@@ -1,15 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="IG">
-  <!-- Transparent background: this keeps the favicon visually round in the browser tab. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" role="img" aria-label="IG">
+  <!-- Recreated from the monogram in favicon.png. The surrounding black card is intentionally omitted. -->
   <defs>
-    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#3480ff" />
-      <stop offset="1" stop-color="#0b55e8" />
+    <linearGradient id="chrome" x1="0" y1="0" x2="0.8" y2="1">
+      <stop stop-color="#fff" />
+      <stop offset="1" stop-color="#e9eaed" />
+    </linearGradient>
+    <linearGradient id="electric-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2d7cff" />
+      <stop offset="1" stop-color="#0759e7" />
     </linearGradient>
   </defs>
-  <g fill="#f8fafc">
-    <path d="M25 26h14v60L25 100z" />
-    <path d="M44 30c8-8 18-12 30-12h30l-7 13H74c-15 0-26 11-26 25s11 25 26 25h11l7-11H74c-8 0-13-6-13-14s5-14 13-14h25l-7 13H74c-1 0-2 0-3 1h28v13H70c-21 0-36-15-36-34 0-10 4-19 10-26z" />
-    <path d="M87 52h16v15H78z" />
-  </g>
-  <path fill="url(#blue)" d="M30 89l9-10v21H27zM92 62h11v12H87z" />
+  <path fill="url(#chrome)" d="M365 317h80v301l-80 80z" />
+  <path fill="url(#electric-blue)" d="M380 707l65-67v67z" />
+  <path fill="url(#chrome)" d="M905 317l-57 83H673c-58 0-103 43-103 101s45 130 111 130h99l-36 76H681c-113 0-193-89-193-207 0-103 80-183 180-183z" />
+  <path fill="url(#chrome)" d="M744 471h155v77H689z" />
+  <path fill="url(#chrome)" d="M791 548h108v66H780z" />
+  <path fill="url(#electric-blue)" d="M791 566h108v48H791z" />
 </svg>
