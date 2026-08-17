@@ -196,21 +196,6 @@ export default function App() {
   // Tezkor tarjimon funksiyasi
   const t = (key) => translations[lang][key] || key;
 
-  // Title & description header content
-  const projectHeaderInfo = (
-    <div className="space-y-6 mb-12 text-center">
-      <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-emerald-400 text-xs font-bold uppercase tracking-widest inline-block">
-        AgriTech Platform
-      </span>
-      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
-        YOSH FERMERS
-      </h1>
-      <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        A modern network and educational platform for young farmers featuring floating navigation headers, partner logo carousels, and interactive opportunity cards.
-      </p>
-    </div>
-  );
-
   // Qidiruv va saralash filtri
   const filteredProducts = useMemo(() => {
     return productsData.filter(product => {
@@ -229,6 +214,15 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F0F7FF] text-slate-800 font-sans selection:bg-emerald-500 selection:text-white pb-12">
+      {/* Project introduction — displayed before the original site content. */}
+      <section className="bg-white text-center px-4 pt-8 pb-16 sm:pt-12 sm:pb-20">
+        <h1 className="font-['Barlow_Condensed'] text-[clamp(44px,8vw,76px)] font-black uppercase tracking-tight leading-[0.9] text-[#0a0a0a]">
+          YOSH FERMERS
+        </h1>
+        <p className="mt-6 text-black/50 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+          A modern network and educational platform for young farmers. Connecting agriculture with technology.
+        </p>
+      </section>
 
       {/* HERO SECTION 
         Background gradient has a pt-24 md:pt-28 to offset the floating fixed header 
