@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { 
-  Search, Globe, Phone, Mail, MapPin, Award, BookOpen, 
-  ChevronRight, Download, Users, Landmark, Sprout, TrendingUp, 
-  Briefcase, CheckCircle, ArrowRight, Star, X, Calendar, User, 
+import {
+  Search, Globe, Phone, Mail, MapPin, Award, BookOpen,
+  ChevronRight, Download, Users, Landmark, Sprout, TrendingUp,
+  Briefcase, CheckCircle, ArrowRight, Star, X, Calendar, User,
   Shield, MessageSquare, Menu, Send, LogIn, ChevronDown, Award as GraduationCap
 } from 'lucide-react';
 
@@ -196,6 +196,21 @@ export default function App() {
   // Tezkor tarjimon funksiyasi
   const t = (key) => translations[lang][key] || key;
 
+  // Title & description header content
+  const projectHeaderInfo = (
+    <div className="space-y-6 mb-12 text-center">
+      <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-emerald-400 text-xs font-bold uppercase tracking-widest inline-block">
+        AgriTech Platform
+      </span>
+      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+        YOSH FERMERS
+      </h1>
+      <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        A modern network and educational platform for young farmers featuring floating navigation headers, partner logo carousels, and interactive opportunity cards.
+      </p>
+    </div>
+  );
+
   // Qidiruv va saralash filtri
   const filteredProducts = useMemo(() => {
     return productsData.filter(product => {
@@ -214,20 +229,20 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F0F7FF] text-slate-800 font-sans selection:bg-emerald-500 selection:text-white pb-12">
-      
+
       {/* HERO SECTION 
         Background gradient has a pt-24 md:pt-28 to offset the floating fixed header 
       */}
-      <div 
+      <div
         className="relative min-h-165 md:min-h-185 lg:min-h-210 bg-cover bg-bottom bg-no-repeat flex flex-col justify-between pt-24 md:pt-28 pb-8 px-4 md:px-8 overflow-hidden"
-        style={{ 
+        style={{
           backgroundImage: `linear-gradient(to bottom, rgba(74, 144, 226, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=2000&q=80')`
         }}
       >
-        
+
         {/* FIXED POSITION NAVBAR (Rasmga 100% mos va ekran bo'ylab qotirilgan) */}
         <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-full shadow-lg border border-slate-100/85 px-4 md:px-8 py-3.5 flex items-center justify-between z-50 transition-all duration-300">
-          
+
           {/* Minimalist Yashil Barg Logotipi */}
           <a href="#" className="flex items-center gap-2.5">
             <div className="relative flex items-center justify-center">
@@ -251,10 +266,10 @@ export default function App() {
 
           {/* O'ng tarafdagi interaktiv elementlar: Til va Kirish tugmasi */}
           <div className="flex items-center gap-4">
-            
+
             {/* Tillar Dropdown menyusi */}
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                 className="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold text-slate-700 transition"
               >
@@ -282,7 +297,7 @@ export default function App() {
             </div>
 
             {/* Kirish Tugmasi (Rasmga mutlaqo o'xshash) */}
-            <button 
+            <button
               onClick={() => setLoginModalOpen(true)}
               className="bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
             >
@@ -291,7 +306,7 @@ export default function App() {
             </button>
 
             {/* Mobil menyu tugmasi */}
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-full transition"
             >
@@ -338,12 +353,12 @@ export default function App() {
         {/* Statistika Panel: Translucent overlay cards from bottom of image_c08444.jpg */}
         <div className="w-full max-w-7xl mx-auto z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            
+
             {/* Card 1: 0 ta fermer */}
             <div className="bg-[#0c1424]/65 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-5 flex items-center gap-3 text-white transition hover:bg-[#0c1424]/80">
               <div className="p-2.5 bg-white/10 rounded-xl">
-                <MapPin className="w-5 h-5 text-amber-400" />   
-              </div>  
+                <MapPin className="w-5 h-5 text-amber-400" />
+              </div>
               <div>
                 <span className="text-2xl md:text-3xl font-bold block leading-none">0</span>
                 <span className="text-[11px] text-white/70 font-medium block mt-1">{t('statFarmer')}</span>
@@ -392,9 +407,9 @@ export default function App() {
       <section id="about" className="max-w-7xl mx-auto px-4 md:px-8 py-16">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" 
-              alt="Yosh fermerlar hamkorligi" 
+            <img
+              src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80"
+              alt="Yosh fermerlar hamkorligi"
               className="rounded-3xl shadow-xl w-full h-80 object-cover"
             />
           </div>
@@ -412,7 +427,7 @@ export default function App() {
               <div className="flex items-center gap-3">
                 <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Xalqaro eksport imkoniyati</span>
-              </div> 
+              </div>
               <div className="flex items-center gap-3">
                 <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Imtiyozli kredit drayverlari</span>
@@ -434,7 +449,7 @@ export default function App() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-          
+
           <div className="lg:col-span-4 bg-white p-6 rounded-3xl shadow-md flex flex-col justify-between border border-slate-100">
             <div>
               <span className="text-[10px] font-bold tracking-wider text-emerald-600 uppercase block mb-1">TANLANGAN VILOYAT</span>
@@ -466,7 +481,7 @@ export default function App() {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setAcademyModalOpen(true)}
               className="w-full bg-[#23C55E] hover:bg-green-600 text-white font-bold py-3 px-4 rounded-2xl mt-6 transition flex items-center justify-center gap-2 text-sm shadow-md"
             >
@@ -490,11 +505,10 @@ export default function App() {
                     <button
                       key={reg.id}
                       onClick={() => setSelectedRegion(reg)}
-                      className={`text-left p-3.5 rounded-2xl border transition-all ${
-                        isSelected 
-                          ? 'bg-[#23C55E] border-[#23C55E] text-white shadow-md scale-102' 
-                          : 'bg-slate-50 hover:bg-slate-100 border-slate-100 text-slate-800'
-                      }`}
+                      className={`text-left p-3.5 rounded-2xl border transition-all ${isSelected
+                        ? 'bg-[#23C55E] border-[#23C55E] text-white shadow-md scale-102'
+                        : 'bg-slate-50 hover:bg-slate-100 border-slate-100 text-slate-800'
+                        }`}
                     >
                       <span className="text-[10px] block opacity-75 font-semibold truncate">{reg.crop}</span>
                       <span className="font-bold text-xs block mt-1 truncate">
@@ -542,7 +556,7 @@ export default function App() {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setAcademyModalOpen(true)}
               className="bg-[#23C55E] hover:bg-green-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition flex items-center gap-2 text-sm"
             >
@@ -552,9 +566,9 @@ export default function App() {
           </div>
 
           <div className="md:col-span-5">
-            <img 
-              src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" 
-              alt="Yosh fermerlar maktabi amaliy mashg'ulot" 
+            <img
+              src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80"
+              alt="Yosh fermerlar maktabi amaliy mashg'ulot"
               className="rounded-3xl w-full h-72 object-cover shadow-md"
             />
           </div>
@@ -580,11 +594,10 @@ export default function App() {
               <button
                 key={category.key}
                 onClick={() => setMarketFilter(category.key)}
-                className={`px-4.5 py-1.5 rounded-full font-bold text-xs transition ${
-                  marketFilter === category.key 
-                    ? 'bg-[#23C55E] text-white shadow' 
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                className={`px-4.5 py-1.5 rounded-full font-bold text-xs transition ${marketFilter === category.key
+                  ? 'bg-[#23C55E] text-white shadow'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
               >
                 {category.label}
               </button>
@@ -593,8 +606,8 @@ export default function App() {
 
           <div className="relative w-full md:w-72">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder={t('searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -609,9 +622,9 @@ export default function App() {
             <div key={product.id} className="bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all flex flex-col justify-between">
               <div>
                 <div className="relative overflow-hidden h-48">
-                  <img 
-                    src={product.image} 
-                    alt={product.nameUz} 
+                  <img
+                    src={product.image}
+                    alt={product.nameUz}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-emerald-800 font-extrabold px-3 py-1 rounded-full text-xs shadow-sm">
@@ -635,7 +648,7 @@ export default function App() {
               </div>
 
               <div className="px-5 pb-5">
-                <button 
+                <button
                   onClick={() => setOrderModalProduct(product)}
                   className="w-full bg-[#23C55E] hover:bg-green-600 text-white font-bold py-2.5 rounded-2xl transition text-xs flex items-center justify-center gap-1.5"
                 >
@@ -660,9 +673,9 @@ export default function App() {
             <div key={leader.id} className="bg-white rounded-3xl p-5 border border-slate-100 hover:shadow-lg transition-all flex flex-col justify-between">
               <div>
                 <div className="relative mb-4 h-40 overflow-hidden rounded-2xl">
-                  <img 
-                    src={leader.img} 
-                    alt={leader.name} 
+                  <img
+                    src={leader.img}
+                    alt={leader.name}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-3 left-3 bg-amber-400 text-slate-950 font-black w-7 h-7 rounded-full flex items-center justify-center text-xs shadow-md">
@@ -677,7 +690,7 @@ export default function App() {
                 </p>
               </div>
 
-              <button 
+              <button
                 onClick={() => setActiveLeader(leader)}
                 className="w-full bg-slate-100 hover:bg-[#23C55E] hover:text-white text-slate-700 font-bold py-2 rounded-xl mt-4 transition text-xs"
               >
@@ -691,7 +704,7 @@ export default function App() {
       {/* Aloqa / Konsultatsiya bo'limi */}
       <section id="contact" className="max-w-4xl mx-auto px-4 md:px-8 py-12">
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
-          
+
           <div className="text-center max-w-xl mx-auto mb-8">
             <h2 className="text-2xl font-black text-slate-900">{t('feedbackTitle')}</h2>
             <p className="text-slate-500 text-xs md:text-sm mt-1.5">{t('feedbackSub')}</p>
@@ -755,7 +768,7 @@ export default function App() {
             <button onClick={() => setLoginModalOpen(false)} className="absolute top-4 right-4 bg-slate-100 hover:bg-slate-200 text-slate-800 p-1 rounded-full">
               <X className="w-4 h-4" />
             </button>
-            
+
             <div className="text-center space-y-4 pt-2">
               <div className="p-3 bg-emerald-50 rounded-full w-12 h-12 flex items-center justify-center mx-auto text-emerald-600">
                 <LogIn className="w-6 h-6" />
@@ -883,7 +896,7 @@ export default function App() {
                 <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">{activeLeader.region}</span>
                 <h3 className="text-lg font-black text-slate-900 mt-2">{activeLeader.name}</h3>
                 <p className="text-[10px] text-slate-400">{activeLeader.age} yoshda</p>
-              </div>  
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed bg-slate-50 p-3.5 rounded-2xl text-left border border-slate-100">
                 {lang === 'uz' ? activeLeader.achievementUz : lang === 'en' ? activeLeader.achievementEn : activeLeader.achievementRu}
               </p>
