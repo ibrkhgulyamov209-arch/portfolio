@@ -362,7 +362,7 @@ export default function App() {
                 <MapPin className="w-5 h-5 text-amber-400" />
               </div>
               <div>
-                <span className="text-2xl md:text-3xl font-bold block leading-none">0</span>
+                <span className="text-2xl md:text-3xl font-bold block leading-none">10,000</span>
                 <span className="text-[11px] text-white/70 font-medium block mt-1">{t('statFarmer')}</span>
               </div>
             </div>
@@ -373,7 +373,7 @@ export default function App() {
                 <Sprout className="w-5 h-5 text-emerald-400" />
               </div>
               <div>
-                <span className="text-2xl md:text-3xl font-bold block leading-none">54 016</span>
+                <span className="text-2xl md:text-3xl font-bold block leading-none">54,016</span>
                 <span className="text-[11px] text-white/70 font-medium block mt-1">{t('statGektar')}</span>
               </div>
             </div>
