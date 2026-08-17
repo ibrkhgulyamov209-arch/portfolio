@@ -235,7 +235,7 @@ export default function App() {
       >
 
         {/* FIXED POSITION NAVBAR (Rasmga 100% mos va ekran bo'ylab qotirilgan) */}
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-full shadow-lg border border-slate-100/85 px-4 md:px-8 py-3.5 flex items-center justify-between z-50 transition-all duration-300">
+        <header className="absolute top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-full shadow-lg border border-slate-100/85 px-4 md:px-8 py-3.5 flex items-center justify-between z-50 transition-all duration-300">
 
           {/* Minimalist Yashil Barg Logotipi */}
           <a href="#" className="flex items-center gap-2.5">
