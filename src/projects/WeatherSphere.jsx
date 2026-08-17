@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-const WeatherSphere = ({ initialLang = 'en' }) => {
+const WeatherSphere = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const [cityInput, setCityInput] = useState('Tashkent');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [lang, setLang] = useState(initialLang);
-
-  useEffect(() => {
-    setLang(initialLang);
-  }, [initialLang]);
 
   const translations = {
     en: {
@@ -242,7 +237,7 @@ const WeatherSphere = ({ initialLang = 'en' }) => {
             {['en', 'ru', 'uz'].map(l => (
               <button
                 key={l}
-                onClick={() => setLang(l)}
+                onClick={() => onLanguageChange(l)}
                 className={`px-2.5 py-1 rounded-full uppercase transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer ${lang === l ? 'bg-[#0a0a0a] text-white shadow-sm' : 'text-black/50 hover:text-[#0a0a0a]'}`}
               >
                 {l}

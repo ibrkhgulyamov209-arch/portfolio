@@ -169,8 +169,7 @@ const translations = {
   }
 };
 
-const DreamCareer = ({ defaultLang = 'en' }) => {
-  const [currentLang, setCurrentLang] = useState(defaultLang);
+const DreamCareer = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const [targetTrack, setTargetTrack] = useState('AI Full-Stack Developer');
   const [unlockedSkills, setUnlockedSkills] = useState({
     'React & Vite': true,
@@ -178,7 +177,7 @@ const DreamCareer = ({ defaultLang = 'en' }) => {
     'JavaScript ES6+': true,
   });
 
-  const t = translations[currentLang] || translations.en;
+  const t = translations[lang] || translations.en;
 
   const skillTree = {
     'AI Full-Stack Developer': [
@@ -216,17 +215,17 @@ const DreamCareer = ({ defaultLang = 'en' }) => {
           { code: 'en', label: 'EN' },
           { code: 'ru', label: 'RU' },
           { code: 'uz', label: "UZ" }
-        ].map((lang) => (
+        ].map((locale) => (
           <button
-            key={lang.code}
-            onClick={() => setCurrentLang(lang.code)}
+            key={locale.code}
+            onClick={() => onLanguageChange(locale.code)}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
-              currentLang === lang.code 
+              lang === locale.code
                 ? 'bg-[#0a0a0a] text-white border-[#0a0a0a] shadow-sm' 
                 : 'bg-black/2 text-black/60 border-black/8 hover:bg-black/5 hover:text-[#0a0a0a]'
             }`}
           >
-            {lang.label}
+            {locale.label}
           </button>
         ))}
       </div>

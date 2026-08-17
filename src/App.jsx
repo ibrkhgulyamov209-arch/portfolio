@@ -192,11 +192,11 @@ const translations = {
 function projectComponent(id, lang, onLanguageChange) {
   switch (id) {
     case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
-    case 'dream-career': return <DreamCareer />;
-    case 'unipath': return <UniPath />;
-    case 'taskflow': return <TaskFlow />;
-    case 'weathersphere': return <WeatherSphere initialLang={lang} />;
-    case 'edulink': return <EduLink />;
+    case 'dream-career': return <DreamCareer lang={lang} onLanguageChange={onLanguageChange} />;
+    case 'unipath': return <UniPath lang={lang} />;
+    case 'taskflow': return <TaskFlow lang={lang} />;
+    case 'weathersphere': return <WeatherSphere lang={lang} onLanguageChange={onLanguageChange} />;
+    case 'edulink': return <EduLink lang={lang} />;
     default: return null;
   }
 }
