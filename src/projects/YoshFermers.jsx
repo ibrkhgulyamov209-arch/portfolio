@@ -293,7 +293,7 @@ export default function App() {
             {/* Kirish Tugmasi (Rasmga mutlaqo o'xshash) */}
             <button
               onClick={() => setLoginModalOpen(true)}
-              className="bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
+              className="hidden bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
             >
               <span>{t('loginText')}</span>
               <span className="font-light text-base">→</span>
@@ -321,6 +321,13 @@ export default function App() {
               <a href="#market" onClick={() => setMobileMenuOpen(false)} className="hover:text-emerald-500 py-1">{t('navMarket')}</a>
               <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-emerald-500 py-1">{t('navContact')}</a>
             </nav>
+            <button
+              onClick={() => { setLoginModalOpen(true); setMobileMenuOpen(false); }}
+              className="mt-5 w-full bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
+            >
+              <span>{t('loginText')}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         )}
 
