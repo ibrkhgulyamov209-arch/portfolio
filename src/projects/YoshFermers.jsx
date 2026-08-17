@@ -180,8 +180,7 @@ const leadersData = [
   { id: 4, name: "Madina Malikova", age: 22, region: "Bukhara", achievementUz: "Cho'l sharoitida zamonaviy tomchilatib sug'oriladigan bog' barpo etdi.", achievementEn: "Created a modern drip-irrigated orchard in desert climate conditions.", achievementRu: "Создала современный капельно-орошаемый сад в пустынной местности.", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80", rank: "4" }
 ];
 
-export default function App() {
-  const [lang, setLang] = useState('uz');
+export default function App({ lang, onLanguageChange }) {
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState(regionsData[0]);
   const [marketFilter, setMarketFilter] = useState('all');
@@ -208,7 +207,7 @@ export default function App() {
 
   // Aktiv tilni o'zgartirish funksiyasi
   const handleLangChange = (newLang) => {
-    setLang(newLang);
+    onLanguageChange(newLang);
     setLangDropdownOpen(false);
   };
 

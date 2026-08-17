@@ -189,9 +189,9 @@ const translations = {
   }
 };
 
-function projectComponent(id, lang) {
+function projectComponent(id, lang, onLanguageChange) {
   switch (id) {
-    case 'yosh-fermers': return <YoshFermers />;
+    case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
     case 'dream-career': return <DreamCareer />;
     case 'unipath': return <UniPath />;
     case 'taskflow': return <TaskFlow />;
@@ -276,7 +276,7 @@ export default function App() {
 
         {/* Detail content */}
         <main className="max-w-240 mx-auto pt-24 px-5 sm:px-10 pb-20">
-          {projectComponent(activeProject, lang)}
+          {projectComponent(activeProject, lang, setLang)}
         </main>
 
         {/* Next project footer */}
