@@ -235,7 +235,7 @@ export default function App() {
       >
 
         {/* FIXED POSITION NAVBAR (Rasmga 100% mos va ekran bo'ylab qotirilgan) */}
-        <header className="absolute top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-full shadow-lg border border-slate-100/85 px-4 md:px-8 py-3.5 flex items-center justify-between z-50 transition-all duration-300">
+        <header className="absolute top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-full shadow-lg border border-slate-100/85 px-3 sm:px-5 md:px-8 py-3.5 flex items-center justify-between z-50 transition-all duration-300">
 
           {/* Minimalist Yashil Barg Logotipi */}
           <a href="#" className="flex items-center gap-2.5">
@@ -249,7 +249,7 @@ export default function App() {
           </a>
 
           {/* Navigatsiya Linklari */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-800">
+          <nav className="hidden items-center gap-8 text-sm font-bold text-slate-800">
             <a href="#hero" className="hover:text-emerald-500 transition-colors py-1">{t('navHome')}</a>
             <a href="#about" className="hover:text-emerald-500 transition-colors py-1">{t('navAbout')}</a>
             <a href="#map" className="hover:text-emerald-500 transition-colors py-1">{t('navMap')}</a>
@@ -259,17 +259,17 @@ export default function App() {
           </nav>
 
           {/* O'ng tarafdagi interaktiv elementlar: Til va Kirish tugmasi */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
 
             {/* Tillar Dropdown menyusi */}
             <div className="relative">
               <button
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                className="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-full px-4 py-2 flex items-center gap-2 text-xs font-semibold text-slate-700 transition"
+                className="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-full px-3 sm:px-4 py-2 flex items-center gap-2 text-xs font-semibold text-slate-700 transition"
               >
                 <Globe className="w-4 h-4 text-slate-500" />
-                <span>{lang.toUpperCase()} <span className="opacity-75">{t('langLabel')}</span></span>
-                <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                <span>{lang.toUpperCase()} <span className="hidden sm:inline opacity-75">{t('langLabel')}</span></span>
+                <ChevronDown className="hidden sm:block w-3.5 h-3.5 text-slate-400" />
               </button>
 
               {langDropdownOpen && (
@@ -293,7 +293,7 @@ export default function App() {
             {/* Kirish Tugmasi (Rasmga mutlaqo o'xshash) */}
             <button
               onClick={() => setLoginModalOpen(true)}
-              className="bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-6 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
+              className="bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
             >
               <span>{t('loginText')}</span>
               <span className="font-light text-base">→</span>
@@ -302,7 +302,8 @@ export default function App() {
             {/* Mobil menyu tugmasi */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-full transition"
+              aria-label="Open navigation menu"
+              className="p-2 text-slate-700 hover:bg-slate-100 rounded-full transition"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -311,7 +312,7 @@ export default function App() {
 
         {/* Mobil menyu oynasi (Header fixed bo'lgani sababli u ham fixed holatga o'tkazildi) */}
         {mobileMenuOpen && (
-          <div className="fixed top-20 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-150 p-6 z-50 lg:hidden animate-scaleUp">
+          <div className="absolute top-24 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-150 p-6 z-50 animate-scaleUp">
             <nav className="flex flex-col gap-4 text-base font-bold text-slate-800">
               <a href="#hero" onClick={() => setMobileMenuOpen(false)} className="hover:text-emerald-500 py-1">{t('navHome')}</a>
               <a href="#about" onClick={() => setMobileMenuOpen(false)} className="hover:text-emerald-500 py-1">{t('navAbout')}</a>
