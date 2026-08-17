@@ -297,7 +297,7 @@ export default function App() {
   }
 
   // inspect number
-  console.log("%c📞 Contact: +998 [Your Phone Number]", "color: #38bdf8; font-size: 14px; font-weight: bold;");
+  console.log("%c📞 Contact: +998 93 007 07 78", "color: #38bdf8; font-size: 14px; font-weight: bold;");
 
 
   // ── MAIN PORTFOLIO VIEW ──────────────────────────────────────────────────
