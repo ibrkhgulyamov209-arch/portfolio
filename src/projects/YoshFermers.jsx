@@ -384,7 +384,7 @@ export default function App() {
                 <Landmark className="w-5 h-5 text-sky-400" />
               </div>
               <div>
-                <span className="text-2xl md:text-3xl font-bold block leading-none">732.7 mlrd</span>
+                <span className="text-2xl md:text-3xl font-bold block leading-none">733 mlrd</span>
                 <span className="text-[11px] text-white/70 font-medium block mt-1">{t('statSom')}</span>
               </div>
             </div>
