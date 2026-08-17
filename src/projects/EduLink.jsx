@@ -63,12 +63,98 @@ const universityDatabase = [
   }
 ];
 
-const EduLink = () => {
+const translations = {
+  en: {
+    badge: "Advanced University & Location Matcher",
+    subtitle: "Input your exact GPA, IELTS score, and technical achievements to discover global universities with integrated map lookups.",
+    fieldLabel: "Preferred Field of Study",
+    fields: {
+      "Computer Science": "Computer Science",
+      "Engineering": "Engineering",
+      "AI & Tech": "AI & Tech",
+      "Frontend Development": "Frontend Development"
+    },
+    gpaLabel: "Current GPA (max 4.0)",
+    ieltsLabel: "IELTS Score",
+    portfolioLabel: "Portfolio & Coding Achievements",
+    portfolioOptions: {
+      "Yes": "Built Multiple Web Apps & Portfolios",
+      "Hackathon": "Hackathon Participant / Winner",
+      "General": "General Academic Background"
+    },
+    submitBtn: "Calculate Eligibility & Map Locations →",
+    resultsHeading: "Matching Institutions",
+    noResults: "No matching institutions found for your specific GPA and IELTS filters. Try adjusting your score thresholds!",
+    scholarship: "Scholarship",
+    req: "Req",
+    viewOnMap: "View on Map",
+    apply: "Apply",
+    alertMsg: (name, city) => `Application query generated for ${name} in ${city}!`
+  },
+  ru: {
+    badge: "Продвинутый подбор университетов и локаций",
+    subtitle: "Введите свой GPA, балл IELTS и технические достижения, чтобы найти мировые университеты с интегрированными картами.",
+    fieldLabel: "Предпочтительное направление",
+    fields: {
+      "Computer Science": "Компьютерные науки",
+      "Engineering": "Инженерия",
+      "AI & Tech": "ИИ и технологии",
+      "Frontend Development": "Фронтенд-разработка"
+    },
+    gpaLabel: "Текущий GPA (макс. 4.0)",
+    ieltsLabel: "Балл IELTS",
+    portfolioLabel: "Портфолио и навыки программирования",
+    portfolioOptions: {
+      "Yes": "Создано несколько веб-приложений и портфолио",
+      "Hackathon": "Участник / победитель хакатонов",
+      "General": "Общий академический бэкграунд"
+    },
+    submitBtn: "Рассчитать соответствие и карты →",
+    resultsHeading: "Подходящие учебные заведения",
+    noResults: "Не найдено подходящих учебных заведений по вашим фильтрам GPA и IELTS. Попробуйте скорректировать пороги баллов!",
+    scholarship: "Стипендия",
+    req: "Треб",
+    viewOnMap: "На карте",
+    apply: "Подать заявку",
+    alertMsg: (name, city) => `Заявка сгенерирована для ${name} в г. ${city}!`
+  },
+  uz: {
+    badge: "Ilg'or universitet va joylashuv tanlash tizimi",
+    subtitle: "Global universitetlarni xaritalar bilan topish uchun aniq GPA, IELTS bali va texnik yutuqlaringizni kiriting.",
+    fieldLabel: "Afzal ko'rilgan yo'nalish",
+    fields: {
+      "Computer Science": "Kompyuter fanlari",
+      "Engineering": "Muhandislik",
+      "AI & Tech": "Sun'iy intellekt va texnologiya",
+      "Frontend Development": "Frontend dasturlash"
+    },
+    gpaLabel: "Joriy GPA (maks. 4.0)",
+    ieltsLabel: "IELTS bali",
+    portfolioLabel: "Portfolio va dasturlash yutuqlari",
+    portfolioOptions: {
+      "Yes": "Bir nechta veb-ilova va portfoliolar yaratilgan",
+      "Hackathon": "Hakaton ishtirokchisi / g'olibi",
+      "General": "Umumiy akademik ma'lumot"
+    },
+    submitBtn: "Moslikni hisoblash va xaritani ko'rish →",
+    resultsHeading: "Mos keluvchi muassasalar",
+    noResults: "GPA va IELTS filtrlaringizga mos keluvchi muassasalar topilmadi. Ballar chegarasini o'zgartirib ko'ring!",
+    scholarship: "Stipendiya",
+    req: "Talab",
+    viewOnMap: "Xaritada ko'rish",
+    apply: "Ariza topshirish",
+    alertMsg: (name, city) => `${name} (${city}) uchun ariza so'rovi yaratildi!`
+  }
+};
+
+const EduLink = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const [field, setField] = useState('Computer Science');
   const [gpa, setGpa] = useState('3.6');
   const [ielts, setIelts] = useState('7.0');
   const [codingProjects, setCodingProjects] = useState('Yes');
   const [results, setResults] = useState(null);
+
+  const t = translations[lang];
 
   const handleFindMatches = (e) => {
     e.preventDefault();
@@ -82,16 +168,35 @@ const EduLink = () => {
 
   return (
     <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+      {/* Language Switcher */}
+      <div className="flex justify-end mb-6">
+        <div className="inline-flex p-1 rounded-2xl bg-black/5 border border-black/10 gap-1">
+          {['en', 'ru', 'uz'].map((l) => (
+            <button
+              key={l}
+              onClick={() => onLanguageChange(l)}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold uppercase transition-all cursor-pointer ${
+                lang === l 
+                  ? 'bg-[#0a0a0a] text-white shadow-xs' 
+                  : 'text-black/60 hover:text-[#0a0a0a]'
+              }`}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Header */}
       <div className="text-center mb-12">
         <span className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[#0a0a0a] text-[11px] font-bold uppercase tracking-widest mb-4 inline-block">
-          Advanced University & Location Matcher
+          {t.badge}
         </span>
         <h2 className="font-['Barlow_Condensed'] text-[clamp(40px,7vw,64px)] font-black uppercase tracking-tight mb-3">
           EduLink
         </h2>
         <p className="text-black/50 text-sm max-w-xl mx-auto leading-relaxed">
-          Input your exact GPA, IELTS score, and technical achievements to discover global universities with integrated map lookups.
+          {t.subtitle}
         </p>
       </div>
 
@@ -99,21 +204,21 @@ const EduLink = () => {
       <form onSubmit={handleFindMatches} className="p-8 rounded-3xl bg-black/2 border border-black/8 space-y-6 mb-8">
         <div className="grid md:grid-cols-3 gap-6">
           <div>
-            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Preferred Field of Study</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">{t.fieldLabel}</label>
             <select
               value={field}
               onChange={(e) => setField(e.target.value)}
               className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all cursor-pointer"
             >
-              <option value="Computer Science">Computer Science</option>
-              <option value="Engineering">Engineering</option>
-              <option value="AI & Tech">AI & Tech</option>
-              <option value="Frontend Development">Frontend Development</option>
+              <option value="Computer Science">{t.fields["Computer Science"]}</option>
+              <option value="Engineering">{t.fields["Engineering"]}</option>
+              <option value="AI & Tech">{t.fields["AI & Tech"]}</option>
+              <option value="Frontend Development">{t.fields["Frontend Development"]}</option>
             </select>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Current GPA (max 4.0)</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">{t.gpaLabel}</label>
             <input
               type="number"
               step="0.1"
@@ -127,7 +232,7 @@ const EduLink = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">IELTS Score</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">{t.ieltsLabel}</label>
             <select
               value={ielts}
               onChange={(e) => setIelts(e.target.value)}
@@ -143,15 +248,15 @@ const EduLink = () => {
         </div>
 
         <div>
-          <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Portfolio & Coding Achievements</label>
+          <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">{t.portfolioLabel}</label>
           <select
             value={codingProjects}
             onChange={(e) => setCodingProjects(e.target.value)}
             className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all cursor-pointer"
           >
-            <option value="Yes">Built Multiple Web Apps & Portfolios</option>
-            <option value="Hackathon">Hackathon Participant / Winner</option>
-            <option value="General">General Academic Background</option>
+            <option value="Yes">{t.portfolioOptions["Yes"]}</option>
+            <option value="Hackathon">{t.portfolioOptions["Hackathon"]}</option>
+            <option value="General">{t.portfolioOptions["General"]}</option>
           </select>
         </div>
 
@@ -159,7 +264,7 @@ const EduLink = () => {
           type="submit"
           className="w-full py-4 rounded-2xl bg-[#0a0a0a] hover:bg-black/80 font-bold text-xs uppercase tracking-widest text-white transition-all shadow-md cursor-pointer"
         >
-          Calculate Eligibility & Map Locations →
+          {t.submitBtn}
         </button>
       </form>
 
@@ -167,12 +272,12 @@ const EduLink = () => {
       {results !== null && (
         <div className="space-y-4">
           <h3 className="font-['Barlow_Condensed'] text-2xl font-black uppercase tracking-wide text-[#0a0a0a] mb-4">
-            Matching Institutions ({results.length} found)
+            {t.resultsHeading} ({results.length} found)
           </h3>
 
           {results.length === 0 ? (
             <div className="p-8 rounded-3xl bg-black/2 border border-black/8 text-center text-black/50 text-sm font-medium">
-              No matching institutions found for your specific GPA and IELTS filters. Try adjusting your score thresholds!
+              {t.noResults}
             </div>
           ) : (
             results.map((uni) => (
@@ -188,7 +293,9 @@ const EduLink = () => {
                     <span className="text-xs text-black/50 font-medium">📍 {uni.city}, {uni.country}</span>
                   </div>
                   <h4 className="font-['Barlow_Condensed'] text-2xl font-black text-[#0a0a0a]">{uni.name}</h4>
-                  <p className="text-xs text-black/60 mt-1 font-medium"><strong className="text-[#0a0a0a]">Scholarship:</strong> {uni.scholarship} | <strong className="text-[#0a0a0a]">Req:</strong> IELTS {uni.minIELTS}+, GPA {uni.minGPA}+</p>
+                  <p className="text-xs text-black/60 mt-1 font-medium">
+                    <strong className="text-[#0a0a0a]">{t.scholarship}:</strong> {uni.scholarship} | <strong className="text-[#0a0a0a]">{t.req}:</strong> IELTS {uni.minIELTS}+, GPA {uni.minGPA}+
+                  </p>
                 </div>
 
                 <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
@@ -198,13 +305,13 @@ const EduLink = () => {
                     rel="noopener noreferrer"
                     className="px-4 py-2.5 rounded-xl bg-white hover:bg-black/5 text-[#0a0a0a] text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border border-black/15 shadow-xs"
                   >
-                    <span>🗺️</span> View on Map
+                    <span>🗺️</span> {t.viewOnMap}
                   </a>
                   <button 
-                    onClick={() => alert(`Application query generated for ${uni.name} in ${uni.city}!`)}
+                    onClick={() => alert(t.alertMsg(uni.name, uni.city))}
                     className="px-4 py-2.5 rounded-xl bg-[#0a0a0a] hover:bg-black/80 text-white text-xs font-bold transition-all cursor-pointer shadow-xs"
                   >
-                    Apply
+                    {t.apply}
                   </button>
                 </div>
               </div>
@@ -216,4 +323,4 @@ const EduLink = () => {
   );
 };
 
-export default EduLink; 
+export default EduLink;

@@ -1,6 +1,102 @@
 import { useState } from 'react';
 
-const TaskFlow = () => {
+const translations = {
+  en: {
+    badge: "Productivity & Task Management",
+    subtitle: "Manage your daily engineering tasks, university goals, and development milestones with a high-performance workspace.",
+    totalTasks: "Total Tasks",
+    completed: "Completed",
+    prodRate: "Productivity Rate",
+    newDescLabel: "New Task Description",
+    placeholder: "e.g. Code WeatherSphere search component...",
+    catLabel: "Category",
+    priorityLabel: "Priority",
+    addTaskBtn: "+ Add Task",
+    categories: {
+      All: "All",
+      Frontend: "Frontend",
+      Studies: "Studies",
+      Startup: "Startup",
+      "CS Prep": "CS Prep"
+    },
+    priorities: {
+      High: "High Priority",
+      Medium: "Medium Priority",
+      Low: "Low Priority"
+    },
+    priorityText: {
+      High: "• High Priority",
+      Medium: "• Medium Priority",
+      Low: "• Low Priority"
+    },
+    noTasks: "No tasks found in this category. Add a new task above!",
+    delete: "Delete"
+  },
+  ru: {
+    badge: "Управление задачами и продуктивность",
+    subtitle: "Управляйте ежедневными инженерными задачами, университетскими целями и вехами разработки в высокопроизводительном пространстве.",
+    totalTasks: "Всего задач",
+    completed: "Выполнено",
+    prodRate: "Продуктивность",
+    newDescLabel: "Описание новой задачи",
+    placeholder: "напр., Написать компонент поиска WeatherSphere...",
+    catLabel: "Категория",
+    priorityLabel: "Приоритет",
+    addTaskBtn: "+ Добавить задачу",
+    categories: {
+      All: "Все",
+      Frontend: "Фронтенд",
+      Studies: "Учеба",
+      Startup: "Стартап",
+      "CS Prep": "Подготовка к CS"
+    },
+    priorities: {
+      High: "Высокий приоритет",
+      Medium: "Средний приоритет",
+      Low: "Низкий приоритет"
+    },
+    priorityText: {
+      High: "• Высокий приоритет",
+      Medium: "• Средний приоритет",
+      Low: "• Низкий приоритет"
+    },
+    noTasks: "В этой категории нет задач. Добавьте новую задачу выше!",
+    delete: "Удалить"
+  },
+  uz: {
+    badge: "Mahsuldorlik va Vazifalarni Boshqarish",
+    subtitle: "Kundalik muhandislik vazifalaringiz, universitet maqsadlaringiz va dasturlash bosqichlaringizni yuqori unumdorlikdagi ishchi muhitda boshqaring.",
+    totalTasks: "Jami vazifalar",
+    completed: "Bajarilgan",
+    prodRate: "Mahsuldorlik darajasi",
+    newDescLabel: "Yangi vazifa tavsifi",
+    placeholder: "masalan: WeatherSphere qidiruv komponentini yozish...",
+    catLabel: "Kategoriya",
+    priorityLabel: "Ustuvorlik",
+    addTaskBtn: "+ Vazifa qo'shish",
+    categories: {
+      All: "Barchasi",
+      Frontend: "Frontend",
+      Studies: "O'qish",
+      Startup: "Startap",
+      "CS Prep": "CS Tayyorgarlik"
+    },
+    priorities: {
+      High: "Yuqori ustuvorlik",
+      Medium: "O'rta ustuvorlik",
+      Low: "Past ustuvorlik"
+    },
+    priorityText: {
+      High: "• Yuqori ustuvorlik",
+      Medium: "• O'rta ustuvorlik",
+      Low: "• Past ustuvorlik"
+    },
+    noTasks: "Bu kategoriyada vazifalar topilmadi. Yuqoridan yangi vazifa qo'shing!",
+    delete: "O'chirish"
+  }
+};
+
+const TaskFlow = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const [tasks, setTasks] = useState([
     { id: 1, text: "Finish portfolio React integration & deployment", category: "Frontend", priority: "High", completed: true },
     { id: 2, text: "Prepare IELTS vocabulary & speaking practice", category: "Studies", priority: "High", completed: false },
@@ -12,6 +108,8 @@ const TaskFlow = () => {
   const [category, setCategory] = useState('Frontend');
   const [priority, setPriority] = useState('Medium');
   const [filter, setFilter] = useState('All');
+
+  const t = translations[lang];
 
   const addTask = (e) => {
     e.preventDefault();
@@ -43,16 +141,35 @@ const TaskFlow = () => {
 
   return (
     <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+      {/* Language Switcher */}
+      <div className="flex justify-end mb-6">
+        <div className="inline-flex p-1 rounded-2xl bg-black/5 border border-black/10 gap-1">
+          {['en', 'ru', 'uz'].map((l) => (
+            <button
+              key={l}
+              onClick={() => onLanguageChange(l)}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold uppercase transition-all cursor-pointer ${
+                lang === l 
+                  ? 'bg-[#0a0a0a] text-white shadow-xs' 
+                  : 'text-black/60 hover:text-[#0a0a0a]'
+              }`}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Header */}
       <div className="text-center mb-12">
         <span className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[#0a0a0a] text-[11px] font-bold uppercase tracking-widest mb-4 inline-block">
-          Productivity & Task Management
+          {t.badge}
         </span>
         <h2 className="font-['Barlow_Condensed'] text-[clamp(40px,7vw,64px)] font-black uppercase tracking-tight mb-3">
           TaskFlow
         </h2>
         <p className="text-black/50 text-sm max-w-xl mx-auto leading-relaxed">
-          Manage your daily engineering tasks, university goals, and development milestones with a high-performance workspace.
+          {t.subtitle}
         </p>
       </div>
 
@@ -60,7 +177,7 @@ const TaskFlow = () => {
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Total Tasks</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">{t.totalTasks}</span>
             <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{tasks.length}</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center text-[#0a0a0a] font-bold border border-black/10">
@@ -70,7 +187,7 @@ const TaskFlow = () => {
 
         <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Completed</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">{t.completed}</span>
             <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{completedCount}</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center text-[#0a0a0a] font-bold border border-black/10">
@@ -80,7 +197,7 @@ const TaskFlow = () => {
 
         <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Productivity Rate</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">{t.prodRate}</span>
             <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{progressPercentage}%</span>
           </div>
           <div className="w-12 h-12 rounded-full border-4 border-black/10 border-t-[#0a0a0a] flex items-center justify-center text-xs font-bold text-[#0a0a0a]">
@@ -93,11 +210,11 @@ const TaskFlow = () => {
       <form onSubmit={addTask} className="p-6 rounded-3xl bg-black/2 border border-black/8 space-y-4 mb-8">
         <div className="grid md:grid-cols-3 gap-4">
           <div className="md:col-span-3">
-            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">New Task Description</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">{t.newDescLabel}</label>
             <input 
               type="text" 
               required
-              placeholder="e.g. Code WeatherSphere search component..." 
+              placeholder={t.placeholder} 
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm placeholder:text-black/30 focus:outline-none focus:border-[#0a0a0a] transition-all"
@@ -105,29 +222,29 @@ const TaskFlow = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">Category</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">{t.catLabel}</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] cursor-pointer transition-all"
             >
-              <option value="Frontend">Frontend</option>
-              <option value="Studies">Studies</option>
-              <option value="Startup">Startup</option>
-              <option value="CS Prep">CS Prep</option>
+              <option value="Frontend">{t.categories["Frontend"]}</option>
+              <option value="Studies">{t.categories["Studies"]}</option>
+              <option value="Startup">{t.categories["Startup"]}</option>
+              <option value="CS Prep">{t.categories["CS Prep"]}</option>
             </select>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">Priority</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">{t.priorityLabel}</label>
             <select
               value={priority}
               onChange={(e) => setPriority(e.target.value)}
               className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] cursor-pointer transition-all"
             >
-              <option value="High">High Priority</option>
-              <option value="Medium">Medium Priority</option>
-              <option value="Low">Low Priority</option>
+              <option value="High">{t.priorities["High"]}</option>
+              <option value="Medium">{t.priorities["Medium"]}</option>
+              <option value="Low">{t.priorities["Low"]}</option>
             </select>
           </div>
 
@@ -136,7 +253,7 @@ const TaskFlow = () => {
               type="submit" 
               className="w-full py-3 rounded-2xl bg-[#0a0a0a] hover:bg-black/80 text-xs font-bold text-white tracking-wider uppercase transition-all cursor-pointer shadow-md"
             >
-              + Add Task
+              {t.addTaskBtn}
             </button>
           </div>
         </div>
@@ -154,7 +271,7 @@ const TaskFlow = () => {
                 : 'bg-black/5 text-black/50 hover:bg-black/10 hover:text-[#0a0a0a]'
             }`}
           >
-            {cat}
+            {t.categories[cat]}
           </button>
         ))}
       </div>
@@ -163,7 +280,7 @@ const TaskFlow = () => {
       <div className="space-y-3">
         {filteredTasks.length === 0 ? (
           <div className="p-8 rounded-2xl bg-black/2 border border-black/8 text-center text-black/40 text-sm font-medium">
-            No tasks found in this category. Add a new task above!
+            {t.noTasks}
           </div>
         ) : (
           filteredTasks.map(task => (
@@ -188,12 +305,12 @@ const TaskFlow = () => {
                   </p>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="px-2.5 py-0.5 rounded-md bg-black/5 text-black/60 text-[10px] font-bold uppercase tracking-wider border border-black/10">
-                      {task.category}
+                      {t.categories[task.category] || task.category}
                     </span>
                     <span className={`text-[10px] font-bold uppercase tracking-wider ${
                       task.priority === 'High' ? 'text-red-600' : task.priority === 'Medium' ? 'text-[#f4a819]' : 'text-black/50'
                     }`}>
-                      • {task.priority} Priority
+                      {t.priorityText[task.priority] || `• ${task.priority} Priority`}
                     </span>
                   </div>
                 </div>
@@ -203,7 +320,7 @@ const TaskFlow = () => {
                 onClick={() => deleteTask(task.id)}
                 className="px-3 py-1.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-600 text-xs font-semibold transition-all cursor-pointer"
               >
-                Delete
+                {t.delete}
               </button>
             </div>
           ))
