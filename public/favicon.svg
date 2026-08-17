@@ -11,7 +11,7 @@
     </linearGradient>
   </defs>
   <circle cx="640" cy="640" r="620" fill="#06080c" />
-  <g transform="translate(-70 -56) scale(1.11)">
+  <g transform="translate(-122 26) scale(1.2)">
     <path fill="url(#chrome)" d="M365 317h80v301l-80 80z" />
     <path fill="url(#electric-blue)" d="M380 707l65-67v67z" />
     <path fill="url(#chrome)" d="M905 317l-57 83H673c-58 0-103 43-103 101s45 130 111 130h99l-36 76H681c-113 0-193-89-193-207 0-103 80-183 180-183z" />
