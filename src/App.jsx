@@ -41,30 +41,30 @@ const translations = {
     backToPortfolio: 'Back to Portfolio',
     moreProjects: 'More Projects',
     projects: [
-      { id: 'yosh-fermers',   title: 'Yosh Fermers',        tag: 'AgriTech',   desc: 'A modern network and educational platform for young farmers. Connecting agriculture with technology.',        tech: ['React', 'Node.js', 'MongoDB'],         year: '2025' },
-      { id: 'dream-career',   title: 'Dream Career Simulator', tag: 'AI / Web',   desc: 'AI-powered career roadmaps & skill tree generator. Discover realistic paths to your dream job.',                  tech: ['Next.js', 'OpenAI API', 'Tailwind'],    year: '2025' },
-      { id: 'unipath',        title: 'UniPath AI',            tag: 'EdTech',    desc: 'Global university & scholarship guidance platform. Simplifies international university applications.',         tech: ['React', 'Firebase', 'Python'],         year: '2025' },
-      { id: 'taskflow',       title: 'TaskFlow',              tag: 'SaaS',      desc: 'Modern, minimalist productivity dashboard. Manage tasks, track habits and build better workflows.',          tech: ['React', 'TypeScript', 'Supabase'],      year: '2025' },
-      { id: 'weathersphere',  title: 'WeatherSphere',         tag: 'Utility',   desc: 'Real-time weather forecasting with elegant data visualisation. Beautiful UI meets accurate data.',              tech: ['JavaScript', 'D3.js', 'REST API'],      year: '2024' },
-      { id: 'edulink',        title: 'EduLink',               tag: 'Education', desc: 'Community-driven resource sharing platform for students. Learn, share, and grow together.',                     tech: ['React', 'GraphQL', 'PostgreSQL'],       year: '2024' },
+      { id: 'yosh-fermers', title: 'Yosh Fermers', tag: 'AgriTech', desc: 'A modern network and educational platform for young farmers. Connecting agriculture with technology.', tech: ['React', 'Node.js', 'MongoDB'], year: '2025' },
+      { id: 'dream-career', title: 'Dream Career Simulator', tag: 'AI / Web', desc: 'AI-powered career roadmaps & skill tree generator. Discover realistic paths to your dream job.', tech: ['Next.js', 'OpenAI API', 'Tailwind'], year: '2025' },
+      { id: 'unipath', title: 'UniPath AI', tag: 'EdTech', desc: 'Global university & scholarship guidance platform. Simplifies international university applications.', tech: ['React', 'Firebase', 'Python'], year: '2025' },
+      { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Modern, minimalist productivity dashboard. Manage tasks, track habits and build better workflows.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
+      { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Real-time weather forecasting with elegant data visualisation. Beautiful UI meets accurate data.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
+      { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Community-driven resource sharing platform for students. Learn, share, and grow together.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
     ],
     skills: [
-      { name: 'React',        icon: '⚛'   },
-      { name: 'JavaScript',   icon: 'JS'  },
-      { name: 'TypeScript',   icon: 'TS'  },
-      { name: 'Tailwind CSS', icon: 'TW'  },
-      { name: 'HTML5',        icon: 'H5'  },
-      { name: 'CSS3',         icon: 'C3'  },
-      { name: 'Git',          icon: 'GIT' },
-      { name: 'Node.js',      icon: '⬡'   },
-      { name: 'Figma',        icon: '◈'   },
-      { name: 'Next.js',      icon: 'N'   },
+      { name: 'React', icon: '⚛' },
+      { name: 'JavaScript', icon: 'JS' },
+      { name: 'TypeScript', icon: 'TS' },
+      { name: 'Tailwind CSS', icon: 'TW' },
+      { name: 'HTML5', icon: 'H5' },
+      { name: 'CSS3', icon: 'C3' },
+      { name: 'Git', icon: 'GIT' },
+      { name: 'Node.js', icon: '⬡' },
+      { name: 'Figma', icon: '◈' },
+      { name: 'Next.js', icon: 'N' },
     ],
     timeline: [
-      { year: '2027', title: 'University Application Journey',    place: 'Tashkent, Uzbekistan', desc: 'Preparing and submitting applications to top computer science universities.' },
-      { year: '2026', title: 'Certificates & Admissions Prep',    place: 'Tashkent, Uzbekistan', desc: 'Focusing on acquiring standard certificates and preparing for university requirements.' },
-      { year: '2025', title: 'Mars IT Student & Developer',       place: 'Tashkent, Uzbekistan', desc: 'Studied core web development and built real projects with mentors at Mars IT School.' },
-      { year: '2024', title: 'First Lines of Code',               place: 'Tashkent, Uzbekistan', desc: 'Discovered programming and fell in love with building things for the web.' },
+      { year: '2027', title: 'University Application Journey', place: 'Tashkent, Uzbekistan', desc: 'Preparing and submitting applications to top computer science universities.' },
+      { year: '2026', title: 'Certificates & Admissions Prep', place: 'Tashkent, Uzbekistan', desc: 'Focusing on acquiring standard certificates and preparing for university requirements.' },
+      { year: '2025', title: 'Mars IT Student & Developer', place: 'Tashkent, Uzbekistan', desc: 'Studied core web development and built real projects with mentors at Mars IT School.' },
+      { year: '2024', title: 'First Lines of Code', place: 'Tashkent, Uzbekistan', desc: 'Discovered programming and fell in love with building things for the web.' },
     ]
   },
   ru: {
@@ -101,30 +101,30 @@ const translations = {
     backToPortfolio: 'Назад к портфолио',
     moreProjects: 'Другие проекты',
     projects: [
-      { id: 'yosh-fermers',   title: 'Yosh Fermers',        tag: 'AgriTech',   desc: 'Современная сеть и образовательная платформа для молодых фермеров, связывающая сельское хозяйство с технологиями.', tech: ['React', 'Node.js', 'MongoDB'],         year: '2025' },
-      { id: 'dream-career',   title: 'Dream Career Simulator', tag: 'AI / Web',   desc: 'Карьерные карты и генератор навыков на базе ИИ. Найдите реалистичный путь к работе мечты.',                      tech: ['Next.js', 'OpenAI API', 'Tailwind'],    year: '2025' },
-      { id: 'unipath',        title: 'UniPath AI',            tag: 'EdTech',    desc: 'Платформа глобального поиска университетов и стипендий. Упрощает подачу заявок в вузы за рубежом.',    tech: ['React', 'Firebase', 'Python'],         year: '2025' },
-      { id: 'taskflow',       title: 'TaskFlow',              tag: 'SaaS',      desc: 'Современный минималистичный дашборд продуктивности. Управляйте задачами и привычками.',              tech: ['React', 'TypeScript', 'Supabase'],      year: '2025' },
-      { id: 'weathersphere',  title: 'WeatherSphere',         tag: 'Utility',   desc: 'Прогноз погоды в реальном времени с элегантной визуализацией данных.',                                 tech: ['JavaScript', 'D3.js', 'REST API'],      year: '2024' },
-      { id: 'edulink',        title: 'EduLink',               tag: 'Education', desc: 'Платформа для совместного обмена ресурсами среди студентов. Учитесь и развивайтесь вместе.',        tech: ['React', 'GraphQL', 'PostgreSQL'],       year: '2024' },
+      { id: 'yosh-fermers', title: 'Yosh Fermers', tag: 'AgriTech', desc: 'Современная сеть и образовательная платформа для молодых фермеров, связывающая сельское хозяйство с технологиями.', tech: ['React', 'Node.js', 'MongoDB'], year: '2025' },
+      { id: 'dream-career', title: 'Dream Career Simulator', tag: 'AI / Web', desc: 'Карьерные карты и генератор навыков на базе ИИ. Найдите реалистичный путь к работе мечты.', tech: ['Next.js', 'OpenAI API', 'Tailwind'], year: '2025' },
+      { id: 'unipath', title: 'UniPath AI', tag: 'EdTech', desc: 'Платформа глобального поиска университетов и стипендий. Упрощает подачу заявок в вузы за рубежом.', tech: ['React', 'Firebase', 'Python'], year: '2025' },
+      { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Современный минималистичный дашборд продуктивности. Управляйте задачами и привычками.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
+      { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Прогноз погоды в реальном времени с элегантной визуализацией данных.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
+      { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Платформа для совместного обмена ресурсами среди студентов. Учитесь и развивайтесь вместе.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
     ],
     skills: [
-      { name: 'React',        icon: '⚛'   },
-      { name: 'JavaScript',   icon: 'JS'  },
-      { name: 'TypeScript',   icon: 'TS'  },
-      { name: 'Tailwind CSS', icon: 'TW'  },
-      { name: 'HTML5',        icon: 'H5'  },
-      { name: 'CSS3',         icon: 'C3'  },
-      { name: 'Git',          icon: 'GIT' },
-      { name: 'Node.js',      icon: '⬡'   },
-      { name: 'Figma',        icon: '◈'   },
-      { name: 'Next.js',      icon: 'N'   },
+      { name: 'React', icon: '⚛' },
+      { name: 'JavaScript', icon: 'JS' },
+      { name: 'TypeScript', icon: 'TS' },
+      { name: 'Tailwind CSS', icon: 'TW' },
+      { name: 'HTML5', icon: 'H5' },
+      { name: 'CSS3', icon: 'C3' },
+      { name: 'Git', icon: 'GIT' },
+      { name: 'Node.js', icon: '⬡' },
+      { name: 'Figma', icon: '◈' },
+      { name: 'Next.js', icon: 'N' },
     ],
     timeline: [
-      { year: '2027', title: 'Подача заявлений в вуз',            place: 'Ташкент, Узбекистан',      desc: 'Подготовка и подача документов в ведущие университеты по направлению Computer Science.' },
-      { year: '2026', title: 'Получение сертификатов для вуза',    place: 'Ташкент, Узбекистан',      desc: 'Сдача экзаменов и получение необходимых сертификатов для поступления в университет.' },
-      { year: '2025', title: 'Студент Mars IT и Разработчик',     place: 'Ташкент, Узбекистан',      desc: 'Изучение веб-разработки и создание проектов под руководством менторов в Mars IT School.' },
-      { year: '2024', title: 'Первые строки кода',                place: 'Ташкент, Узбекистан',      desc: 'Знакомство с программированием и создание первых веб-страниц.' },
+      { year: '2027', title: 'Подача заявлений в вуз', place: 'Ташкент, Узбекистан', desc: 'Подготовка и подача документов в ведущие университеты по направлению Computer Science.' },
+      { year: '2026', title: 'Получение сертификатов для вуза', place: 'Ташкент, Узбекистан', desc: 'Сдача экзаменов и получение необходимых сертификатов для поступления в университет.' },
+      { year: '2025', title: 'Студент Mars IT и Разработчик', place: 'Ташкент, Узбекистан', desc: 'Изучение веб-разработки и создание проектов под руководством менторов в Mars IT School.' },
+      { year: '2024', title: 'Первые строки кода', place: 'Ташкент, Узбекистан', desc: 'Знакомство с программированием и создание первых веб-страниц.' },
     ]
   },
   uz: {
@@ -161,43 +161,43 @@ const translations = {
     backToPortfolio: 'Portfelga qaytish',
     moreProjects: 'Boshqa loyihalar',
     projects: [
-      { id: 'yosh-fermers',   title: 'Yosh Fermers',        tag: 'AgriTech',   desc: 'Yosh fermerlar uchun zamonaviy tarmoq va ta’lim platformasi. Qishloq xo\'jaligini texnologiya bilan bog\'laydi.', tech: ['React', 'Node.js', 'MongoDB'],         year: '2025' },
-      { id: 'dream-career',   title: 'Dream Career Simulator', tag: 'AI / Web',   desc: 'Sun’iy intellektga asoslangan karyera yo\'llari va ko\'nikmalar daraxti generatori.',                    tech: ['Next.js', 'OpenAI API', 'Tailwind'],    year: '2025' },
-      { id: 'unipath',        title: 'UniPath AI',            tag: 'EdTech',    desc: 'Global universitetlar va stipendiyalar bo\'yicha maslahat platformasi. Xorijiy universitetlarga arizalarni soddalashtiradi.', tech: ['React', 'Firebase', 'Python'],         year: '2025' },
-      { id: 'taskflow',       title: 'TaskFlow',              tag: 'SaaS',      desc: 'Zamonaviy, minimalistik unumdorlik boshqaruv paneli. Vazifalarni boshqaring va odatlarni kuzating.',      tech: ['React', 'TypeScript', 'Supabase'],      year: '2025' },
-      { id: 'weathersphere',  title: 'WeatherSphere',         tag: 'Utility',   desc: 'Elegant ma’lumotlar vizualizatsiyasi bilan real vaqtda ob-havo prognozi.',                             tech: ['JavaScript', 'D3.js', 'REST API'],      year: '2024' },
-      { id: 'edulink',        title: 'EduLink',               tag: 'Education', desc: 'Talabalar uchun hamjamiyat tomonidan boshqariladigan resurs almashish platformasi.',                tech: ['React', 'GraphQL', 'PostgreSQL'],       year: '2024' },
+      { id: 'yosh-fermers', title: 'Yosh Fermers', tag: 'AgriTech', desc: 'Yosh fermerlar uchun zamonaviy tarmoq va ta’lim platformasi. Qishloq xo\'jaligini texnologiya bilan bog\'laydi.', tech: ['React', 'Node.js', 'MongoDB'], year: '2025' },
+      { id: 'dream-career', title: 'Dream Career Simulator', tag: 'AI / Web', desc: 'Sun’iy intellektga asoslangan karyera yo\'llari va ko\'nikmalar daraxti generatori.', tech: ['Next.js', 'OpenAI API', 'Tailwind'], year: '2025' },
+      { id: 'unipath', title: 'UniPath AI', tag: 'EdTech', desc: 'Global universitetlar va stipendiyalar bo\'yicha maslahat platformasi. Xorijiy universitetlarga arizalarni soddalashtiradi.', tech: ['React', 'Firebase', 'Python'], year: '2025' },
+      { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Zamonaviy, minimalistik unumdorlik boshqaruv paneli. Vazifalarni boshqaring va odatlarni kuzating.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
+      { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Elegant ma’lumotlar vizualizatsiyasi bilan real vaqtda ob-havo prognozi.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
+      { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Talabalar uchun hamjamiyat tomonidan boshqariladigan resurs almashish platformasi.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
     ],
     skills: [
-      { name: 'React',        icon: '⚛'   },
-      { name: 'JavaScript',   icon: 'JS'  },
-      { name: 'TypeScript',   icon: 'TS'  },
-      { name: 'Tailwind CSS', icon: 'TW'  },
-      { name: 'HTML5',        icon: 'H5'  },
-      { name: 'CSS3',         icon: 'C3'  },
-      { name: 'Git',          icon: 'GIT' },
-      { name: 'Node.js',      icon: '⬡'   },
-      { name: 'Figma',        icon: '◈'   },
-      { name: 'Next.js',      icon: 'N'   },
+      { name: 'React', icon: '⚛' },
+      { name: 'JavaScript', icon: 'JS' },
+      { name: 'TypeScript', icon: 'TS' },
+      { name: 'Tailwind CSS', icon: 'TW' },
+      { name: 'HTML5', icon: 'H5' },
+      { name: 'CSS3', icon: 'C3' },
+      { name: 'Git', icon: 'GIT' },
+      { name: 'Node.js', icon: '⬡' },
+      { name: 'Figma', icon: '◈' },
+      { name: 'Next.js', icon: 'N' },
     ],
     timeline: [
-      { year: '2027', title: 'Universitetga topshirish',          place: 'Toshkent, O\'zbekiston',    desc: 'Xalqaro universitetlarga hujjat topshirish va qabul jarayonlarida qatnashish.' },
-      { year: '2026', title: 'Universitet uchun sertifikatlar',    place: 'Toshkent, O\'zbekiston',    desc: 'Universitetga kirish talablari uchun zarur bo\'lgan sertifikatlarni olishga tayyorgarlik.' },
-      { year: '2025', title: 'Mars IT Talabasi va Dasturchi',     place: 'Toshkent, O\'zbekiston',    desc: 'Mars IT School\'da mentorlar yordamida veb-dasturlashni o\'rganib, real loyihalar yaratdim.' },
-      { year: '2024', title: 'Birinchi qator kodlar',             place: 'Toshkent, O\'zbekiston',    desc: 'Dasturlash olami bilan tanishib, ilk veb-sahifalarimni yoza boshladim.' },
+      { year: '2027', title: 'Universitetga topshirish', place: 'Toshkent, O\'zbekiston', desc: 'Xalqaro universitetlarga hujjat topshirish va qabul jarayonlarida qatnashish.' },
+      { year: '2026', title: 'Universitet uchun sertifikatlar', place: 'Toshkent, O\'zbekiston', desc: 'Universitetga kirish talablari uchun zarur bo\'lgan sertifikatlarni olishga tayyorgarlik.' },
+      { year: '2025', title: 'Mars IT Talabasi va Dasturchi', place: 'Toshkent, O\'zbekiston', desc: 'Mars IT School\'da mentorlar yordamida veb-dasturlashni o\'rganib, real loyihalar yaratdim.' },
+      { year: '2024', title: 'Birinchi qator kodlar', place: 'Toshkent, O\'zbekiston', desc: 'Dasturlash olami bilan tanishib, ilk veb-sahifalarimni yoza boshladim.' },
     ]
   }
 };
 
 function projectComponent(id, lang) {
   switch (id) {
-    case 'yosh-fermers':  return <YoshFermers />;
-    case 'dream-career':  return <DreamCareer />;
-    case 'unipath':       return <UniPath />;
-    case 'taskflow':      return <TaskFlow />;
+    case 'yosh-fermers': return <YoshFermers />;
+    case 'dream-career': return <DreamCareer />;
+    case 'unipath': return <UniPath />;
+    case 'taskflow': return <TaskFlow />;
     case 'weathersphere': return <WeatherSphere initialLang={lang} />;
-    case 'edulink':       return <EduLink />;
-    default:              return null;
+    case 'edulink': return <EduLink />;
+    default: return null;
   }
 }
 
@@ -221,9 +221,9 @@ function ArrowLeft() {
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
-  const [menuOpen, setMenuOpen]           = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [lang, setLang]                   = useState('en');
+  const [lang, setLang] = useState('en');
 
   const t = translations[lang];
 
@@ -295,6 +295,10 @@ export default function App() {
       </div>
     );
   }
+
+  // inspect number
+  console.log("%c📞 Contact: +998 [Your Phone Number]", "color: #38bdf8; font-size: 14px; font-weight: bold;");
+
 
   // ── MAIN PORTFOLIO VIEW ──────────────────────────────────────────────────
   return (
