@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TaskFlow = () => {
   const [tasks, setTasks] = useState([
@@ -42,72 +42,74 @@ const TaskFlow = () => {
   const progressPercentage = tasks.length > 0 ? Math.round((completedCount / tasks.length) * 100) : 0;
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
       {/* Header */}
-      <div className="text-center mb-8">
-        <span className="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 inline-block">
+      <div className="text-center mb-12">
+        <span className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[#0a0a0a] text-[11px] font-bold uppercase tracking-widest mb-4 inline-block">
           Productivity & Task Management
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold mb-3 text-white tracking-tight">TaskFlow</h2>
-        <p className="text-slate-400 max-w-xl mx-auto">
+        <h2 className="font-['Barlow_Condensed'] text-[clamp(40px,7vw,64px)] font-black uppercase tracking-tight mb-3">
+          TaskFlow
+        </h2>
+        <p className="text-black/50 text-sm max-w-xl mx-auto leading-relaxed">
           Manage your daily engineering tasks, university goals, and development milestones with a high-performance workspace.
         </p>
       </div>
 
       {/* Progress Dashboard Card */}
       <div className="grid md:grid-cols-3 gap-4 mb-8">
-        <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+        <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1 font-semibold">Total Tasks</span>
-            <span className="text-2xl font-bold text-white">{tasks.length}</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Total Tasks</span>
+            <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{tasks.length}</span>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold border border-blue-500/20">
+          <div className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center text-[#0a0a0a] font-bold border border-black/10">
             📋
           </div>
         </div>
 
-        <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+        <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1 font-semibold">Completed</span>
-            <span className="text-2xl font-bold text-green-400">{completedCount}</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Completed</span>
+            <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{completedCount}</span>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 font-bold border border-green-500/20">
+          <div className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center text-[#0a0a0a] font-bold border border-black/10">
             ✓
           </div>
         </div>
 
-        <div className="p-5 rounded-2xl bg-linear-to-br from-blue-900/20 to-purple-900/20 border border-white/10 flex items-center justify-between">
+        <div className="p-5 rounded-2xl bg-black/2 border border-black/8 flex items-center justify-between">
           <div>
-            <span className="text-xs text-slate-400 uppercase tracking-wider block mb-1 font-semibold">Productivity Rate</span>
-            <span className="text-2xl font-bold text-purple-400">{progressPercentage}%</span>
+            <span className="text-[11px] text-black/40 uppercase tracking-wider block mb-1 font-bold">Productivity Rate</span>
+            <span className="font-['Barlow_Condensed'] text-3xl font-black text-[#0a0a0a]">{progressPercentage}%</span>
           </div>
-          <div className="w-12 h-12 rounded-full border-4 border-purple-500/20 border-t-purple-500 flex items-center justify-center text-xs font-bold text-white">
+          <div className="w-12 h-12 rounded-full border-4 border-black/10 border-t-[#0a0a0a] flex items-center justify-center text-xs font-bold text-[#0a0a0a]">
             {progressPercentage}%
           </div>
         </div>
       </div>
 
       {/* Add Task Form */}
-      <form onSubmit={addTask} className="p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 mb-8">
+      <form onSubmit={addTask} className="p-6 rounded-3xl bg-black/2 border border-black/8 space-y-4 mb-8">
         <div className="grid md:grid-cols-3 gap-4">
           <div className="md:col-span-3">
-            <label className="block text-xs font-semibold text-slate-300 mb-1">New Task Description</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">New Task Description</label>
             <input 
               type="text" 
               required
               placeholder="e.g. Code WeatherSphere search component..." 
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm placeholder:text-black/30 focus:outline-none focus:border-[#0a0a0a] transition-all"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-1">Category</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">Category</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] cursor-pointer transition-all"
             >
               <option value="Frontend">Frontend</option>
               <option value="Studies">Studies</option>
@@ -117,11 +119,11 @@ const TaskFlow = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-1">Priority</label>
+            <label className="block text-xs font-bold text-black/70 mb-1 uppercase tracking-wider">Priority</label>
             <select
               value={priority}
               onChange={(e) => setPriority(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] cursor-pointer transition-all"
             >
               <option value="High">High Priority</option>
               <option value="Medium">Medium Priority</option>
@@ -132,7 +134,7 @@ const TaskFlow = () => {
           <div className="flex items-end">
             <button 
               type="submit" 
-              className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-xs font-bold text-white transition-all cursor-pointer shadow-lg shadow-blue-500/20"
+              className="w-full py-3 rounded-2xl bg-[#0a0a0a] hover:bg-black/80 text-xs font-bold text-white tracking-wider uppercase transition-all cursor-pointer shadow-md"
             >
               + Add Task
             </button>
@@ -148,8 +150,8 @@ const TaskFlow = () => {
             onClick={() => setFilter(cat)}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               filter === cat 
-                ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20' 
-                : 'bg-white/5 text-slate-400 hover:bg-white/10'
+                ? 'bg-[#0a0a0a] text-white shadow-sm' 
+                : 'bg-black/5 text-black/50 hover:bg-black/10 hover:text-[#0a0a0a]'
             }`}
           >
             {cat}
@@ -160,7 +162,7 @@ const TaskFlow = () => {
       {/* Task List */}
       <div className="space-y-3">
         {filteredTasks.length === 0 ? (
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 text-center text-slate-400">
+          <div className="p-8 rounded-2xl bg-black/2 border border-black/8 text-center text-black/40 text-sm font-medium">
             No tasks found in this category. Add a new task above!
           </div>
         ) : (
@@ -168,28 +170,28 @@ const TaskFlow = () => {
             <div 
               key={task.id} 
               className={`p-4 rounded-2xl border flex items-center justify-between gap-4 transition-all ${
-                task.completed ? 'bg-white/2 border-white/5 opacity-60' : 'bg-white/5 border-white/10 hover:border-white/20'
+                task.completed ? 'bg-black/2 border-black/5 opacity-60' : 'bg-white border-black/10 shadow-sm hover:border-black/20'
               }`}
             >
               <div className="flex items-center gap-4 flex-1">
                 <button
                   onClick={() => toggleTask(task.id)}
                   className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
-                    task.completed ? 'bg-green-500 text-white' : 'bg-white/10 text-transparent hover:bg-white/20'
+                    task.completed ? 'bg-[#0a0a0a] text-white' : 'bg-black/5 text-transparent hover:bg-black/10'
                   }`}
                 >
                   ✓
                 </button>
                 <div>
-                  <p className={`text-sm font-medium text-white ${task.completed ? 'line-through text-slate-400' : ''}`}>
+                  <p className={`text-sm font-semibold text-[#0a0a0a] ${task.completed ? 'line-through text-black/40' : ''}`}>
                     {task.text}
                   </p>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">
+                    <span className="px-2.5 py-0.5 rounded-md bg-black/5 text-black/60 text-[10px] font-bold uppercase tracking-wider border border-black/10">
                       {task.category}
                     </span>
                     <span className={`text-[10px] font-bold uppercase tracking-wider ${
-                      task.priority === 'High' ? 'text-red-400' : task.priority === 'Medium' ? 'text-amber-400' : 'text-blue-400'
+                      task.priority === 'High' ? 'text-red-600' : task.priority === 'Medium' ? 'text-[#f4a819]' : 'text-black/50'
                     }`}>
                       • {task.priority} Priority
                     </span>
@@ -199,7 +201,7 @@ const TaskFlow = () => {
 
               <button
                 onClick={() => deleteTask(task.id)}
-                className="px-3 py-1.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-semibold transition-all cursor-pointer"
+                className="px-3 py-1.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-600 text-xs font-semibold transition-all cursor-pointer"
               >
                 Delete
               </button>

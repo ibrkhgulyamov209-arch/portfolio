@@ -45,35 +45,75 @@ const UniPath = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h2 className="text-4xl font-bold text-white mb-2">UniPath Admissions Hub</h2>
+    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <span className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[#0a0a0a] text-[11px] font-bold uppercase tracking-widest mb-4 inline-block">
+          UniPath Admissions Hub
+        </span>
+        <h2 className="font-['Barlow_Condensed'] text-[clamp(40px,7vw,64px)] font-black uppercase tracking-tight mb-3">
+          University Admission Simulator
+        </h2>
+        <p className="text-black/50 text-sm max-w-xl mx-auto leading-relaxed">
+          Evaluate your profile and get an instant reality check for top global universities.
+        </p>
+      </div>
       
       {step === 1 ? (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" placeholder="Full Name" required className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white" onChange={e => setData({...data, name: e.target.value})} />
-          <div className="grid grid-cols-2 gap-4">
-            <input type="number" placeholder="Current Age" required className="p-4 rounded-xl bg-white/5 border border-white/10 text-white" onChange={e => setData({...data, age: e.target.value})} />
-            <select className="p-4 rounded-xl bg-slate-900 border border-white/10 text-white" onChange={e => setData({...data, targetUni: e.target.value})}>
-              {universityDatabase.map(u => <option key={u.name}>{u.name}</option>)}
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            required 
+            className="w-full p-4 rounded-2xl bg-black/2 border border-black/15 text-[#0a0a0a] placeholder:text-black/30 text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all" 
+            onChange={e => setData({...data, name: e.target.value})} 
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input 
+              type="number" 
+              placeholder="Current Age" 
+              required 
+              className="p-4 rounded-2xl bg-black/2 border border-black/15 text-[#0a0a0a] placeholder:text-black/30 text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all" 
+              onChange={e => setData({...data, age: e.target.value})} 
+            />
+            <select 
+              className="p-4 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] cursor-pointer transition-all" 
+              onChange={e => setData({...data, targetUni: e.target.value})}
+            >
+              {universityDatabase.map(u => <option key={u.name} value={u.name}>{u.name}</option>)}
             </select>
           </div>
-          <textarea placeholder="List your current achievements" required className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white" onChange={e => setData({...data, currentAchievements: e.target.value})}></textarea>
-          <button className="w-full p-4 rounded-xl bg-blue-600 font-bold text-white cursor-pointer">Get The Savage Verdict →</button>
+          <textarea 
+            placeholder="List your current achievements" 
+            required 
+            rows={4}
+            className="w-full p-4 rounded-2xl bg-black/2 border border-black/15 text-[#0a0a0a] placeholder:text-black/30 text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all resize-none" 
+            onChange={e => setData({...data, currentAchievements: e.target.value})}
+          />
+          <button className="w-full p-4 rounded-2xl bg-[#0a0a0a] text-white font-bold text-sm tracking-wider uppercase cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all shadow-md">
+            Get The Savage Verdict →
+          </button>
         </form>
       ) : (
-        <div className="space-y-6 animate-fadeIn">
-          <div className="p-6 rounded-2xl bg-red-600/20 border border-red-500/30 text-red-200">
-            <h3 className="font-bold text-lg">{result.status}</h3>
+        <div className="space-y-6">
+          <div className="p-6 rounded-3xl bg-[#0a0a0a] text-white border border-black/10 shadow-lg">
+            <span className="text-[10px] font-bold text-[#f4a819] uppercase tracking-widest block mb-1">Assessment Result</span>
+            <h3 className="font-['Barlow_Condensed'] text-2xl font-black uppercase">{result.status}</h3>
           </div>
           <div className="grid gap-4">
             {result.roadmap.map((r, i) => (
-              <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/10">
-                <h4 className="text-blue-400 font-bold">{r.title}</h4>
-                <p className="text-slate-300 text-sm">{r.desc}</p>
+              <div key={i} className="p-5 rounded-2xl bg-black/2 border border-black/8">
+                <h4 className="font-['Barlow_Condensed'] text-xl font-black uppercase text-[#0a0a0a] mb-1">{r.title}</h4>
+                <p className="text-black/60 text-sm">{r.desc}</p>
               </div>
             ))}
           </div>
-          <button onClick={() => setStep(1)} className="w-full p-4 rounded-xl bg-white/10 text-white font-bold cursor-pointer">Try again (if you dare)</button>
+          <button 
+            onClick={() => setStep(1)} 
+            className="w-full p-4 rounded-2xl bg-transparent border-[1.5px] border-black/20 text-[#0a0a0a] font-bold text-sm tracking-wider uppercase cursor-pointer hover:bg-[#0a0a0a] hover:text-white transition-all"
+          >
+            Try again (if you dare)
+          </button>
         </div>
       )}
     </div>

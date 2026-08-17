@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const universityDatabase = [
   { 
@@ -81,27 +81,29 @@ const EduLink = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
       {/* Header */}
-      <div className="text-center mb-8">
-        <span className="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 inline-block">
+      <div className="text-center mb-12">
+        <span className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[#0a0a0a] text-[11px] font-bold uppercase tracking-widest mb-4 inline-block">
           Advanced University & Location Matcher
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold mb-3 text-white tracking-tight">EduLink</h2>
-        <p className="text-slate-400 max-w-xl mx-auto">
+        <h2 className="font-['Barlow_Condensed'] text-[clamp(40px,7vw,64px)] font-black uppercase tracking-tight mb-3">
+          EduLink
+        </h2>
+        <p className="text-black/50 text-sm max-w-xl mx-auto leading-relaxed">
           Input your exact GPA, IELTS score, and technical achievements to discover global universities with integrated map lookups.
         </p>
       </div>
 
       {/* Input Form */}
-      <form onSubmit={handleFindMatches} className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-6 mb-8">
+      <form onSubmit={handleFindMatches} className="p-8 rounded-3xl bg-black/2 border border-black/8 space-y-6 mb-8">
         <div className="grid md:grid-cols-3 gap-6">
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-2">Preferred Field of Study</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Preferred Field of Study</label>
             <select
               value={field}
               onChange={(e) => setField(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all cursor-pointer"
             >
               <option value="Computer Science">Computer Science</option>
               <option value="Engineering">Engineering</option>
@@ -111,7 +113,7 @@ const EduLink = () => {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-2">Current GPA (max 4.0)</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Current GPA (max 4.0)</label>
             <input
               type="number"
               step="0.1"
@@ -120,16 +122,16 @@ const EduLink = () => {
               required
               value={gpa}
               onChange={(e) => setGpa(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-2">IELTS Score</label>
+            <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">IELTS Score</label>
             <select
               value={ielts}
               onChange={(e) => setIelts(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all cursor-pointer"
             >
               <option value="6.0">6.0</option>
               <option value="6.5">6.5</option>
@@ -141,11 +143,11 @@ const EduLink = () => {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-300 mb-2">Portfolio & Coding Achievements</label>
+          <label className="block text-xs font-bold text-black/70 uppercase tracking-wider mb-2">Portfolio & Coding Achievements</label>
           <select
             value={codingProjects}
             onChange={(e) => setCodingProjects(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-3 rounded-2xl bg-white border border-black/15 text-[#0a0a0a] text-sm font-medium focus:outline-none focus:border-[#0a0a0a] transition-all cursor-pointer"
           >
             <option value="Yes">Built Multiple Web Apps & Portfolios</option>
             <option value="Hackathon">Hackathon Participant / Winner</option>
@@ -155,7 +157,7 @@ const EduLink = () => {
 
         <button
           type="submit"
-          className="w-full py-4 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 font-bold text-xs uppercase tracking-widest text-white transition-all shadow-lg shadow-blue-500/20 cursor-pointer"
+          className="w-full py-4 rounded-2xl bg-[#0a0a0a] hover:bg-black/80 font-bold text-xs uppercase tracking-widest text-white transition-all shadow-md cursor-pointer"
         >
           Calculate Eligibility & Map Locations →
         </button>
@@ -163,44 +165,44 @@ const EduLink = () => {
 
       {/* Results Section */}
       {results !== null && (
-        <div className="space-y-4 animate-fadeIn">
-          <h3 className="text-xl font-bold text-white mb-4">
+        <div className="space-y-4">
+          <h3 className="font-['Barlow_Condensed'] text-2xl font-black uppercase tracking-wide text-[#0a0a0a] mb-4">
             Matching Institutions ({results.length} found)
           </h3>
 
           {results.length === 0 ? (
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 text-center text-slate-400">
+            <div className="p-8 rounded-3xl bg-black/2 border border-black/8 text-center text-black/50 text-sm font-medium">
               No matching institutions found for your specific GPA and IELTS filters. Try adjusting your score thresholds!
             </div>
           ) : (
             results.map((uni) => (
               <div 
                 key={uni.id}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+                className="p-6 rounded-3xl bg-black/2 border border-black/8 hover:border-black/20 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
               >
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="px-3 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-widest border border-blue-500/20">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="px-3 py-0.5 rounded-full bg-black/5 text-[#0a0a0a] text-[10px] font-bold uppercase tracking-widest border border-black/10">
                       {uni.tier}
                     </span>
-                    <span className="text-xs text-slate-400">• 📍 {uni.city}, {uni.country}</span>
+                    <span className="text-xs text-black/50 font-medium">📍 {uni.city}, {uni.country}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white">{uni.name}</h4>
-                  <p className="text-xs text-purple-400 mt-1">Scholarship: {uni.scholarship} | Req: IELTS {uni.minIELTS}+, GPA {uni.minGPA}+</p>
+                  <h4 className="font-['Barlow_Condensed'] text-2xl font-black text-[#0a0a0a]">{uni.name}</h4>
+                  <p className="text-xs text-black/60 mt-1 font-medium"><strong className="text-[#0a0a0a]">Scholarship:</strong> {uni.scholarship} | <strong className="text-[#0a0a0a]">Req:</strong> IELTS {uni.minIELTS}+, GPA {uni.minGPA}+</p>
                 </div>
 
-                <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+                <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${uni.mapQuery}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-blue-300 text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-white hover:bg-black/5 text-[#0a0a0a] text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border border-black/15 shadow-xs"
                   >
                     <span>🗺️</span> View on Map
                   </a>
                   <button 
                     onClick={() => alert(`Application query generated for ${uni.name} in ${uni.city}!`)}
-                    className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-[#0a0a0a] hover:bg-black/80 text-white text-xs font-bold transition-all cursor-pointer shadow-xs"
                   >
                     Apply
                   </button>
@@ -214,4 +216,4 @@ const EduLink = () => {
   );
 };
 
-export default EduLink;
+export default EduLink; 

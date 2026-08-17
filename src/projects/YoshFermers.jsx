@@ -219,7 +219,7 @@ export default function App() {
         Background gradient has a pt-24 md:pt-28 to offset the floating fixed header 
       */}
       <div 
-        className="relative min-h-[660px] md:min-h-[740px] lg:min-h-[840px] bg-cover bg-bottom bg-no-repeat flex flex-col justify-between pt-24 md:pt-28 pb-8 px-4 md:px-8 overflow-hidden"
+        className="relative min-h-165 md:min-h-185 lg:min-h-210 bg-cover bg-bottom bg-no-repeat flex flex-col justify-between pt-24 md:pt-28 pb-8 px-4 md:px-8 overflow-hidden"
         style={{ 
           backgroundImage: `linear-gradient(to bottom, rgba(74, 144, 226, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=2000&q=80')`
         }}
@@ -315,7 +315,7 @@ export default function App() {
         )}
 
         {/* Hero Main Content */}
-        <div id="hero" className="flex-grow flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 z-10 py-12">
+        <div id="hero" className="grow flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 z-10 py-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] animate-fadeIn">
             {t('heroTitle')}
           </h1>
@@ -406,19 +406,19 @@ export default function App() {
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
-                <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
+                <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Innovatsion agrotexnologiyalar</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
+                <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Xalqaro eksport imkoniyati</span>
-              </div>
+              </div> 
               <div className="flex items-center gap-3">
-                <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
+                <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Imtiyozli kredit drayverlari</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0" />
+                <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">Doimiy professional ustozlar</span>
               </div>
             </div>
