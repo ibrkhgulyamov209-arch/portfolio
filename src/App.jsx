@@ -210,6 +210,26 @@ function ArrowDiag() {
   );
 }
 
+function ThemeToggle({ theme, onToggle }) {
+  const isDark = theme === 'dark';
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      className="w-9 h-9 rounded-full border border-black/10 bg-black/5 flex items-center justify-center text-[#0a0a0a] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95"
+    >
+      {isDark ? (
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+      ) : (
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" /></svg>
+      )}
+    </button>
+  );
+}
+
 function ArrowLeft() {
   return (
     <svg className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -224,6 +244,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [lang, setLang] = useState('en');
+  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'light');
 
   const t = translations[lang];
 
@@ -242,10 +263,17 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, [activeProject]);
 
+  useEffect(() => {
+    localStorage.setItem('portfolio-theme', theme);
+    document.documentElement.style.colorScheme = theme;
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(currentTheme => currentTheme === 'dark' ? 'light' : 'dark');
+
   // ── PROJECT DETAIL VIEW ──────────────────────────────────────────────────
   if (activeProject) {
     return (
-      <div className="bg-white text-[#0a0a0a] min-h-screen">
+      <div className={`${theme === 'dark' ? 'dark-mode' : ''} bg-white text-[#0a0a0a] min-h-screen transition-colors duration-300`}>
         {/* Detail nav */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/92 backdrop-blur-md border-b border-black/6">
           <div className="max-w-7xl mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
@@ -264,6 +292,7 @@ export default function App() {
                   </button>
                 ))}
               </div>
+              <ThemeToggle theme={theme} onToggle={toggleTheme} />
               <button
                 onClick={() => setActiveProject(null)}
                 className="group flex items-center gap-2 bg-transparent border-[1.5px] border-black/15 rounded-full px-3.5 sm:px-4.5 py-2 text-[12px] sm:text-[13px] font-semibold cursor-pointer text-[#0a0a0a] hover:bg-[#0a0a0a] hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
@@ -302,7 +331,7 @@ export default function App() {
 
   // ── MAIN PORTFOLIO VIEW ──────────────────────────────────────────────────
   return (
-    <div className="bg-white text-[#0a0a0a] min-h-screen overflow-x-hidden">
+    <div className={`${theme === 'dark' ? 'dark-mode' : ''} bg-white text-[#0a0a0a] min-h-screen overflow-x-hidden transition-colors duration-300`}>
 
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/92 backdrop-blur-md border-b border-black/6">
@@ -331,10 +360,15 @@ export default function App() {
                 </button>
               ))}
             </div>
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
 
             <a href="#contact" className="inline-flex items-center bg-[#0a0a0a] text-white text-[13px] font-semibold px-5 py-2.5 rounded-full no-underline transition-all duration-300 hover:scale-105 active:scale-95">
               ibrkh.gulyamov209@gmail.com
             </a>
+          </div>
+
+          <div className="hidden md:flex lg:hidden">
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </div>
 
           <button onClick={() => setMenuOpen(!menuOpen)}
@@ -347,6 +381,7 @@ export default function App() {
 
         {menuOpen && (
           <div className="border-t border-black/6 bg-white px-5 sm:px-10 py-6 flex flex-col gap-5 md:hidden shadow-lg">
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <div className="flex items-center gap-1 bg-black/5 border border-black/10 rounded-full p-1 text-[11px] font-bold w-fit">
               {['en', 'ru', 'uz'].map(l => (
                 <button key={l} onClick={() => setLang(l)}

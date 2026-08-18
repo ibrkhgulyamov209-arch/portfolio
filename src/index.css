@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* Global dark theme. Attribute selectors also cover the independently styled project demos. */
+.dark-mode {
+  background-color: #0b1020 !important;
+  color: #f8fafc !important;
+}
+
+.dark-mode [class*="bg-white"] {
+  background-color: #111827 !important;
+}
+
+.dark-mode [class*="bg-[#F0F7FF]"] {
+  background-color: #0b1020 !important;
+}
+
+.dark-mode [class*="text-[#0a0a0a]"],
+.dark-mode [class*="text-slate-"] {
+  color: #f8fafc !important;
+}
+
+.dark-mode [class*="text-black/"] {
+  color: rgb(203 213 225 / 0.78) !important;
+}
+
+.dark-mode [class*="border-black/"] {
+  border-color: rgb(148 163 184 / 0.22) !important;
+}
+
+.dark-mode [class*="bg-black/2"],
+.dark-mode [class*="bg-black/5"] {
+  background-color: rgb(255 255 255 / 0.07) !important;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #172033 !important;
+  color: #f8fafc !important;
+  border-color: rgb(148 163 184 / 0.3) !important;
+}
