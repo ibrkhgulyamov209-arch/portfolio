@@ -423,7 +423,7 @@ export default function App() {
             <h1 className="font-['Barlow_Condensed'] text-[clamp(64px,14vw,200px)] font-black leading-[0.88] tracking-[-2px] uppercase m-0 text-[#0a0a0a] select-none">
               {t.role1}
             </h1>
-            <h1 className="font-['Barlow_Condensed'] text-[clamp(64px,14vw,200px)] font-black leading-[0.88] tracking-[-2px] uppercase m-0 text-transparent [-webkit-text-stroke:2px_#0a0a0a] sm:[-webkit-text-stroke:2.5px_#0a0a0a] select-none">
+            <h1 className="outline-adaptive font-['Barlow_Condensed'] text-[clamp(64px,14vw,200px)] font-black leading-[0.88] tracking-[-2px] uppercase m-0 text-transparent [-webkit-text-stroke:2px_#0a0a0a] sm:[-webkit-text-stroke:2.5px_#0a0a0a] select-none">
               {t.role2}
             </h1>
           </div>
@@ -460,7 +460,7 @@ export default function App() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
             <h2 className="font-['Barlow_Condensed'] text-[clamp(44px,7.5vw,96px)] font-black uppercase leading-[0.9] tracking-[-1px] m-0">
               {t.featuredProjectsHeadingLines[0]} <span className="sm:hidden">{t.featuredProjectsHeadingLines[1]}</span><br className="hidden sm:inline" />
-              <span className="text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a] hidden sm:inline">{t.featuredProjectsHeadingLines[1]}</span>
+              <span className="outline-adaptive text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a] hidden sm:inline">{t.featuredProjectsHeadingLines[1]}</span>
             </h2>
             <p className="text-[13px] text-black/40 max-w-full lg:max-w-55 lg:text-right leading-[1.6] shrink-0">
               {t.featuredProjectsSub}
@@ -493,7 +493,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-5 sm:px-10">
           <h2 className="font-['Barlow_Condensed'] text-[clamp(44px,7.5vw,96px)] font-black uppercase leading-[0.9] tracking-[-1px] mb-12 sm:mb-16">
             {t.journeyHeadingLines[0]} <span className="sm:hidden">{t.journeyHeadingLines[1]}</span><br className="hidden sm:inline" />
-            <span className="text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a] hidden sm:inline">{t.journeyHeadingLines[1]}</span>
+            <span className="outline-adaptive text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a] hidden sm:inline">{t.journeyHeadingLines[1]}</span>
           </h2>
           <div className="border-t border-black/8">
             {t.timeline.map((item, i) => (
@@ -518,7 +518,7 @@ export default function App() {
               <span className="text-[11px] font-bold text-black/30 uppercase tracking-[0.15em] block mb-4">{t.availableForWork}</span>
               <h2 className="font-['Barlow_Condensed'] text-[clamp(44px,7.5vw,96px)] font-black uppercase leading-[0.9] tracking-[-1px] mb-8 sm:mb-10">
                 {t.contactHeadingLines[0]}<br />
-                <span className="text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a]">{t.contactHeadingLines[1]}</span>
+                <span className="outline-adaptive text-transparent [-webkit-text-stroke:1.5px_#0a0a0a] sm:[-webkit-text-stroke:2px_#0a0a0a]">{t.contactHeadingLines[1]}</span>
               </h2>
               <div className="flex flex-col gap-3">
                 <a href="mailto:ibrkh.gulyamov209@gmail.com" className="group inline-flex items-center gap-2 text-sm sm:text-base font-medium text-[#0a0a0a] no-underline border-b border-black/12 pb-2 transition-all duration-300 hover:translate-x-1 break-all">
