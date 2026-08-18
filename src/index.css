@@ -14,17 +14,35 @@
   background-color: #0b1020 !important;
 }
 
+.dark-mode [class*="bg-slate-"] {
+  background-color: #172033 !important;
+}
+
 .dark-mode [class*="text-[#0a0a0a]"],
 .dark-mode [class*="text-slate-"] {
   color: #f8fafc !important;
 }
 
 .dark-mode [class*="text-black/"] {
-  color: rgb(203 213 225 / 0.78) !important;
+  color: #cbd5e1 !important;
+}
+
+.dark-mode [class*="text-slate-950"],
+.dark-mode [class*="text-slate-900"] {
+  color: #f8fafc !important;
+}
+
+.dark-mode [class*="placeholder-"]::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1;
 }
 
 .dark-mode [class*="border-black/"] {
   border-color: rgb(148 163 184 / 0.22) !important;
+}
+
+.dark-mode [class*="border-slate-"] {
+  border-color: rgb(148 163 184 / 0.25) !important;
 }
 
 .dark-mode [class*="bg-black/2"],

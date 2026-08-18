@@ -244,7 +244,11 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [lang, setLang] = useState('en');
-  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'light');
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme) return savedTheme;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
 
   const t = translations[lang];
 
