@@ -283,8 +283,8 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-5 sm:px-10 h-16 flex items-center justify-between">
             <a href="#" onClick={e => { e.preventDefault(); setActiveProject(null); }}
               className="flex items-center gap-0.5 no-underline">
-              <span className="font-['Barlow_Condensed'] text-[24px] sm:text-[26px] font-black text-[#0a0a0a] tracking-[-0.5px]">Ibrkh</span>
-              <span className="font-['Barlow_Condensed'] text-[24px] sm:text-[26px] font-black text-[#f4a819]">.</span>
+              <span className="font-['Barlow_Condensed'] text-[24px] sm:text-[26px] font-black text-[#0a0a0a] tracking-[-0.5px]">Ibrkh.</span>
+              <span className="font-['Barlow_Condensed'] text-[24px] sm:text-[26px] font-black text-[#f4a819]">dev</span>
             </a>
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex items-center gap-1 bg-black/5 border border-black/10 rounded-full p-1 text-[11px] font-bold">
