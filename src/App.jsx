@@ -193,23 +193,21 @@ const translations = {
 };
 
 // 1. Add this helper function on top
-function ExternalRedirect({ url, onClose }) {
+function ExternalRedirect({ url }) {
   React.useEffect(() => {
     window.open(url, '_blank', 'noopener,noreferrer');
-    if (onClose) onClose(null);
-  }, [url, onClose]);
+  }, [url]);
 
   return null;
 }
 
 // 2. Updated projectComponent function right below it
-function projectComponent(id, lang, onLanguageChange, setActiveProject) {
+function projectComponent(id, lang, onLanguageChange) {
   switch (id) {
     case 'arxitectors-uz': 
       return (
         <ExternalRedirect 
           url="https://www.arxitektors.uz/" 
-          onClose={setActiveProject} 
         />
       );
       
@@ -223,7 +221,7 @@ function projectComponent(id, lang, onLanguageChange, setActiveProject) {
   }
 }
 
-{projectComponent(activeProject, lang, handleLanguageChange, setActiveProject)}
+const [activeProjectId, setActiveProjectId] = useState(null); // or [selectedProject, setActiveProject]
 
 function ArrowDiag() {
   return (
