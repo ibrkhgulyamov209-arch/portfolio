@@ -204,7 +204,7 @@ function projectComponent(id, lang, onLanguageChange) {
             {lang === 'en' && 'Visit external project site.'}
           </p>
           <a 
-            href="https://arxitectors-uz.vercel.app" 
+            href="https://www.arxitektors.uz/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition"
