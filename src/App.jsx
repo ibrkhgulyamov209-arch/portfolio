@@ -192,14 +192,27 @@ const translations = {
   }
 };
 
-function projectComponent(id, lang, onLanguageChange) {
-  switch (id) {
-    case 'arxitectors-uz':
-      if (typeof window !== 'undefined') {
-        window.open('https://www.arxitektors.uz/', '_blank', 'noopener,noreferrer');
-      }
-      return null;
+// 1. Add this helper function on top
+function ExternalRedirect({ url, onClose }) {
+  React.useEffect(() => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+    if (onClose) onClose(null);
+  }, [url, onClose]);
 
+  return null;
+}
+
+// 2. Updated projectComponent function right below it
+function projectComponent(id, lang, onLanguageChange, setActiveProject) {
+  switch (id) {
+    case 'arxitectors-uz': 
+      return (
+        <ExternalRedirect 
+          url="https://www.arxitektors.uz/" 
+          onClose={setActiveProject} 
+        />
+      );
+      
     case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
     case 'dream-career': return <DreamCareer lang={lang} onLanguageChange={onLanguageChange} />;
     case 'unipath': return <UniPath lang={lang} onLanguageChange={onLanguageChange} />;
@@ -209,6 +222,8 @@ function projectComponent(id, lang, onLanguageChange) {
     default: return null;
   }
 }
+
+{projectComponent(activeProject, lang, handleLanguageChange, setActiveProject)}
 
 function ArrowDiag() {
   return (
