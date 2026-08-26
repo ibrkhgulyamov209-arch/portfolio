@@ -206,9 +206,22 @@ function projectComponent(id, lang, onLanguageChange) {
   switch (id) {
     case 'arxitectors-uz': 
       return (
-        <ExternalRedirect 
-          url="https://www.arxitektors.uz/" 
-        />
+        <div className="w-full min-h-[350px] flex flex-col items-center justify-center p-8 text-center">
+          <h2 className="text-3xl font-bold mb-3">Arxitectors.uz</h2>
+          <p className="text-sm opacity-60 mb-6 max-w-md">
+            {lang === 'ru' && 'Официальный сайт и портфолио для архитектурного бюро.'}
+            {lang === 'uz' && 'Arxitektura byurosi uchun rasmiy sayt va portfolio.'}
+            {lang === 'en' && 'Official website and portfolio for the architectural bureau.'}
+          </p>
+          <a 
+            href="https://www.arxitektors.uz/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition inline-flex items-center gap-2"
+          >
+            {lang === 'ru' ? 'Открыть сайт ↗' : lang === 'uz' ? 'Saytga o‘tish ↗' : 'Open Live Site ↗'}
+          </a>
+        </div>
       );
       
     case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
