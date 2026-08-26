@@ -192,6 +192,8 @@ const translations = {
   }
 };
 
+{projectComponent(activeProject, lang, handleLanguageChange)}
+
 // 1. Add this helper function on top
 function ExternalRedirect({ url }) {
   React.useEffect(() => {
