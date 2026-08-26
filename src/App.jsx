@@ -47,6 +47,7 @@ const translations = {
       { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Modern, minimalist productivity dashboard. Manage tasks, track habits and build better workflows.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Real-time weather forecasting with elegant data visualisation. Beautiful UI meets accurate data.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Community-driven resource sharing platform for students. Learn, share, and grow together.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
+      { id: 'arxitectors-uz', title: 'Arxitectors.uz', tag: 'Architecture', desc: 'Modern portfolio platform for an architectural firm featuring project showcases, 3D renders, and video tours.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
@@ -107,6 +108,7 @@ const translations = {
       { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Современный минималистичный дашборд продуктивности. Управляйте задачами и привычками.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Прогноз погоды в реальном времени с элегантной визуализацией данных.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Платформа для совместного обмена ресурсами среди студентов. Учитесь и развивайтесь вместе.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
+      { id: 'arxitectors-uz', title: 'Arxitectors.uz', tag: 'Architecture', desc: 'Платформа и портфолио для архитектурного бюро с демонстрацией проектов, визуализациями и видеообзорами.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
@@ -167,6 +169,7 @@ const translations = {
       { id: 'taskflow', title: 'TaskFlow', tag: 'SaaS', desc: 'Zamonaviy, minimalistik unumdorlik boshqaruv paneli. Vazifalarni boshqaring va odatlarni kuzating.', tech: ['React', 'TypeScript', 'Supabase'], year: '2025' },
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Elegant ma’lumotlar vizualizatsiyasi bilan real vaqtda ob-havo prognozi.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Talabalar uchun hamjamiyat tomonidan boshqariladigan resurs almashish platformasi.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
+      { id: 'arxitectors-uz', title: 'Arxitectors.uz', tag: 'Arxitektura', desc: 'Loyiha taqdimotlari, renderlar va video sharhlarni o‘z ichiga olgan arxitektura byurosi platformasi.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
