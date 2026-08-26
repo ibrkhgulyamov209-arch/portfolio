@@ -192,40 +192,27 @@ const translations = {
   }
 };
 
-{projectComponent(activeProject, lang, handleLanguageChange)}
-
-// 1. Add this helper function on top
-function ExternalRedirect({ url }) {
-  React.useEffect(() => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  }, [url]);
-
-  return null;
-}
-
-// 2. Updated projectComponent function right below it
 function projectComponent(id, lang, onLanguageChange) {
   switch (id) {
     case 'arxitectors-uz': 
       return (
-        <div className="w-full min-h-[350px] flex flex-col items-center justify-center p-8 text-center">
-          <h2 className="text-3xl font-bold mb-3">Arxitectors.uz</h2>
-          <p className="text-sm opacity-60 mb-6 max-w-md">
-            {lang === 'ru' && 'Официальный сайт и портфолио для архитектурного бюро.'}
-            {lang === 'uz' && 'Arxitektura byurosi uchun rasmiy sayt va portfolio.'}
-            {lang === 'en' && 'Official website and portfolio for the architectural bureau.'}
+        <div className="w-full h-full min-h-[500px] flex flex-col items-center justify-center p-6 text-center">
+          <h2 className="text-2xl font-bold mb-3">Arxitectors.uz</h2>
+          <p className="text-sm opacity-60 mb-6">
+            {lang === 'ru' && 'Перейти на внешний сайт проекта.'}
+            {lang === 'uz' && 'Loyiha tashqi saytiga o‘tish.'}
+            {lang === 'en' && 'Visit external project site.'}
           </p>
           <a 
-            href="https://www.arxitektors.uz/" 
+            href="https://arxitectors-uz.vercel.app" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition inline-flex items-center gap-2"
+            className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition"
           >
-            {lang === 'ru' ? 'Открыть сайт ↗' : lang === 'uz' ? 'Saytga o‘tish ↗' : 'Open Live Site ↗'}
+            {lang === 'ru' ? 'Открыть сайт ↗' : lang === 'uz' ? 'Saytga o‘tish ↗' : 'Open Site ↗'}
           </a>
         </div>
       );
-      
     case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
     case 'dream-career': return <DreamCareer lang={lang} onLanguageChange={onLanguageChange} />;
     case 'unipath': return <UniPath lang={lang} onLanguageChange={onLanguageChange} />;
@@ -235,8 +222,6 @@ function projectComponent(id, lang, onLanguageChange) {
     default: return null;
   }
 }
-
-{projectComponent(activeProjectId, lang, handleLanguageChange)}
 
 function ArrowDiag() {
   return (
