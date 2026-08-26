@@ -236,7 +236,7 @@ function projectComponent(id, lang, onLanguageChange) {
   }
 }
 
-const [activeProjectId, setActiveProjectId] = useState(null); // or [selectedProject, setActiveProject]
+{projectComponent(activeProjectId, lang, handleLanguageChange)}
 
 function ArrowDiag() {
   return (
