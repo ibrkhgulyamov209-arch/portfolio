@@ -192,27 +192,27 @@ const translations = {
   }
 };
 
-function projectComponent(id, lang, onLanguageChange) {
+// 1. Add this helper function on top
+function ExternalRedirect({ url, onClose }) {
+  React.useEffect(() => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+    if (onClose) onClose(null);
+  }, [url, onClose]);
+
+  return null;
+}
+
+// 2. Updated projectComponent function right below it
+function projectComponent(id, lang, onLanguageChange, setActiveProject) {
   switch (id) {
     case 'arxitectors-uz': 
       return (
-        <div className="w-full h-full min-h-[500px] flex flex-col items-center justify-center p-6 text-center">
-          <h2 className="text-2xl font-bold mb-3">Arxitectors.uz</h2>
-          <p className="text-sm opacity-60 mb-6">
-            {lang === 'ru' && 'Перейти на внешний сайт проекта.'}
-            {lang === 'uz' && 'Loyiha tashqi saytiga o‘tish.'}
-            {lang === 'en' && 'Visit external project site.'}
-          </p>
-          <a 
-            href="https://www.arxitektors.uz/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-lg hover:opacity-90 transition"
-          >
-            {lang === 'ru' ? 'Открыть сайт ↗' : lang === 'uz' ? 'Saytga o‘tish ↗' : 'Open Site ↗'}
-          </a>
-        </div>
+        <ExternalRedirect 
+          url="https://www.arxitektors.uz/" 
+          onClose={setActiveProject} 
+        />
       );
+      
     case 'yosh-fermers': return <YoshFermers lang={lang} onLanguageChange={onLanguageChange} />;
     case 'dream-career': return <DreamCareer lang={lang} onLanguageChange={onLanguageChange} />;
     case 'unipath': return <UniPath lang={lang} onLanguageChange={onLanguageChange} />;
