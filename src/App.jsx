@@ -207,7 +207,7 @@ function projectComponent(id, lang, onLanguageChange) {
     case 'weathersphere': return <WeatherSphere lang={lang} onLanguageChange={onLanguageChange} />;
     case 'edulink': return <EduLink lang={lang} onLanguageChange={onLanguageChange} />;
     default: return null;
-  }
+  } d
 }
 
 function ArrowDiag() {

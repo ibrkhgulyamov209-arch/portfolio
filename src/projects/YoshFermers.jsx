@@ -292,7 +292,7 @@ export default function App({ lang, onLanguageChange }) {
             {/* Kirish Tugmasi (Rasmga mutlaqo o'xshash) */}
             <button
               onClick={() => setLoginModalOpen(true)}
-              className="hidden sm:flex bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
+              className="flex sm:flex bg-[#23C55E] hover:bg-[#1f9d4d] text-white font-bold py-2.5 px-4 sm:px-5 rounded-full flex items-center gap-2 text-sm shadow-md transition-all hover:shadow-lg active:scale-95"
             >
               <span>{t('loginText')}</span>
               <span className="font-light text-base">→</span>
