@@ -45,10 +45,10 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 .skillswap-embed .section-eyebrow {color: var(--green-2); font-size: 12px; text-transform: uppercase; letter-spacing: 1.6px; font-weight: 800;}
 /* Public */
 .skillswap-embed .public-page {background: #fbfcf8; overflow: hidden;}
-.skillswap-embed .public-nav {height: 76px; max-width: 1180px; margin: auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between;}
+.skillswap-embed .public-nav {height: 76px; max-width: none; margin: auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between;}
 .skillswap-embed .public-nav nav {display: flex; align-items: center; gap: 28px;}
 .skillswap-embed .public-nav nav > button:not(.btn) {border: 0; background: transparent; font-size: 14px; font-weight: 600;}
-.skillswap-embed .hero {min-height: 660px; max-width: 1180px; margin: auto; padding: 68px 24px 90px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px;}
+.skillswap-embed .hero {min-height: 660px; max-width: none; margin: auto; padding: 68px 24px 90px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px;}
 .skillswap-embed .hero-copy h1 {margin: 22px 0; font-size: clamp(48px, 6vw, 76px); line-height: 1.02; letter-spacing: -4px; max-width: 650px;}
 .skillswap-embed .hero-copy h1 em {color: var(--green-2); font-style: normal; display: block;}
 .skillswap-embed .hero-copy > p {color: var(--muted); max-width: 590px; font-size: 18px; line-height: 1.7;}
@@ -76,7 +76,7 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 .skillswap-embed .floating-note > svg {color: var(--lime);}
 .skillswap-embed .floating-note span {display: flex; flex-direction: column; font-size: 12px;}
 .skillswap-embed .floating-note small {opacity: .7; margin-top: 2px;}
-.skillswap-embed .how-section {background: #193729; color: white; padding: 95px max(24px, calc((100vw - 1132px)/2));}
+.skillswap-embed .how-section {background: #193729; color: white; padding: 95px 24px;}
 .skillswap-embed .how-section .section-eyebrow {color: var(--lime);}
 .skillswap-embed .how-section > h2,
 .skillswap-embed .skills-head h2 {font-size: 42px; line-height: 1.16; letter-spacing: -1.8px; margin: 14px 0 55px;}
@@ -86,7 +86,7 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 .skillswap-embed .step-icon {width: 55px; height: 55px; border-radius: 16px; background: rgba(217,239,131,.12); color: var(--lime); display: grid; place-items: center; margin-bottom: 23px;}
 .skillswap-embed .step h3 {font-size: 19px; margin-bottom: 12px;}
 .skillswap-embed .step p {color: #a9b9b0; line-height: 1.7; font-size: 14px; max-width: 300px;}
-.skillswap-embed .skills-section {max-width: 1180px; margin: auto; padding: 100px 24px;}
+.skillswap-embed .skills-section {max-width: none; margin: auto; padding: 100px 24px;}
 .skillswap-embed .skills-head {display: flex; justify-content: space-between; align-items: end;}
 .skillswap-embed .skills-head h2 {margin-bottom: 0;}
 .skillswap-embed .skill-cloud {display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px;}
@@ -106,11 +106,11 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 .skillswap-embed .quote-section > div {display: flex; justify-content: center; gap: 11px; align-items: center;}
 .skillswap-embed .quote-section > div span {display: flex; flex-direction: column; text-align: left; font-size: 13px;}
 .skillswap-embed .quote-section small {color: var(--muted); margin-top: 3px;}
-.skillswap-embed .cta {max-width: 1132px; margin: 80px auto; background: var(--lime); padding: 58px 64px; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; gap: 30px;}
+.skillswap-embed .cta {max-width: none; margin: 80px 24px; background: var(--lime); padding: 58px 64px; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; gap: 30px;}
 .skillswap-embed .cta h2 {max-width: 730px; font-size: 35px; line-height: 1.2; margin: 10px 0; letter-spacing: -1.2px;}
 .skillswap-embed .cta p {color: #526145;}
 .skillswap-embed .cta .btn {min-width: 210px; min-height: 50px;}
-.skillswap-embed footer {min-height: 100px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 40px; padding: 0 max(24px, calc((100vw - 1132px)/2)); color: var(--muted); font-size: 13px;}
+.skillswap-embed footer {min-height: 100px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 40px; padding: 0 24px; color: var(--muted); font-size: 13px;}
 .skillswap-embed footer p {flex: 1;}
 /* Auth */
 .skillswap-embed .auth-page {min-height: 100vh; display: grid; grid-template-columns: 42% 58%; background: white;}
@@ -181,7 +181,7 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 .skillswap-embed .notification-btn span {position: absolute; width: 7px; height: 7px; background: #dc695f; border: 1px solid white; border-radius: 50%; right: 8px; top: 7px;}
 .skillswap-embed .menu-btn,
 .skillswap-embed .mobile-close {display: none;}
-.skillswap-embed .page {padding: 35px 38px 60px; max-width: 1450px; margin: auto;}
+.skillswap-embed .page {padding: 35px 38px 60px; max-width: none; margin: auto;}
 .skillswap-embed .page-head {display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px;}
 .skillswap-embed .page-head h1 {font-size: 29px; letter-spacing: -1px; margin-top: 6px;}
 .skillswap-embed .page-head .result-count {color: var(--muted); font-size: 13px;}
@@ -2298,7 +2298,7 @@ function RequestModal({ onClose, showToast, }) {
     </form>
   </Modal>);
 }
-function SkillSwapApp() {
+function SkillSwapApp({ lang = "en", onLanguageChange = () => {} }) {
   const [page, setPage] = useState("landing");
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [requestOpen, setRequestOpen] = useState(false);
@@ -2353,11 +2353,11 @@ function SkillSwapApp() {
 }
 
 
-export default function SkillSwap() {
+export default function SkillSwap({ lang = "en", onLanguageChange = () => {} }) {
   return (
     <div className="skillswap-embed">
       <style>{styles}</style>
-      <SkillSwapApp />
+      <SkillSwapApp lang={lang} onLanguageChange={onLanguageChange} />
     </div>
   );
 }

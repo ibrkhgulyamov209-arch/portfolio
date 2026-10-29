@@ -210,7 +210,7 @@ function projectComponent(id, lang, onLanguageChange) {
     case 'taskflow': return <TaskFlow lang={lang} onLanguageChange={onLanguageChange} />;
     case 'weathersphere': return <WeatherSphere lang={lang} onLanguageChange={onLanguageChange} />;
     case 'edulink': return <EduLink lang={lang} onLanguageChange={onLanguageChange} />;
-    case 'skillswap': return <SkillSwap />;
+    case 'skillswap': return <SkillSwap lang={lang} onLanguageChange={onLanguageChange} />;
     default: return null;
   }
 }
@@ -257,7 +257,8 @@ export default function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(() => localStorage.getItem('portfolio-language') || 'en');
+  useEffect(() => { localStorage.setItem('portfolio-language', lang); }, [lang]);
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('portfolio-theme');
     if (savedTheme) return savedTheme;
@@ -322,7 +323,7 @@ export default function App() {
         </nav>
 
         {/* Detail content */}
-        <main className="max-w-240 mx-auto pt-24 px-5 sm:px-10 pb-20">
+        <main className="w-full pt-24 px-3 sm:px-6 lg:px-8 pb-20">
           {projectComponent(activeProject, lang, setLang)}
         </main>
 

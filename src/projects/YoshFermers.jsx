@@ -352,7 +352,7 @@ export default function App({ lang, onLanguageChange }) {
         </div>
 
         {/* Statistika Panel: Translucent overlay cards from bottom of image_c08444.jpg */}
-        <div className="w-full max-w-7xl mx-auto z-10">
+        <div className="w-full z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
             {/* Card 1: 0 ta fermer */}
@@ -405,7 +405,7 @@ export default function App({ lang, onLanguageChange }) {
       </div>
 
       {/* Biz Haqimizda Qisqacha Ma'lumot */}
-      <section id="about" className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+      <section id="about" className="w-full px-4 md:px-8 py-16">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 relative">
             <img
@@ -443,7 +443,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Interaktiv Hududiy Agro-Tahlil va Xarita */}
-      <section id="map" className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+      <section id="map" className="w-full px-4 md:px-8 py-12">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900">{t('mapTitle')}</h2>
           <p className="text-slate-500 text-xs md:text-sm mt-2">{t('mapSub')}</p>
@@ -529,7 +529,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Fermerlar Maktabi / Akademiya bo'limi */}
-      <section id="academy" className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+      <section id="academy" className="w-full px-4 md:px-8 py-12">
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full inline-block">
@@ -577,7 +577,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Agro-Bozor va Mahsulotlar */}
-      <section id="market" className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+      <section id="market" className="w-full px-4 md:px-8 py-12">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900">{t('marketTitle')}</h2>
           <p className="text-slate-500 text-xs md:text-sm mt-2">{t('marketSub')}</p>
@@ -663,7 +663,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Faol Yosh Fermerlar yetakchilari */}
-      <section id="leaders" className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+      <section id="leaders" className="w-full px-4 md:px-8 py-12">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900">{t('leaderboardTitle')}</h2>
           <p className="text-slate-500 text-xs md:text-sm mt-2">{t('leaderboardSub')}</p>
@@ -703,7 +703,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Aloqa / Konsultatsiya bo'limi */}
-      <section id="contact" className="max-w-4xl mx-auto px-4 md:px-8 py-12">
+      <section id="contact" className="w-full px-4 md:px-8 py-12">
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
 
           <div className="text-center max-w-xl mx-auto mb-8">
@@ -750,7 +750,7 @@ export default function App({ lang, onLanguageChange }) {
       </section>
 
       {/* Footer Hamkorlar va Mualliflik Huquqlari */}
-      <footer className="max-w-7xl mx-auto px-4 md:px-8 border-t border-slate-200/80 pt-10 mt-12 text-center text-slate-400 space-y-6">
+      <footer className="w-full px-4 md:px-8 border-t border-slate-200/80 pt-10 mt-12 text-center text-slate-400 space-y-6">
         <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-xs font-bold text-slate-500 opacity-75">
           <span>Qishloq Xo'jaligi Vazirligi</span>
           <span>O'zbekiston Yoshlar Ittifoqi</span>

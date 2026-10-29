@@ -140,7 +140,7 @@ const TaskFlow = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const progressPercentage = tasks.length > 0 ? Math.round((completedCount / tasks.length) * 100) : 0;
 
   return (
-    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+    <div className="w-full max-w-none text-[#0a0a0a]">
       {/* Language Switcher */}
       <div className="flex justify-end mb-6">
         <div className="inline-flex p-1 rounded-2xl bg-black/5 border border-black/10 gap-1">

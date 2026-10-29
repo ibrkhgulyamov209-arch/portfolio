@@ -207,7 +207,7 @@ const DreamCareer = ({ lang = 'en', onLanguageChange = () => {} }) => {
   const readinessScore = Math.round((completedCount / totalSkillsCount) * 100);
 
   return (
-    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+    <div className="w-full max-w-none text-[#0a0a0a]">
       
       {/* Built-in Language Switcher Toolbar */}
       <div className="flex justify-end gap-2 mb-6">

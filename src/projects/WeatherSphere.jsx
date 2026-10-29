@@ -226,7 +226,7 @@ const WeatherSphere = ({ lang = 'en', onLanguageChange = () => {} }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto text-[#0a0a0a]">
+    <div className="w-full max-w-none text-[#0a0a0a]">
       {/* Header */}
       <div className="text-center mb-12">
         <div className="flex items-center justify-between mb-4">
