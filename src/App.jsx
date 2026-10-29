@@ -5,6 +5,7 @@ import UniPath from './projects/UniPath';
 import TaskFlow from './projects/TaskFlow';
 import WeatherSphere from './projects/WeatherSphere';
 import EduLink from './projects/EduLink';
+import SkillSwap from './projects/SkillSwap';
 
 const translations = {
   en: {
@@ -48,6 +49,7 @@ const translations = {
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Real-time weather forecasting with elegant data visualisation. Beautiful UI meets accurate data.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Community-driven resource sharing platform for students. Learn, share, and grow together.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
       { id: 'arxitectors-uz', title: 'Arxitectors', tag: 'Architecture', desc: 'Modern portfolio platform for an architectural firm featuring project showcases, 3D renders, and video tours.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
+      { id: 'skillswap', title: 'SkillSwap', tag: 'Learning / Community', desc: 'A community platform where people learn new skills by teaching what they already know.', tech: ['React', 'JavaScript', 'CSS'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
@@ -109,6 +111,7 @@ const translations = {
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Прогноз погоды в реальном времени с элегантной визуализацией данных.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Платформа для совместного обмена ресурсами среди студентов. Учитесь и развивайтесь вместе.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
       { id: 'arxitectors-uz', title: 'Arxitectors', tag: 'Architecture', desc: 'Платформа и портфолио для архитектурного бюро с демонстрацией проектов, визуализациями и видеообзорами.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
+      { id: 'skillswap', title: 'SkillSwap', tag: 'Обучение / Сообщество', desc: 'Платформа, где люди осваивают новые навыки, обучая других тому, что уже умеют.', tech: ['React', 'JavaScript', 'CSS'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
@@ -170,6 +173,7 @@ const translations = {
       { id: 'weathersphere', title: 'WeatherSphere', tag: 'Utility', desc: 'Elegant ma’lumotlar vizualizatsiyasi bilan real vaqtda ob-havo prognozi.', tech: ['JavaScript', 'D3.js', 'REST API'], year: '2024' },
       { id: 'edulink', title: 'EduLink', tag: 'Education', desc: 'Talabalar uchun hamjamiyat tomonidan boshqariladigan resurs almashish platformasi.', tech: ['React', 'GraphQL', 'PostgreSQL'], year: '2024' },
       { id: 'arxitectors-uz', title: 'Arxitectors', tag: 'Arxitektura', desc: 'Loyiha taqdimotlari, renderlar va video sharhlarni o‘z ichiga olgan arxitektura byurosi platformasi.', tech: ['React', 'Tailwind CSS', 'Framer Motion'], year: '2026' },
+      { id: 'skillswap', title: 'SkillSwap', tag: 'Ta’lim / Hamjamiyat', desc: 'Odamlar o‘zlari bilgan ko‘nikmalarni o‘rgatish orqali yangi ko‘nikmalarni o‘rganadigan hamjamiyat platformasi.', tech: ['React', 'JavaScript', 'CSS'], year: '2026' },
     ],
     skills: [
       { name: 'React', icon: '⚛' },
@@ -206,6 +210,7 @@ function projectComponent(id, lang, onLanguageChange) {
     case 'taskflow': return <TaskFlow lang={lang} onLanguageChange={onLanguageChange} />;
     case 'weathersphere': return <WeatherSphere lang={lang} onLanguageChange={onLanguageChange} />;
     case 'edulink': return <EduLink lang={lang} onLanguageChange={onLanguageChange} />;
+    case 'skillswap': return <SkillSwap />;
     default: return null;
   } d
 }
