@@ -2375,7 +2375,10 @@ function LocalizedTree({ lang, children }) {
           if (!(key in saved)) saved[key] = element.getAttribute(attribute);
           else if (element.getAttribute(attribute) !== translate(saved[key])) saved[key] = element.getAttribute(attribute);
           originals.current.set(element, saved);
-          element.setAttribute(attribute, translate(saved[key]));
+          const localized = translate(saved[key]);
+          if (element.getAttribute(attribute) !== localized) {
+            element.setAttribute(attribute, localized);
+          }
         }
       });
       root.querySelectorAll("option").forEach((option) => {
