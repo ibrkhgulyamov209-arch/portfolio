@@ -212,7 +212,7 @@ function projectComponent(id, lang, onLanguageChange) {
     case 'edulink': return <EduLink lang={lang} onLanguageChange={onLanguageChange} />;
     case 'skillswap': return <SkillSwap />;
     default: return null;
-  } d
+  }
 }
 
 function ArrowDiag() {
