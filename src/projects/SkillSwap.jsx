@@ -812,8 +812,6 @@ const messages = [
   },
 ];
 
-
-import { useMemo, useState } from "react";
 const icons = {
   arrow: (<>
     <path d="M5 12h14M13 6l6 6-6 6" />
