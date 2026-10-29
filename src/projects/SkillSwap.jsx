@@ -600,1758 +600,1758 @@ const styles = String.raw`@import url("https://fonts.googleapis.com/css2?family=
 `;
 
 const people = [
-    {
-        id: 1,
-        name: "Maya Chen",
-        role: "Product designer",
-        location: "Vancouver, Canada",
-        avatar: "MC",
-        color: "sage",
-        rating: 4.9,
-        reviews: 28,
-        bio: "Product designer who loves turning complex ideas into clear, useful experiences. I teach Figma through practical projects.",
-        teaches: [
-            { name: "Figma", level: "Expert" },
-            { name: "UX research", level: "Advanced" },
-        ],
-        learns: ["Conversational Spanish", "Photography"],
-        availability: "Weekday evenings",
-        languages: ["English", "Mandarin"],
-        match: 96,
-    },
-    {
-        id: 2,
-        name: "Leo Martins",
-        role: "Frontend engineer",
-        location: "Lisbon, Portugal",
-        avatar: "LM",
-        color: "blue",
-        rating: 4.8,
-        reviews: 19,
-        bio: "React engineer and patient mentor. I like pairing on real code and explaining the why behind every pattern.",
-        teaches: [
-            { name: "React", level: "Expert" },
-            { name: "TypeScript", level: "Advanced" },
-        ],
-        learns: ["English speaking", "UI design"],
-        availability: "Weekends",
-        languages: ["Portuguese", "English"],
-        match: 92,
-    },
-    {
-        id: 3,
-        name: "Amara Okafor",
-        role: "Language coach",
-        location: "London, UK",
-        avatar: "AO",
-        color: "rose",
-        rating: 5,
-        reviews: 34,
-        bio: "Certified English coach focused on confidence, natural conversation, and kind, actionable feedback.",
-        teaches: [
-            { name: "English speaking", level: "Expert" },
-            { name: "Public speaking", level: "Advanced" },
-        ],
-        learns: ["React", "Guitar"],
-        availability: "Flexible",
-        languages: ["English", "French"],
-        match: 89,
-    },
-    {
-        id: 4,
-        name: "Jon Bell",
-        role: "Studio photographer",
-        location: "Austin, USA",
-        avatar: "JB",
-        color: "amber",
-        rating: 4.7,
-        reviews: 15,
-        bio: "Portrait photographer teaching light, composition, and editing without getting lost in technical jargon.",
-        teaches: [
-            { name: "Photography", level: "Expert" },
-            { name: "Lightroom", level: "Advanced" },
-        ],
-        learns: ["Figma", "Italian"],
-        availability: "Weekday mornings",
-        languages: ["English"],
-        match: 85,
-    },
-    {
-        id: 5,
-        name: "Sofia Reyes",
-        role: "Spanish tutor",
-        location: "Mexico City, Mexico",
-        avatar: "SR",
-        color: "violet",
-        rating: 4.9,
-        reviews: 41,
-        bio: "Friendly Spanish tutor. My sessions use music, stories, and real-life situations so vocabulary sticks.",
-        teaches: [
-            { name: "Spanish", level: "Expert" },
-            { name: "Creative writing", level: "Advanced" },
-        ],
-        learns: ["Product design", "Yoga"],
-        availability: "Weekday evenings",
-        languages: ["Spanish", "English"],
-        match: 82,
-    },
-    {
-        id: 6,
-        name: "Noah Williams",
-        role: "Music producer",
-        location: "Melbourne, Australia",
-        avatar: "NW",
-        color: "mint",
-        rating: 4.8,
-        reviews: 22,
-        bio: "Guitarist and producer helping beginners play songs they love from their very first session.",
-        teaches: [
-            { name: "Guitar", level: "Expert" },
-            { name: "Music production", level: "Advanced" },
-        ],
-        learns: ["TypeScript", "French"],
-        availability: "Weekends",
-        languages: ["English"],
-        match: 78,
-    },
+  {
+    id: 1,
+    name: "Maya Chen",
+    role: "Product designer",
+    location: "Vancouver, Canada",
+    avatar: "MC",
+    color: "sage",
+    rating: 4.9,
+    reviews: 28,
+    bio: "Product designer who loves turning complex ideas into clear, useful experiences. I teach Figma through practical projects.",
+    teaches: [
+      { name: "Figma", level: "Expert" },
+      { name: "UX research", level: "Advanced" },
+    ],
+    learns: ["Conversational Spanish", "Photography"],
+    availability: "Weekday evenings",
+    languages: ["English", "Mandarin"],
+    match: 96,
+  },
+  {
+    id: 2,
+    name: "Leo Martins",
+    role: "Frontend engineer",
+    location: "Lisbon, Portugal",
+    avatar: "LM",
+    color: "blue",
+    rating: 4.8,
+    reviews: 19,
+    bio: "React engineer and patient mentor. I like pairing on real code and explaining the why behind every pattern.",
+    teaches: [
+      { name: "React", level: "Expert" },
+      { name: "TypeScript", level: "Advanced" },
+    ],
+    learns: ["English speaking", "UI design"],
+    availability: "Weekends",
+    languages: ["Portuguese", "English"],
+    match: 92,
+  },
+  {
+    id: 3,
+    name: "Amara Okafor",
+    role: "Language coach",
+    location: "London, UK",
+    avatar: "AO",
+    color: "rose",
+    rating: 5,
+    reviews: 34,
+    bio: "Certified English coach focused on confidence, natural conversation, and kind, actionable feedback.",
+    teaches: [
+      { name: "English speaking", level: "Expert" },
+      { name: "Public speaking", level: "Advanced" },
+    ],
+    learns: ["React", "Guitar"],
+    availability: "Flexible",
+    languages: ["English", "French"],
+    match: 89,
+  },
+  {
+    id: 4,
+    name: "Jon Bell",
+    role: "Studio photographer",
+    location: "Austin, USA",
+    avatar: "JB",
+    color: "amber",
+    rating: 4.7,
+    reviews: 15,
+    bio: "Portrait photographer teaching light, composition, and editing without getting lost in technical jargon.",
+    teaches: [
+      { name: "Photography", level: "Expert" },
+      { name: "Lightroom", level: "Advanced" },
+    ],
+    learns: ["Figma", "Italian"],
+    availability: "Weekday mornings",
+    languages: ["English"],
+    match: 85,
+  },
+  {
+    id: 5,
+    name: "Sofia Reyes",
+    role: "Spanish tutor",
+    location: "Mexico City, Mexico",
+    avatar: "SR",
+    color: "violet",
+    rating: 4.9,
+    reviews: 41,
+    bio: "Friendly Spanish tutor. My sessions use music, stories, and real-life situations so vocabulary sticks.",
+    teaches: [
+      { name: "Spanish", level: "Expert" },
+      { name: "Creative writing", level: "Advanced" },
+    ],
+    learns: ["Product design", "Yoga"],
+    availability: "Weekday evenings",
+    languages: ["Spanish", "English"],
+    match: 82,
+  },
+  {
+    id: 6,
+    name: "Noah Williams",
+    role: "Music producer",
+    location: "Melbourne, Australia",
+    avatar: "NW",
+    color: "mint",
+    rating: 4.8,
+    reviews: 22,
+    bio: "Guitarist and producer helping beginners play songs they love from their very first session.",
+    teaches: [
+      { name: "Guitar", level: "Expert" },
+      { name: "Music production", level: "Advanced" },
+    ],
+    learns: ["TypeScript", "French"],
+    availability: "Weekends",
+    languages: ["English"],
+    match: 78,
+  },
 ];
 const notifications = [
-    {
-        id: 1,
-        icon: "message",
-        title: "New message from Amara",
-        body: "Thursday at 6 PM works perfectly!",
-        time: "8 min",
-        unread: true,
-    },
-    {
-        id: 2,
-        icon: "swap",
-        title: "Leo accepted your exchange",
-        body: "React mentoring for English practice",
-        time: "1 hr",
-        unread: true,
-    },
-    {
-        id: 3,
-        icon: "calendar",
-        title: "Session tomorrow",
-        body: "Figma fundamentals with Maya at 5:30 PM",
-        time: "3 hr",
-        unread: true,
-    },
-    {
-        id: 4,
-        icon: "star",
-        title: "You received a new review",
-        body: "Jon rated your photography feedback 5 stars",
-        time: "Yesterday",
-        unread: false,
-    },
+  {
+    id: 1,
+    icon: "message",
+    title: "New message from Amara",
+    body: "Thursday at 6 PM works perfectly!",
+    time: "8 min",
+    unread: true,
+  },
+  {
+    id: 2,
+    icon: "swap",
+    title: "Leo accepted your exchange",
+    body: "React mentoring for English practice",
+    time: "1 hr",
+    unread: true,
+  },
+  {
+    id: 3,
+    icon: "calendar",
+    title: "Session tomorrow",
+    body: "Figma fundamentals with Maya at 5:30 PM",
+    time: "3 hr",
+    unread: true,
+  },
+  {
+    id: 4,
+    icon: "star",
+    title: "You received a new review",
+    body: "Jon rated your photography feedback 5 stars",
+    time: "Yesterday",
+    unread: false,
+  },
 ];
 const conversations = [
-    {
-        id: 1,
-        person: people[2],
-        preview: "Thursday at 6 PM works perfectly!",
-        time: "8m",
-        unread: 2,
-    },
-    {
-        id: 2,
-        person: people[1],
-        preview: "I sent over the React exercises.",
-        time: "1h",
-        unread: 0,
-    },
-    {
-        id: 3,
-        person: people[0],
-        preview: "Your wireframes are getting stronger!",
-        time: "Tue",
-        unread: 0,
-    },
-    {
-        id: 4,
-        person: people[3],
-        preview: "Try shooting closer to golden hour.",
-        time: "Mon",
-        unread: 0,
-    },
+  {
+    id: 1,
+    person: people[2],
+    preview: "Thursday at 6 PM works perfectly!",
+    time: "8m",
+    unread: 2,
+  },
+  {
+    id: 2,
+    person: people[1],
+    preview: "I sent over the React exercises.",
+    time: "1h",
+    unread: 0,
+  },
+  {
+    id: 3,
+    person: people[0],
+    preview: "Your wireframes are getting stronger!",
+    time: "Tue",
+    unread: 0,
+  },
+  {
+    id: 4,
+    person: people[3],
+    preview: "Try shooting closer to golden hour.",
+    time: "Mon",
+    unread: 0,
+  },
 ];
 const messages = [
-    {
-        id: 1,
-        mine: false,
-        text: "Hey Alex! I saw you want to improve your English conversation.",
-        time: "5:42 PM",
-    },
-    {
-        id: 2,
-        mine: true,
-        text: "Yes! I can read well, but I want to sound more natural when I speak. I’d be happy to help you learn React in return.",
-        time: "5:45 PM",
-    },
-    {
-        id: 3,
-        mine: false,
-        text: "That sounds like a great swap. I’m starting a small portfolio project, so React would be perfect.",
-        time: "5:47 PM",
-    },
-    {
-        id: 4,
-        mine: true,
-        text: "How does Thursday evening sound for our first session?",
-        time: "5:49 PM",
-    },
-    {
-        id: 5,
-        mine: false,
-        text: "Thursday at 6 PM works perfectly!",
-        time: "5:50 PM",
-    },
+  {
+    id: 1,
+    mine: false,
+    text: "Hey Alex! I saw you want to improve your English conversation.",
+    time: "5:42 PM",
+  },
+  {
+    id: 2,
+    mine: true,
+    text: "Yes! I can read well, but I want to sound more natural when I speak. I’d be happy to help you learn React in return.",
+    time: "5:45 PM",
+  },
+  {
+    id: 3,
+    mine: false,
+    text: "That sounds like a great swap. I’m starting a small portfolio project, so React would be perfect.",
+    time: "5:47 PM",
+  },
+  {
+    id: 4,
+    mine: true,
+    text: "How does Thursday evening sound for our first session?",
+    time: "5:49 PM",
+  },
+  {
+    id: 5,
+    mine: false,
+    text: "Thursday at 6 PM works perfectly!",
+    time: "5:50 PM",
+  },
 ];
 
 
 import { useMemo, useState } from "react";
 const icons = {
-    arrow: (<>
-      <path d="M5 12h14M13 6l6 6-6 6"/>
-    </>),
-    back: (<>
-      <path d="m15 18-6-6 6-6"/>
-    </>),
-    bell: (<>
-      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
-    </>),
-    calendar: (<>
-      <rect x="3" y="5" width="18" height="16" rx="2"/>
-      <path d="M16 3v4M8 3v4M3 11h18"/>
-    </>),
-    check: (<>
-      <path d="m5 12 4 4L19 6"/>
-    </>),
-    chevron: (<>
-      <path d="m9 18 6-6-6-6"/>
-    </>),
-    clock: (<>
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 7v5l3 2"/>
-    </>),
-    close: (<>
-      <path d="m6 6 12 12M18 6 6 18"/>
-    </>),
-    filter: (<>
-      <path d="M4 6h16M7 12h10M10 18h4"/>
-    </>),
-    globe: (<>
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
-    </>),
-    grid: (<>
-      <rect x="3" y="3" width="7" height="7" rx="1"/>
-      <rect x="14" y="3" width="7" height="7" rx="1"/>
-      <rect x="3" y="14" width="7" height="7" rx="1"/>
-      <rect x="14" y="14" width="7" height="7" rx="1"/>
-    </>),
-    heart: (<>
-      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
-    </>),
-    home: (<>
-      <path d="m3 11 9-8 9 8v10h-6v-6H9v6H3Z"/>
-    </>),
-    link: (<>
-      <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"/>
-    </>),
-    location: (<>
-      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
-      <circle cx="12" cy="10" r="2"/>
-    </>),
-    logout: (<>
-      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
-    </>),
-    menu: (<>
-      <path d="M4 7h16M4 12h16M4 17h16"/>
-    </>),
-    message: (<>
-      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/>
-    </>),
-    more: (<>
-      <circle cx="5" cy="12" r="1"/>
-      <circle cx="12" cy="12" r="1"/>
-      <circle cx="19" cy="12" r="1"/>
-    </>),
-    plus: (<>
-      <path d="M12 5v14M5 12h14"/>
-    </>),
-    search: (<>
-      <circle cx="11" cy="11" r="7"/>
-      <path d="m20 20-4-4"/>
-    </>),
-    send: (<>
-      <path d="m22 2-7 20-4-9-9-4Z"/>
-      <path d="M22 2 11 13"/>
-    </>),
-    settings: (<>
-      <circle cx="12" cy="12" r="3"/>
-      <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/>
-    </>),
-    star: (<>
-      <path d="m12 2 3 6 6.5.9-4.7 4.6 1.1 6.5-5.9-3.1L6.1 20l1.1-6.5-4.7-4.6L9 8Z"/>
-    </>),
-    swap: (<>
-      <path d="M7 7h11l-3-3M17 17H6l3 3M18 7l3 3-3 3M6 17l-3-3 3-3"/>
-    </>),
-    user: (<>
-      <circle cx="12" cy="8" r="4"/>
-      <path d="M4 21a8 8 0 0 1 16 0"/>
-    </>),
-    video: (<>
-      <rect x="3" y="6" width="13" height="12" rx="2"/>
-      <path d="m16 10 5-3v10l-5-3Z"/>
-    </>),
+  arrow: (<>
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </>),
+  back: (<>
+    <path d="m15 18-6-6 6-6" />
+  </>),
+  bell: (<>
+    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+  </>),
+  calendar: (<>
+    <rect x="3" y="5" width="18" height="16" rx="2" />
+    <path d="M16 3v4M8 3v4M3 11h18" />
+  </>),
+  check: (<>
+    <path d="m5 12 4 4L19 6" />
+  </>),
+  chevron: (<>
+    <path d="m9 18 6-6-6-6" />
+  </>),
+  clock: (<>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7v5l3 2" />
+  </>),
+  close: (<>
+    <path d="m6 6 12 12M18 6 6 18" />
+  </>),
+  filter: (<>
+    <path d="M4 6h16M7 12h10M10 18h4" />
+  </>),
+  globe: (<>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+  </>),
+  grid: (<>
+    <rect x="3" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="3" width="7" height="7" rx="1" />
+    <rect x="3" y="14" width="7" height="7" rx="1" />
+    <rect x="14" y="14" width="7" height="7" rx="1" />
+  </>),
+  heart: (<>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+  </>),
+  home: (<>
+    <path d="m3 11 9-8 9 8v10h-6v-6H9v6H3Z" />
+  </>),
+  link: (<>
+    <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1" />
+  </>),
+  location: (<>
+    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+    <circle cx="12" cy="10" r="2" />
+  </>),
+  logout: (<>
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+  </>),
+  menu: (<>
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </>),
+  message: (<>
+    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
+  </>),
+  more: (<>
+    <circle cx="5" cy="12" r="1" />
+    <circle cx="12" cy="12" r="1" />
+    <circle cx="19" cy="12" r="1" />
+  </>),
+  plus: (<>
+    <path d="M12 5v14M5 12h14" />
+  </>),
+  search: (<>
+    <circle cx="11" cy="11" r="7" />
+    <path d="m20 20-4-4" />
+  </>),
+  send: (<>
+    <path d="m22 2-7 20-4-9-9-4Z" />
+    <path d="M22 2 11 13" />
+  </>),
+  settings: (<>
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z" />
+  </>),
+  star: (<>
+    <path d="m12 2 3 6 6.5.9-4.7 4.6 1.1 6.5-5.9-3.1L6.1 20l1.1-6.5-4.7-4.6L9 8Z" />
+  </>),
+  swap: (<>
+    <path d="M7 7h11l-3-3M17 17H6l3 3M18 7l3 3-3 3M6 17l-3-3 3-3" />
+  </>),
+  user: (<>
+    <circle cx="12" cy="8" r="4" />
+    <path d="M4 21a8 8 0 0 1 16 0" />
+  </>),
+  video: (<>
+    <rect x="3" y="6" width="13" height="12" rx="2" />
+    <path d="m16 10 5-3v10l-5-3Z" />
+  </>),
 };
 function Icon({ name, size = 18 }) {
-    return (<svg aria-hidden="true" className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      {icons[name]}
-    </svg>);
+  return (<svg aria-hidden="true" className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    {icons[name]}
+  </svg>);
 }
 function Logo({ onClick }) {
-    return (<button className="logo" onClick={onClick} aria-label="SkillSwap home">
-      <span className="logo-mark">
-        <Icon name="swap" size={20}/>
-      </span>
-      <span>
-        Skill<span>Swap</span>
-      </span>
-    </button>);
+  return (<button className="logo" onClick={onClick} aria-label="SkillSwap home">
+    <span className="logo-mark">
+      <Icon name="swap" size={20} />
+    </span>
+    <span>
+      Skill<span>Swap</span>
+    </span>
+  </button>);
 }
 function Avatar({ person, size = "md", online = false, }) {
-    return (<div className={`avatar ${person.color} ${size}`} aria-label={person.name}>
-      {person.avatar}
-      {online && <span className="online"/>}
-    </div>);
+  return (<div className={`avatar ${person.color} ${size}`} aria-label={person.name}>
+    {person.avatar}
+    {online && <span className="online" />}
+  </div>);
 }
 function Button({ children, variant = "primary", icon, onClick, type = "button", disabled = false, className = "", }) {
-    return (<button type={type} disabled={disabled} onClick={onClick} className={`btn ${variant} ${className}`}>
-      {icon && <Icon name={icon}/>}
-      {children}
-    </button>);
+  return (<button type={type} disabled={disabled} onClick={onClick} className={`btn ${variant} ${className}`}>
+    {icon && <Icon name={icon} />}
+    {children}
+  </button>);
 }
 function Stars({ rating, count }) {
-    return (<span className="stars">
-      <Icon name="star" size={15}/>
-      <strong>{rating.toFixed(1)}</strong>
-      {count !== undefined && <span>({count})</span>}
-    </span>);
+  return (<span className="stars">
+    <Icon name="star" size={15} />
+    <strong>{rating.toFixed(1)}</strong>
+    {count !== undefined && <span>({count})</span>}
+  </span>);
 }
 function Badge({ children, tone = "neutral", }) {
-    return <span className={`badge ${tone}`}>{children}</span>;
+  return <span className={`badge ${tone}`}>{children}</span>;
 }
 function Modal({ title, children, onClose, }) {
-    return (<div className="modal-backdrop" onMouseDown={onClose}>
-      <div className="modal" onMouseDown={(e) => e.stopPropagation()}>
-        <div className="modal-head">
-          <h2>{title}</h2>
-          <button className="icon-btn" onClick={onClose} aria-label="Close">
-            <Icon name="close"/>
-          </button>
-        </div>
-        {children}
-      </div>
-    </div>);
-}
-function Landing({ navigate }) {
-    const skillNames = [
-        "React",
-        "Spanish",
-        "Photography",
-        "Figma",
-        "Guitar",
-        "Public speaking",
-    ];
-    return (<div className="public-page">
-      <header className="public-nav">
-        <Logo onClick={() => navigate("landing")}/>
-        <nav>
-          <button onClick={() => document
-            .getElementById("how")
-            ?.scrollIntoView({ behavior: "smooth" })}>
-            How it works
-          </button>
-          <button onClick={() => document
-            .getElementById("skills")
-            ?.scrollIntoView({ behavior: "smooth" })}>
-            Explore skills
-          </button>
-          <button onClick={() => navigate("login")}>Log in</button>
-          <Button onClick={() => navigate("signup")}>Start swapping</Button>
-        </nav>
-      </header>
-      <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <Badge tone="green">A better way to grow</Badge>
-            <h1>
-              Your skills are <em>worth sharing.</em>
-            </h1>
-            <p>
-              Learn anything by teaching what you know. SkillSwap connects
-              curious people for one-to-one skill exchanges—no fees, just shared
-              growth.
-            </p>
-            <div className="hero-actions">
-              <Button onClick={() => navigate("signup")} icon="arrow">
-                Find your skill swap
-              </Button>
-              <Button variant="secondary" onClick={() => document
-            .getElementById("how")
-            ?.scrollIntoView({ behavior: "smooth" })}>
-                See how it works
-              </Button>
-            </div>
-            <div className="trusted">
-              <div className="avatar-stack">
-                {people.slice(0, 4).map((p) => (<Avatar key={p.id} person={p} size="sm"/>))}
-              </div>
-              <span>
-                <strong>4,800+ learners</strong>
-                <br />
-                sharing skills this week
-              </span>
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="orbit orbit-one"/>
-            <div className="orbit orbit-two"/>
-            <div className="swap-card card-a">
-              <div className="mini-person">
-                <Avatar person={people[1]}/>
-                <div>
-                  <strong>Leo</strong>
-                  <span>Teaches React</span>
-                </div>
-              </div>
-              <div className="skill-pill">
-                <span className="skill-icon">{"{ }"}</span>React development
-              </div>
-            </div>
-            <div className="swap-center">
-              <Icon name="swap" size={30}/>
-            </div>
-            <div className="swap-card card-b">
-              <div className="mini-person">
-                <Avatar person={people[2]}/>
-                <div>
-                  <strong>Amara</strong>
-                  <span>Teaches English</span>
-                </div>
-              </div>
-              <div className="skill-pill">
-                <span className="skill-icon">Aa</span>English speaking
-              </div>
-            </div>
-            <div className="floating-note">
-              <Icon name="check"/>
-              <span>
-                <strong>It’s a match!</strong>
-                <small>92% skill compatibility</small>
-              </span>
-            </div>
-          </div>
-        </section>
-        <section className="how-section" id="how">
-          <div className="section-eyebrow">Simple by design</div>
-          <h2>
-            Turn what you know into
-            <br />
-            what you want to learn
-          </h2>
-          <div className="steps">
-            {[
-            [
-                "01",
-                "Create your skill profile",
-                "Share what you can teach, what you’re curious about, and when you’re free.",
-            ],
-            [
-                "02",
-                "Find the right people",
-                "Browse people with complementary skills and a schedule that fits yours.",
-            ],
-            [
-                "03",
-                "Swap, learn, repeat",
-                "Propose an exchange, meet online or in person, and grow together.",
-            ],
-        ].map(([n, title, body]) => (<div className="step" key={n}>
-                <span>{n}</span>
-                <div className="step-icon">
-                  <Icon name={n === "01" ? "user" : n === "02" ? "search" : "swap"} size={27}/>
-                </div>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </div>))}
-          </div>
-        </section>
-        <section className="skills-section" id="skills">
-          <div className="skills-head">
-            <div>
-              <div className="section-eyebrow">Learn something new</div>
-              <h2>Skills people are sharing</h2>
-            </div>
-            <Button variant="secondary" onClick={() => navigate("signup")}>
-              Explore all skills
-            </Button>
-          </div>
-          <div className="skill-cloud">
-            {skillNames.map((skill, i) => (<button key={skill} onClick={() => navigate("signup")} className={`skill-tile tile-${i}`}>
-                <span>{["{ }", "¡Hola!", "◉", "F", "♪", "“ ”"][i]}</span>
-                <strong>{skill}</strong>
-                <small>{[342, 219, 184, 276, 156, 131][i]} people</small>
-                <Icon name="arrow"/>
-              </button>))}
-          </div>
-        </section>
-        <section className="quote-section">
-          <blockquote>
-            “I taught Elena the basics of product design, and she helped me
-            finally feel confident speaking Spanish. We still meet every other
-            week.”
-          </blockquote>
-          <div>
-            <Avatar person={people[0]}/>
-            <span>
-              <strong>Priya Shah</strong>
-              <small>Product designer · Toronto</small>
-            </span>
-          </div>
-        </section>
-        <section className="cta">
-          <div>
-            <span className="section-eyebrow">Ready when you are</span>
-            <h2>Someone out there wants to learn what you know.</h2>
-            <p>Your first exchange could be one conversation away.</p>
-          </div>
-          <Button onClick={() => navigate("signup")} icon="arrow">
-            Create your free profile
-          </Button>
-        </section>
-      </main>
-      <footer>
-        <Logo onClick={() => navigate("landing")}/>
-        <p>Learn freely. Teach generously.</p>
-        <span>© 2026 SkillSwap</span>
-      </footer>
-    </div>);
-}
-function AuthPage({ kind, navigate, login, }) {
-    const isSignup = kind === "signup";
-    const [step, setStep] = useState(1);
-    const [authNotice, setAuthNotice] = useState("");
-    const submit = (e) => {
-        e.preventDefault();
-        if (isSignup && step === 1)
-            setStep(2);
-        else
-            login();
-    };
-    return (<div className="auth-page">
-      <div className="auth-brand">
-        <Logo onClick={() => navigate("landing")}/>
-        <div className="auth-quote">
-          <Icon name="swap" size={34}/>
-          <h2>Every person is both a teacher and a learner.</h2>
-          <p>
-            Join thousands of people sharing what they know and growing
-            together.
-          </p>
-          <div className="mini-person">
-            <Avatar person={people[4]}/>
-            <div>
-              <strong>Sofia Reyes</strong>
-              <span>Spanish tutor & yoga learner</span>
-            </div>
-          </div>
-        </div>
-        <div className="auth-dots"/>
-      </div>
-      <div className="auth-form-wrap">
-        <button className="back-link" onClick={() => navigate("landing")}>
-          <Icon name="back"/> Back to home
+  return (<div className="modal-backdrop" onMouseDown={onClose}>
+    <div className="modal" onMouseDown={(e) => e.stopPropagation()}>
+      <div className="modal-head">
+        <h2>{title}</h2>
+        <button className="icon-btn" onClick={onClose} aria-label="Close">
+          <Icon name="close" />
         </button>
-        <form className="auth-form" onSubmit={submit}>
-          <div>
-            <span className="section-eyebrow">
-              {isSignup ? `Step ${step} of 2` : "Welcome back"}
-            </span>
-            <h1>
-              {isSignup
-            ? step === 1
-                ? "Create your account"
-                : "What do you want to swap?"
-            : "Good to see you again"}
-            </h1>
-            <p>
-              {isSignup
-            ? step === 1
-                ? "Start learning by sharing what you already know."
-                : "This helps us find your best matches."
-            : "Log in to continue your learning journey."}
-            </p>
-          </div>
-          {(!isSignup || step === 1) && (<>
-              <label>
-                Full name{!isSignup && <small> (optional)</small>}
-                <input placeholder={isSignup ? "Alex Morgan" : "Your name"} required={isSignup}/>
-              </label>
-              <label>
-                Email address
-                <input type="email" placeholder="alex@example.com" required/>
-              </label>
-              <label>
-                Password
-                <input type="password" placeholder="At least 8 characters" required/>
-              </label>
-              {isSignup && (<label className="check-row">
-                  <input type="checkbox" required/>
-                  <span>
-                    I agree to the Terms of Service and Community Guidelines.
-                  </span>
-                </label>)}
-            </>)}
-          {isSignup && step === 2 && (<>
-              <label>
-                I can teach
-                <input placeholder="e.g. React, baking, French" required/>
-              </label>
-              <label>
-                I want to learn
-                <input placeholder="e.g. English, photography" required/>
-              </label>
-              <div className="field-row">
-                <label>
-                  My level
-                  <select>
-                    <option>Advanced</option>
-                    <option>Expert</option>
-                    <option>Intermediate</option>
-                  </select>
-                </label>
-                <label>
-                  Availability
-                  <select>
-                    <option>Weekday evenings</option>
-                    <option>Weekends</option>
-                    <option>Flexible</option>
-                  </select>
-                </label>
-              </div>
-            </>)}
-          <Button type="submit" className="full" icon="arrow">
-            {isSignup
-            ? step === 1
-                ? "Continue"
-                : "Find my matches"
-            : "Log in"}
-          </Button>
-          {!isSignup && <button type="button" className="text-link" onClick={() => setAuthNotice("Password reset is not connected in this prototype yet.")}>Forgot password?</button>}
-          <div className="auth-divider">
-            <span>or</span>
-          </div>
-          <Button variant="secondary" className="full" onClick={() => setAuthNotice("Google sign-in is not connected in this prototype yet.")}>
-            <span className="google-g">G</span> Continue with Google
-          </Button>
-          {authNotice && <p role="status" className="auth-notice">{authNotice}</p>}
-          <p className="switch-auth">
-            {isSignup ? "Already have an account?" : "New to SkillSwap?"}{" "}
-            <button type="button" onClick={() => navigate(isSignup ? "login" : "signup")}>
-              {isSignup ? "Log in" : "Create an account"}
-            </button>
-          </p>
-        </form>
-      </div>
-    </div>);
-}
-function AppShell({ page, navigate, children, openNotifications, }) {
-    const nav = [
-        ["dashboard", "home", "Overview"],
-        ["explore", "search", "Explore"],
-        ["requests", "swap", "Requests"],
-        ["messages", "message", "Messages"],
-        ["sessions", "calendar", "Sessions"],
-    ];
-    const [mobile, setMobile] = useState(false);
-    return (<div className="app-shell">
-      <aside className={mobile ? "mobile-open" : ""}>
-        <div className="side-top">
-          <Logo onClick={() => navigate("dashboard")}/>
-          <button className="mobile-close" onClick={() => setMobile(false)}>
-            <Icon name="close"/>
-          </button>
-        </div>
-        <nav>
-          {nav.map(([id, icon, label]) => (<button key={id} className={page === id ? "active" : ""} onClick={() => {
-                navigate(id);
-                setMobile(false);
-            }}>
-              <Icon name={icon}/>
-              {label}
-              {id === "messages" && <span className="nav-count">2</span>}
-            </button>))}
-        </nav>
-        <div className="side-bottom">
-          <button className={page === "settings" ? "active" : ""} onClick={() => navigate("settings")}>
-            <Icon name="settings"/>
-            Settings
-          </button>
-          <div className="side-profile">
-            <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }}/>
-            <div>
-              <strong>Alex Morgan</strong>
-              <span>View profile</span>
-            </div>
-            <Icon name="more"/>
-          </div>
-        </div>
-      </aside>
-      <div className="app-main">
-        <header className="app-header">
-          <button className="menu-btn" onClick={() => setMobile(true)}>
-            <Icon name="menu"/>
-          </button>
-          <div className="header-search">
-            <Icon name="search"/>
-            <input placeholder="Search skills or people…" onFocus={() => navigate("explore")}/>
-            <kbd>⌘ K</kbd>
-          </div>
-          <button className="notification-btn" onClick={openNotifications}>
-            <Icon name="bell"/>
-            <span />
-          </button>
-          <Button className="header-cta" icon="plus" onClick={() => navigate("requests")}>
-            New exchange
-          </Button>
-        </header>
-        {children}
-      </div>
-    </div>);
-}
-function PageHead({ eyebrow, title, children, }) {
-    return (<div className="page-head">
-      <div>
-        {eyebrow && <span className="section-eyebrow">{eyebrow}</span>}
-        <h1>{title}</h1>
       </div>
       {children}
-    </div>);
+    </div>
+  </div>);
+}
+function Landing({ navigate }) {
+  const skillNames = [
+    "React",
+    "Spanish",
+    "Photography",
+    "Figma",
+    "Guitar",
+    "Public speaking",
+  ];
+  return (<div className="public-page">
+    <header className="public-nav">
+      <Logo onClick={() => navigate("landing")} />
+      <nav>
+        <button onClick={() => document
+          .getElementById("how")
+          ?.scrollIntoView({ behavior: "smooth" })}>
+          How it works
+        </button>
+        <button onClick={() => document
+          .getElementById("skills")
+          ?.scrollIntoView({ behavior: "smooth" })}>
+          Explore skills
+        </button>
+        <button onClick={() => navigate("login")}>Log in</button>
+        <Button onClick={() => navigate("signup")}>Start swapping</Button>
+      </nav>
+    </header>
+    <main>
+      <section className="hero">
+        <div className="hero-copy">
+          <Badge tone="green">A better way to grow</Badge>
+          <h1>
+            Your skills are <em>worth sharing.</em>
+          </h1>
+          <p>
+            Learn anything by teaching what you know. SkillSwap connects
+            curious people for one-to-one skill exchanges—no fees, just shared
+            growth.
+          </p>
+          <div className="hero-actions">
+            <Button onClick={() => navigate("signup")} icon="arrow">
+              Find your skill swap
+            </Button>
+            <Button variant="secondary" onClick={() => document
+              .getElementById("how")
+              ?.scrollIntoView({ behavior: "smooth" })}>
+              See how it works
+            </Button>
+          </div>
+          <div className="trusted">
+            <div className="avatar-stack">
+              {people.slice(0, 4).map((p) => (<Avatar key={p.id} person={p} size="sm" />))}
+            </div>
+            <span>
+              <strong>4,800+ learners</strong>
+              <br />
+              sharing skills this week
+            </span>
+          </div>
+        </div>
+        <div className="hero-visual">
+          <div className="orbit orbit-one" />
+          <div className="orbit orbit-two" />
+          <div className="swap-card card-a">
+            <div className="mini-person">
+              <Avatar person={people[1]} />
+              <div>
+                <strong>Leo</strong>
+                <span>Teaches React</span>
+              </div>
+            </div>
+            <div className="skill-pill">
+              <span className="skill-icon">{"{ }"}</span>React development
+            </div>
+          </div>
+          <div className="swap-center">
+            <Icon name="swap" size={30} />
+          </div>
+          <div className="swap-card card-b">
+            <div className="mini-person">
+              <Avatar person={people[2]} />
+              <div>
+                <strong>Amara</strong>
+                <span>Teaches English</span>
+              </div>
+            </div>
+            <div className="skill-pill">
+              <span className="skill-icon">Aa</span>English speaking
+            </div>
+          </div>
+          <div className="floating-note">
+            <Icon name="check" />
+            <span>
+              <strong>It’s a match!</strong>
+              <small>92% skill compatibility</small>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section className="how-section" id="how">
+        <div className="section-eyebrow">Simple by design</div>
+        <h2>
+          Turn what you know into
+          <br />
+          what you want to learn
+        </h2>
+        <div className="steps">
+          {[
+            [
+              "01",
+              "Create your skill profile",
+              "Share what you can teach, what you’re curious about, and when you’re free.",
+            ],
+            [
+              "02",
+              "Find the right people",
+              "Browse people with complementary skills and a schedule that fits yours.",
+            ],
+            [
+              "03",
+              "Swap, learn, repeat",
+              "Propose an exchange, meet online or in person, and grow together.",
+            ],
+          ].map(([n, title, body]) => (<div className="step" key={n}>
+            <span>{n}</span>
+            <div className="step-icon">
+              <Icon name={n === "01" ? "user" : n === "02" ? "search" : "swap"} size={27} />
+            </div>
+            <h3>{title}</h3>
+            <p>{body}</p>
+          </div>))}
+        </div>
+      </section>
+      <section className="skills-section" id="skills">
+        <div className="skills-head">
+          <div>
+            <div className="section-eyebrow">Learn something new</div>
+            <h2>Skills people are sharing</h2>
+          </div>
+          <Button variant="secondary" onClick={() => navigate("signup")}>
+            Explore all skills
+          </Button>
+        </div>
+        <div className="skill-cloud">
+          {skillNames.map((skill, i) => (<button key={skill} onClick={() => navigate("signup")} className={`skill-tile tile-${i}`}>
+            <span>{["{ }", "¡Hola!", "◉", "F", "♪", "“ ”"][i]}</span>
+            <strong>{skill}</strong>
+            <small>{[342, 219, 184, 276, 156, 131][i]} people</small>
+            <Icon name="arrow" />
+          </button>))}
+        </div>
+      </section>
+      <section className="quote-section">
+        <blockquote>
+          “I taught Elena the basics of product design, and she helped me
+          finally feel confident speaking Spanish. We still meet every other
+          week.”
+        </blockquote>
+        <div>
+          <Avatar person={people[0]} />
+          <span>
+            <strong>Priya Shah</strong>
+            <small>Product designer · Toronto</small>
+          </span>
+        </div>
+      </section>
+      <section className="cta">
+        <div>
+          <span className="section-eyebrow">Ready when you are</span>
+          <h2>Someone out there wants to learn what you know.</h2>
+          <p>Your first exchange could be one conversation away.</p>
+        </div>
+        <Button onClick={() => navigate("signup")} icon="arrow">
+          Create your free profile
+        </Button>
+      </section>
+    </main>
+    <footer>
+      <Logo onClick={() => navigate("landing")} />
+      <p>Learn freely. Teach generously.</p>
+      <span>© 2026 SkillSwap</span>
+    </footer>
+  </div>);
+}
+function AuthPage({ kind, navigate, login, }) {
+  const isSignup = kind === "signup";
+  const [step, setStep] = useState(1);
+  const [authNotice, setAuthNotice] = useState("");
+  const submit = (e) => {
+    e.preventDefault();
+    if (isSignup && step === 1)
+      setStep(2);
+    else
+      login();
+  };
+  return (<div className="auth-page">
+    <div className="auth-brand">
+      <Logo onClick={() => navigate("landing")} />
+      <div className="auth-quote">
+        <Icon name="swap" size={34} />
+        <h2>Every person is both a teacher and a learner.</h2>
+        <p>
+          Join thousands of people sharing what they know and growing
+          together.
+        </p>
+        <div className="mini-person">
+          <Avatar person={people[4]} />
+          <div>
+            <strong>Sofia Reyes</strong>
+            <span>Spanish tutor & yoga learner</span>
+          </div>
+        </div>
+      </div>
+      <div className="auth-dots" />
+    </div>
+    <div className="auth-form-wrap">
+      <button className="back-link" onClick={() => navigate("landing")}>
+        <Icon name="back" /> Back to home
+      </button>
+      <form className="auth-form" onSubmit={submit}>
+        <div>
+          <span className="section-eyebrow">
+            {isSignup ? `Step ${step} of 2` : "Welcome back"}
+          </span>
+          <h1>
+            {isSignup
+              ? step === 1
+                ? "Create your account"
+                : "What do you want to swap?"
+              : "Good to see you again"}
+          </h1>
+          <p>
+            {isSignup
+              ? step === 1
+                ? "Start learning by sharing what you already know."
+                : "This helps us find your best matches."
+              : "Log in to continue your learning journey."}
+          </p>
+        </div>
+        {(!isSignup || step === 1) && (<>
+          <label>
+            Full name{!isSignup && <small> (optional)</small>}
+            <input placeholder={isSignup ? "Alex Morgan" : "Your name"} required={isSignup} />
+          </label>
+          <label>
+            Email address
+            <input type="email" placeholder="alex@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="At least 8 characters" required />
+          </label>
+          {isSignup && (<label className="check-row">
+            <input type="checkbox" required />
+            <span>
+              I agree to the Terms of Service and Community Guidelines.
+            </span>
+          </label>)}
+        </>)}
+        {isSignup && step === 2 && (<>
+          <label>
+            I can teach
+            <input placeholder="e.g. React, baking, French" required />
+          </label>
+          <label>
+            I want to learn
+            <input placeholder="e.g. English, photography" required />
+          </label>
+          <div className="field-row">
+            <label>
+              My level
+              <select>
+                <option>Advanced</option>
+                <option>Expert</option>
+                <option>Intermediate</option>
+              </select>
+            </label>
+            <label>
+              Availability
+              <select>
+                <option>Weekday evenings</option>
+                <option>Weekends</option>
+                <option>Flexible</option>
+              </select>
+            </label>
+          </div>
+        </>)}
+        <Button type="submit" className="full" icon="arrow">
+          {isSignup
+            ? step === 1
+              ? "Continue"
+              : "Find my matches"
+            : "Log in"}
+        </Button>
+        {!isSignup && <button type="button" className="text-link" onClick={() => setAuthNotice("Password reset is not connected in this prototype yet.")}>Forgot password?</button>}
+        <div className="auth-divider">
+          <span>or</span>
+        </div>
+        <Button variant="secondary" className="full" onClick={() => setAuthNotice("Google sign-in is not connected in this prototype yet.")}>
+          <span className="google-g">G</span> Continue with Google
+        </Button>
+        {authNotice && <p role="status" className="auth-notice">{authNotice}</p>}
+        <p className="switch-auth">
+          {isSignup ? "Already have an account?" : "New to SkillSwap?"}{" "}
+          <button type="button" onClick={() => navigate(isSignup ? "login" : "signup")}>
+            {isSignup ? "Log in" : "Create an account"}
+          </button>
+        </p>
+      </form>
+    </div>
+  </div>);
+}
+function AppShell({ page, navigate, children, openNotifications, }) {
+  const nav = [
+    ["dashboard", "home", "Overview"],
+    ["explore", "search", "Explore"],
+    ["requests", "swap", "Requests"],
+    ["messages", "message", "Messages"],
+    ["sessions", "calendar", "Sessions"],
+  ];
+  const [mobile, setMobile] = useState(false);
+  return (<div className="app-shell">
+    <aside className={mobile ? "mobile-open" : ""}>
+      <div className="side-top">
+        <Logo onClick={() => navigate("dashboard")} />
+        <button className="mobile-close" onClick={() => setMobile(false)}>
+          <Icon name="close" />
+        </button>
+      </div>
+      <nav>
+        {nav.map(([id, icon, label]) => (<button key={id} className={page === id ? "active" : ""} onClick={() => {
+          navigate(id);
+          setMobile(false);
+        }}>
+          <Icon name={icon} />
+          {label}
+          {id === "messages" && <span className="nav-count">2</span>}
+        </button>))}
+      </nav>
+      <div className="side-bottom">
+        <button className={page === "settings" ? "active" : ""} onClick={() => navigate("settings")}>
+          <Icon name="settings" />
+          Settings
+        </button>
+        <div className="side-profile">
+          <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
+          <div>
+            <strong>Alex Morgan</strong>
+            <span>View profile</span>
+          </div>
+          <Icon name="more" />
+        </div>
+      </div>
+    </aside>
+    <div className="app-main">
+      <header className="app-header">
+        <button className="menu-btn" onClick={() => setMobile(true)}>
+          <Icon name="menu" />
+        </button>
+        <div className="header-search">
+          <Icon name="search" />
+          <input placeholder="Search skills or people…" onFocus={() => navigate("explore")} />
+          <kbd>⌘ K</kbd>
+        </div>
+        <button className="notification-btn" onClick={openNotifications}>
+          <Icon name="bell" />
+          <span />
+        </button>
+        <Button className="header-cta" icon="plus" onClick={() => navigate("requests")}>
+          New exchange
+        </Button>
+      </header>
+      {children}
+    </div>
+  </div>);
+}
+function PageHead({ eyebrow, title, children, }) {
+  return (<div className="page-head">
+    <div>
+      {eyebrow && <span className="section-eyebrow">{eyebrow}</span>}
+      <h1>{title}</h1>
+    </div>
+    {children}
+  </div>);
 }
 function Dashboard({ navigate }) {
-    return (<main className="page dashboard">
-      <PageHead eyebrow="Monday, March 9" title="Good morning, Alex">
-        <Button variant="secondary" onClick={() => navigate("explore")} icon="search">
-          Find people
-        </Button>
-      </PageHead>
-      <div className="stats-grid">
-        {[
-            ["Active exchanges", "3", "+1 this month", "swap"],
-            ["Pending requests", "2", "Needs your reply", "clock"],
-            ["Sessions this week", "4", "Next one tomorrow", "calendar"],
-        ].map(([label, value, note, icon], i) => (<div className={`stat-card stat-${i}`} key={label}>
-            <div className="stat-icon">
-              <Icon name={icon}/>
+  return (<main className="page dashboard">
+    <PageHead eyebrow="Monday, March 9" title="Good morning, Alex">
+      <Button variant="secondary" onClick={() => navigate("explore")} icon="search">
+        Find people
+      </Button>
+    </PageHead>
+    <div className="stats-grid">
+      {[
+        ["Active exchanges", "3", "+1 this month", "swap"],
+        ["Pending requests", "2", "Needs your reply", "clock"],
+        ["Sessions this week", "4", "Next one tomorrow", "calendar"],
+      ].map(([label, value, note, icon], i) => (<div className={`stat-card stat-${i}`} key={label}>
+        <div className="stat-icon">
+          <Icon name={icon} />
+        </div>
+        <span>{label}</span>
+        <strong>{value}</strong>
+        <small>{note}</small>
+      </div>))}
+    </div>
+    <section className="content-grid">
+      <div className="content-main">
+        <div className="section-title">
+          <h2>Active exchanges</h2>
+          <button onClick={() => navigate("requests")}>
+            View all <Icon name="arrow" />
+          </button>
+        </div>
+        <div className="exchange-list">
+          <div className="exchange-card">
+            <div className="exchange-users">
+              <Avatar person={people[2]} />
+              <span className="swap-mini">
+                <Icon name="swap" size={15} />
+              </span>
+              <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
             </div>
-            <span>{label}</span>
-            <strong>{value}</strong>
-            <small>{note}</small>
-          </div>))}
-      </div>
-      <section className="content-grid">
-        <div className="content-main">
-          <div className="section-title">
-            <h2>Active exchanges</h2>
-            <button onClick={() => navigate("requests")}>
-              View all <Icon name="arrow"/>
-            </button>
-          </div>
-          <div className="exchange-list">
-            <div className="exchange-card">
-              <div className="exchange-users">
-                <Avatar person={people[2]}/>
-                <span className="swap-mini">
-                  <Icon name="swap" size={15}/>
-                </span>
-                <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }}/>
+            <div className="exchange-info">
+              <strong>
+                English speaking <Icon name="swap" size={14} /> React
+              </strong>
+              <span>with Amara Okafor · 3 sessions completed</span>
+              <div className="progress">
+                <i style={{ width: "60%" }} />
               </div>
-              <div className="exchange-info">
-                <strong>
-                  English speaking <Icon name="swap" size={14}/> React
-                </strong>
-                <span>with Amara Okafor · 3 sessions completed</span>
-                <div className="progress">
-                  <i style={{ width: "60%" }}/>
-                </div>
-              </div>
-              <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
-                Message
-              </Button>
             </div>
-            <div className="exchange-card">
-              <div className="exchange-users">
-                <Avatar person={people[0]}/>
-                <span className="swap-mini">
-                  <Icon name="swap" size={15}/>
-                </span>
-                <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }}/>
-              </div>
-              <div className="exchange-info">
-                <strong>
-                  Figma <Icon name="swap" size={14}/> Photography
-                </strong>
-                <span>with Maya Chen · 1 session completed</span>
-                <div className="progress">
-                  <i style={{ width: "28%" }}/>
-                </div>
-              </div>
-              <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
-                Message
-              </Button>
+            <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
+              Message
+            </Button>
+          </div>
+          <div className="exchange-card">
+            <div className="exchange-users">
+              <Avatar person={people[0]} />
+              <span className="swap-mini">
+                <Icon name="swap" size={15} />
+              </span>
+              <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
             </div>
-          </div>
-          <div className="section-title">
-            <h2>Recently viewed</h2>
-            <button onClick={() => navigate("explore")}>
-              Explore more <Icon name="arrow"/>
-            </button>
-          </div>
-          <div className="recent-grid">
-            {people.slice(1, 4).map((p) => (<button className="recent-card" key={p.id} onClick={() => navigate("profile")}>
-                <Avatar person={p} size="lg"/>
-                <div>
-                  <strong>{p.name}</strong>
-                  <span>{p.role}</span>
-                  <Stars rating={p.rating}/>
-                </div>
-                <Icon name="chevron"/>
-              </button>))}
+            <div className="exchange-info">
+              <strong>
+                Figma <Icon name="swap" size={14} /> Photography
+              </strong>
+              <span>with Maya Chen · 1 session completed</span>
+              <div className="progress">
+                <i style={{ width: "28%" }} />
+              </div>
+            </div>
+            <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
+              Message
+            </Button>
           </div>
         </div>
-        <aside className="dashboard-side">
-          <div className="section-title">
-            <h2>Up next</h2>
-            <button onClick={() => navigate("sessions")}>Calendar</button>
-          </div>
-          <div className="next-session">
-            <div className="date-block">
-              <strong>10</strong>
-              <span>MAR</span>
+        <div className="section-title">
+          <h2>Recently viewed</h2>
+          <button onClick={() => navigate("explore")}>
+            Explore more <Icon name="arrow" />
+          </button>
+        </div>
+        <div className="recent-grid">
+          {people.slice(1, 4).map((p) => (<button className="recent-card" key={p.id} onClick={() => navigate("profile")}>
+            <Avatar person={p} size="lg" />
+            <div>
+              <strong>{p.name}</strong>
+              <span>{p.role}</span>
+              <Stars rating={p.rating} />
             </div>
-            <Badge tone="green">Tomorrow · 5:30 PM</Badge>
-            <h3>Figma fundamentals</h3>
-            <div className="mini-person">
-              <Avatar person={people[0]} size="sm"/>
-              <span>
-                with <strong>Maya Chen</strong>
-              </span>
-            </div>
-            <Button className="full" icon="video">
-              Join session
-            </Button>
-            <Button variant="ghost" className="full">
-              Reschedule
-            </Button>
+            <Icon name="chevron" />
+          </button>))}
+        </div>
+      </div>
+      <aside className="dashboard-side">
+        <div className="section-title">
+          <h2>Up next</h2>
+          <button onClick={() => navigate("sessions")}>Calendar</button>
+        </div>
+        <div className="next-session">
+          <div className="date-block">
+            <strong>10</strong>
+            <span>MAR</span>
           </div>
-          <div className="tip-card">
-            <span className="tip-icon">↗</span>
-            <h3>Grow your profile</h3>
-            <p>Add your weekend availability to get 35% more matches.</p>
-            <button onClick={() => navigate("settings")}>
-              Update availability <Icon name="arrow"/>
-            </button>
+          <Badge tone="green">Tomorrow · 5:30 PM</Badge>
+          <h3>Figma fundamentals</h3>
+          <div className="mini-person">
+            <Avatar person={people[0]} size="sm" />
+            <span>
+              with <strong>Maya Chen</strong>
+            </span>
           </div>
-        </aside>
-      </section>
-    </main>);
+          <Button className="full" icon="video">
+            Join session
+          </Button>
+          <Button variant="ghost" className="full">
+            Reschedule
+          </Button>
+        </div>
+        <div className="tip-card">
+          <span className="tip-icon">↗</span>
+          <h3>Grow your profile</h3>
+          <p>Add your weekend availability to get 35% more matches.</p>
+          <button onClick={() => navigate("settings")}>
+            Update availability <Icon name="arrow" />
+          </button>
+        </div>
+      </aside>
+    </section>
+  </main>);
 }
 function Explore({ navigate }) {
-    const [query, setQuery] = useState("");
-    const [level, setLevel] = useState("All levels");
-    const [availability, setAvailability] = useState("Any time");
-    const [language, setLanguage] = useState("Any language");
-    const [loading, setLoading] = useState(false);
-    const filtered = useMemo(() => people.filter((p) => {
-        const q = query.toLowerCase();
-        return ((!q ||
-            p.name.toLowerCase().includes(q) ||
-            p.teaches.some((s) => s.name.toLowerCase().includes(q))) &&
-            (level === "All levels" ||
-                p.teaches.some((s) => s.level === level)) &&
-            (availability === "Any time" || p.availability === availability) &&
-            (language === "Any language" || p.languages.includes(language)));
-    }), [query, level, availability, language]);
-    const doSearch = () => {
-        setLoading(true);
-        window.setTimeout(() => setLoading(false), 650);
-    };
-    return (<main className="page explore">
-      <PageHead eyebrow="Discover your next exchange" title="Find people to learn with">
-        <span className="result-count">{filtered.length} great matches</span>
-      </PageHead>
-      <div className="search-panel">
-        <div className="big-search">
-          <Icon name="search" size={21}/>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSearch()} placeholder="Try “Spanish”, “React”, or a person’s name"/>
-          <Button onClick={doSearch}>Search</Button>
-        </div>
-        <div className="filters">
-          <span>
-            <Icon name="filter"/> Filters
-          </span>
-          <label>
-            Proficiency
-            <select value={level} onChange={(e) => setLevel(e.target.value)}>
-              {["All levels", "Expert", "Advanced", "Intermediate"].map((o) => (<option key={o}>{o}</option>))}
-            </select>
-          </label>
-          <label>
-            Availability
-            <select value={availability} onChange={(e) => setAvailability(e.target.value)}>
-              {["Any time", "Weekday evenings", "Weekends", "Flexible"].map((o) => (<option key={o}>{o}</option>))}
-            </select>
-          </label>
-          <label>
-            Language
-            <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-              {[
-            "Any language",
-            "English",
-            "Spanish",
-            "French",
-            "Portuguese",
-        ].map((o) => (<option key={o}>{o}</option>))}
-            </select>
-          </label>
-          <button className="clear" onClick={() => {
-            setQuery("");
-            setLevel("All levels");
-            setAvailability("Any time");
-            setLanguage("Any language");
-        }}>
-            Clear all
-          </button>
-        </div>
+  const [query, setQuery] = useState("");
+  const [level, setLevel] = useState("All levels");
+  const [availability, setAvailability] = useState("Any time");
+  const [language, setLanguage] = useState("Any language");
+  const [loading, setLoading] = useState(false);
+  const filtered = useMemo(() => people.filter((p) => {
+    const q = query.toLowerCase();
+    return ((!q ||
+      p.name.toLowerCase().includes(q) ||
+      p.teaches.some((s) => s.name.toLowerCase().includes(q))) &&
+      (level === "All levels" ||
+        p.teaches.some((s) => s.level === level)) &&
+      (availability === "Any time" || p.availability === availability) &&
+      (language === "Any language" || p.languages.includes(language)));
+  }), [query, level, availability, language]);
+  const doSearch = () => {
+    setLoading(true);
+    window.setTimeout(() => setLoading(false), 650);
+  };
+  return (<main className="page explore">
+    <PageHead eyebrow="Discover your next exchange" title="Find people to learn with">
+      <span className="result-count">{filtered.length} great matches</span>
+    </PageHead>
+    <div className="search-panel">
+      <div className="big-search">
+        <Icon name="search" size={21} />
+        <input value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSearch()} placeholder="Try “Spanish”, “React”, or a person’s name" />
+        <Button onClick={doSearch}>Search</Button>
       </div>
-      {loading ? (<div className="people-grid">
-          {[1, 2, 3].map((i) => (<div className="person-card skeleton" key={i}>
-              <div />
-              <div />
-              <div />
-              <div />
-            </div>))}
-        </div>) : filtered.length ? (<div className="people-grid">
-          {filtered.map((p) => (<PersonCard key={p.id} person={p} navigate={navigate}/>))}
-        </div>) : (<div className="empty-state">
-          <div>
-            <Icon name="search" size={28}/>
-          </div>
-          <h2>No matches yet</h2>
-          <p>Try clearing a filter or searching for a broader skill.</p>
-          <Button onClick={() => {
-                setQuery("");
-                setLevel("All levels");
-                setAvailability("Any time");
-                setLanguage("Any language");
-            }}>
-            Clear filters
-          </Button>
-        </div>)}
-    </main>);
+      <div className="filters">
+        <span>
+          <Icon name="filter" /> Filters
+        </span>
+        <label>
+          Proficiency
+          <select value={level} onChange={(e) => setLevel(e.target.value)}>
+            {["All levels", "Expert", "Advanced", "Intermediate"].map((o) => (<option key={o}>{o}</option>))}
+          </select>
+        </label>
+        <label>
+          Availability
+          <select value={availability} onChange={(e) => setAvailability(e.target.value)}>
+            {["Any time", "Weekday evenings", "Weekends", "Flexible"].map((o) => (<option key={o}>{o}</option>))}
+          </select>
+        </label>
+        <label>
+          Language
+          <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+            {[
+              "Any language",
+              "English",
+              "Spanish",
+              "French",
+              "Portuguese",
+            ].map((o) => (<option key={o}>{o}</option>))}
+          </select>
+        </label>
+        <button className="clear" onClick={() => {
+          setQuery("");
+          setLevel("All levels");
+          setAvailability("Any time");
+          setLanguage("Any language");
+        }}>
+          Clear all
+        </button>
+      </div>
+    </div>
+    {loading ? (<div className="people-grid">
+      {[1, 2, 3].map((i) => (<div className="person-card skeleton" key={i}>
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>))}
+    </div>) : filtered.length ? (<div className="people-grid">
+      {filtered.map((p) => (<PersonCard key={p.id} person={p} navigate={navigate} />))}
+    </div>) : (<div className="empty-state">
+      <div>
+        <Icon name="search" size={28} />
+      </div>
+      <h2>No matches yet</h2>
+      <p>Try clearing a filter or searching for a broader skill.</p>
+      <Button onClick={() => {
+        setQuery("");
+        setLevel("All levels");
+        setAvailability("Any time");
+        setLanguage("Any language");
+      }}>
+        Clear filters
+      </Button>
+    </div>)}
+  </main>);
 }
 function PersonCard({ person, navigate, }) {
-    const [saved, setSaved] = useState(false);
-    return (<article className="person-card">
-      <div className="match-tag">{person.match}% match</div>
-      <button className={`save-btn ${saved ? "saved" : ""}`} onClick={() => setSaved(!saved)} aria-label="Save profile">
-        <Icon name="heart"/>
-      </button>
-      <button className="person-identity" onClick={() => navigate("profile")}>
-        <Avatar person={person} size="xl"/>
-        <div>
-          <h2>{person.name}</h2>
-          <p>{person.role}</p>
-          <span>
-            <Icon name="location" size={14}/> {person.location}
-          </span>
-        </div>
-      </button>
-      <div className="card-skills">
-        <span>TEACHES</span>
-        {person.teaches.map((s, i) => (<Badge tone={i ? "blue" : "green"} key={s.name}>
-            {s.name} · {s.level}
-          </Badge>))}
-      </div>
-      <div className="wants">
-        <span>Wants to learn</span>
-        <strong>{person.learns.join(" · ")}</strong>
-      </div>
-      <div className="person-meta">
-        <Stars rating={person.rating} count={person.reviews}/>
+  const [saved, setSaved] = useState(false);
+  return (<article className="person-card">
+    <div className="match-tag">{person.match}% match</div>
+    <button className={`save-btn ${saved ? "saved" : ""}`} onClick={() => setSaved(!saved)} aria-label="Save profile">
+      <Icon name="heart" />
+    </button>
+    <button className="person-identity" onClick={() => navigate("profile")}>
+      <Avatar person={person} size="xl" />
+      <div>
+        <h2>{person.name}</h2>
+        <p>{person.role}</p>
         <span>
-          <Icon name="clock" size={14}/> {person.availability}
+          <Icon name="location" size={14} /> {person.location}
         </span>
       </div>
-      <Button className="full" onClick={() => navigate("profile")}>
-        View profile
-      </Button>
-    </article>);
+    </button>
+    <div className="card-skills">
+      <span>TEACHES</span>
+      {person.teaches.map((s, i) => (<Badge tone={i ? "blue" : "green"} key={s.name}>
+        {s.name} · {s.level}
+      </Badge>))}
+    </div>
+    <div className="wants">
+      <span>Wants to learn</span>
+      <strong>{person.learns.join(" · ")}</strong>
+    </div>
+    <div className="person-meta">
+      <Stars rating={person.rating} count={person.reviews} />
+      <span>
+        <Icon name="clock" size={14} /> {person.availability}
+      </span>
+    </div>
+    <Button className="full" onClick={() => navigate("profile")}>
+      View profile
+    </Button>
+  </article>);
 }
 function Profile({ navigate, openRequest, }) {
-    const p = people[2];
-    return (<main className="page profile-page">
-      <button className="back-link" onClick={() => navigate("explore")}>
-        <Icon name="back"/> Back to explore
-      </button>
-      <div className="profile-hero">
-        <div className="profile-main">
-          <Avatar person={p} size="xl" online/>
-          <div>
-            <div className="profile-name">
-              <h1>{p.name}</h1>
-              <Badge tone="green">Verified</Badge>
-            </div>
-            <p>{p.role}</p>
-            <span>
-              <Icon name="location"/> {p.location} · <Icon name="globe"/>{" "}
-              Speaks English & French
-            </span>
-            <Stars rating={p.rating} count={p.reviews}/>
+  const p = people[2];
+  return (<main className="page profile-page">
+    <button className="back-link" onClick={() => navigate("explore")}>
+      <Icon name="back" /> Back to explore
+    </button>
+    <div className="profile-hero">
+      <div className="profile-main">
+        <Avatar person={p} size="xl" online />
+        <div>
+          <div className="profile-name">
+            <h1>{p.name}</h1>
+            <Badge tone="green">Verified</Badge>
           </div>
-        </div>
-        <div className="profile-actions">
-          <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
-            Message
-          </Button>
-          <Button onClick={openRequest} icon="swap">
-            Propose exchange
-          </Button>
+          <p>{p.role}</p>
+          <span>
+            <Icon name="location" /> {p.location} · <Icon name="globe" />{" "}
+            Speaks English & French
+          </span>
+          <Stars rating={p.rating} count={p.reviews} />
         </div>
       </div>
-      <div className="profile-layout">
-        <div className="profile-content">
-          <section className="profile-section">
-            <h2>About Amara</h2>
-            <p>
-              {p.bio} I believe the best learning happens when both people feel
-              comfortable making mistakes and asking questions. Outside of
-              teaching, I’m learning to build small web apps.
-            </p>
-          </section>
-          <section className="profile-section">
-            <div className="section-title">
-              <h2>Skills I can teach</h2>
-              <span>2 skills</span>
-            </div>
-            <div className="skill-detail">
-              <div className="skill-symbol">Aa</div>
-              <div>
-                <h3>English speaking</h3>
-                <Badge tone="green">Expert</Badge>
-                <p>
-                  Conversation practice, pronunciation, interview preparation,
-                  and confidence building for intermediate learners.
-                </p>
-                <span>
-                  <Icon name="check"/> 31 successful exchanges
-                </span>
-              </div>
-            </div>
-            <div className="skill-detail">
-              <div className="skill-symbol purple">“ ”</div>
-              <div>
-                <h3>Public speaking</h3>
-                <Badge tone="blue">Advanced</Badge>
-                <p>
-                  Structure your ideas, present with clarity, and feel
-                  comfortable in front of a group.
-                </p>
-                <span>
-                  <Icon name="check"/> 12 successful exchanges
-                </span>
-              </div>
-            </div>
-          </section>
-          <section className="profile-section">
-            <h2>Recent reviews</h2>
-            {[
-            [
-                "Nina Patel",
-                "Amara is encouraging, prepared, and makes every session feel easy. I’m speaking more confidently at work already.",
-                "2 weeks ago",
-            ],
-            [
-                "Diego Soto",
-                "A thoughtful teacher and great listener. She gave me specific exercises that made a real difference.",
-                "1 month ago",
-            ],
-        ].map(([name, text, date], i) => (<div className="review" key={name}>
-                <Avatar person={{
-                name,
-                avatar: name
-                    .split(" ")
-                    .map((x) => x[0])
-                    .join(""),
-                color: i ? "amber" : "blue",
-            }}/>
-                <div>
-                  <div>
-                    <strong>{name}</strong>
-                    <Stars rating={5}/>
-                  </div>
-                  <p>{text}</p>
-                  <span>{date} · English speaking</span>
-                </div>
-              </div>))}
-          </section>
-        </div>
-        <aside className="profile-side">
-          <div className="side-card">
-            <h3>Looking to learn</h3>
-            <div className="wanted-skill">
-              <span className="skill-symbol small">{"{ }"}</span>
-              <div>
-                <strong>React</strong>
-                <span>Beginner</span>
-              </div>
-            </div>
-            <div className="wanted-skill">
-              <span className="skill-symbol small">♪</span>
-              <div>
-                <strong>Guitar</strong>
-                <span>Beginner</span>
-              </div>
-            </div>
-          </div>
-          <div className="side-card">
-            <h3>Availability</h3>
-            <div className="availability-row">
-              <span>Mon – Thu</span>
-              <strong>6:00 – 9:00 PM</strong>
-            </div>
-            <div className="availability-row">
-              <span>Saturday</span>
-              <strong>10:00 AM – 2:00 PM</strong>
-            </div>
-            <small>Times shown in your timezone</small>
-          </div>
-          <div className="side-card response-card">
-            <Icon name="clock"/>
-            <div>
-              <strong>Usually responds in 2 hours</strong>
-              <span>Last active 12 minutes ago</span>
-            </div>
-          </div>
-        </aside>
+      <div className="profile-actions">
+        <Button variant="secondary" onClick={() => navigate("messages")} icon="message">
+          Message
+        </Button>
+        <Button onClick={openRequest} icon="swap">
+          Propose exchange
+        </Button>
       </div>
-    </main>);
-}
-function Requests({ showToast }) {
-    const [tab, setTab] = useState("Incoming");
-    const [statuses, setStatuses] = useState({});
-    const requests = tab === "Incoming"
-        ? [
-            {
-                id: 1,
-                person: people[4],
-                offer: "Spanish conversation",
-                want: "React basics",
-                note: "I’m building a tiny recipe app and would love help with components. Happy to practice Spanish with you!",
-                date: "Today",
-            },
-            {
-                id: 2,
-                person: people[5],
-                offer: "Guitar",
-                want: "TypeScript",
-                note: "Your TypeScript experience looks like a great fit. I can teach beginner guitar chords and songs.",
-                date: "Yesterday",
-            },
-        ]
-        : tab === "Sent"
-            ? [
-                {
-                    id: 3,
-                    person: people[1],
-                    offer: "React",
-                    want: "English speaking",
-                    note: "Would love to pair on a small React project together.",
-                    date: "Mar 6",
-                },
-            ]
-            : [];
-    return (<main className="page requests-page">
-      <PageHead eyebrow="Exchange hub" title="Requests">
-        <Button icon="plus">New request</Button>
-      </PageHead>
-      <div className="tabs">
-        {["Incoming", "Sent", "History"].map((t) => (<button className={tab === t ? "active" : ""} onClick={() => setTab(t)} key={t}>
-            {t}
-            {t === "Incoming" && <span>2</span>}
-          </button>))}
-      </div>
-      {requests.length ? (<div className="request-list">
-          {requests.map((r) => (<article className="request-card" key={r.id}>
-              <div className="request-top">
-                <Avatar person={r.person} size="lg"/>
-                <div>
-                  <h2>{r.person.name}</h2>
-                  <p>
-                    {r.person.role} · <Stars rating={r.person.rating}/>
-                  </p>
-                  <span>{r.date}</span>
-                </div>
-                <Badge tone={statuses[r.id] === "accepted"
-                    ? "green"
-                    : statuses[r.id] === "rejected"
-                        ? "rose"
-                        : "amber"}>
-                  {statuses[r.id] ||
-                    (tab === "Sent" ? "Pending" : "New request")}
-                </Badge>
-              </div>
-              <div className="request-swap">
-                <div>
-                  <small>THEY’LL TEACH</small>
-                  <strong>{r.offer}</strong>
-                </div>
-                <span>
-                  <Icon name="swap"/>
-                </span>
-                <div>
-                  <small>THEY WANT TO LEARN</small>
-                  <strong>{r.want}</strong>
-                </div>
-              </div>
-              <blockquote>“{r.note}”</blockquote>
-              {tab === "Incoming" && !statuses[r.id] && (<div className="request-actions">
-                  <Button variant="secondary" onClick={() => {
-                        setStatuses({ ...statuses, [r.id]: "rejected" });
-                        showToast("Request declined");
-                    }}>
-                    Decline
-                  </Button>
-                  <Button onClick={() => {
-                        setStatuses({ ...statuses, [r.id]: "accepted" });
-                        showToast(`Exchange with ${r.person.name} accepted`);
-                    }} icon="check">
-                    Accept exchange
-                  </Button>
-                </div>)}
-            </article>))}
-        </div>) : (<div className="empty-state">
-          <div>
-            <Icon name="swap" size={28}/>
-          </div>
-          <h2>No {tab.toLowerCase()} requests</h2>
+    </div>
+    <div className="profile-layout">
+      <div className="profile-content">
+        <section className="profile-section">
+          <h2>About Amara</h2>
           <p>
-            {tab === "History"
-                ? "Completed and declined exchanges will appear here."
-                : "You’re all caught up for now."}
+            {p.bio} I believe the best learning happens when both people feel
+            comfortable making mistakes and asking questions. Outside of
+            teaching, I’m learning to build small web apps.
           </p>
-        </div>)}
-    </main>);
-}
-function Messages() {
-    const [active, setActive] = useState(1);
-    const [texts, setTexts] = useState(initialMessages);
-    const [draft, setDraft] = useState("");
-    const send = (e) => {
-        e.preventDefault();
-        if (!draft.trim())
-            return;
-        setTexts([
-            ...texts,
-            { id: Date.now(), mine: true, text: draft, time: "Now" },
-        ]);
-        setDraft("");
-    };
-    return (<main className="messages-page">
-      <div className="conversations">
-        <div className="messages-title">
-          <h1>Messages</h1>
-          <button>
-            <Icon name="plus"/>
-          </button>
-        </div>
-        <div className="conversation-search">
-          <Icon name="search"/>
-          <input placeholder="Search conversations"/>
-        </div>
-        {conversations.map((c) => (<button className={`conversation ${active === c.id ? "active" : ""}`} onClick={() => setActive(c.id)} key={c.id}>
-            <Avatar person={c.person} online={c.id === 1}/>
+        </section>
+        <section className="profile-section">
+          <div className="section-title">
+            <h2>Skills I can teach</h2>
+            <span>2 skills</span>
+          </div>
+          <div className="skill-detail">
+            <div className="skill-symbol">Aa</div>
             <div>
-              <strong>{c.person.name}</strong>
-              <p>{c.preview}</p>
-            </div>
-            <span>
-              {c.time}
-              {c.unread > 0 && <b>{c.unread}</b>}
-            </span>
-          </button>))}
-      </div>
-      <section className="chat">
-        <header>
-          <div className="mini-person">
-            <Avatar person={people[2]} online/>
-            <div>
-              <strong>Amara Okafor</strong>
+              <h3>English speaking</h3>
+              <Badge tone="green">Expert</Badge>
+              <p>
+                Conversation practice, pronunciation, interview preparation,
+                and confidence building for intermediate learners.
+              </p>
               <span>
-                Online · English <Icon name="swap" size={12}/> React
+                <Icon name="check" /> 31 successful exchanges
               </span>
             </div>
           </div>
-          <div>
-            <button className="icon-btn">
-              <Icon name="video"/>
-            </button>
-            <button className="icon-btn">
-              <Icon name="more"/>
-            </button>
+          <div className="skill-detail">
+            <div className="skill-symbol purple">“ ”</div>
+            <div>
+              <h3>Public speaking</h3>
+              <Badge tone="blue">Advanced</Badge>
+              <p>
+                Structure your ideas, present with clarity, and feel
+                comfortable in front of a group.
+              </p>
+              <span>
+                <Icon name="check" /> 12 successful exchanges
+              </span>
+            </div>
           </div>
-        </header>
-        <div className="chat-body">
-          <div className="date-separator">
-            <span>Today</span>
-          </div>
-          {texts.map((m) => (<div className={`message-row ${m.mine ? "mine" : ""}`} key={m.id}>
-              {!m.mine && <Avatar person={people[2]} size="sm"/>}
+        </section>
+        <section className="profile-section">
+          <h2>Recent reviews</h2>
+          {[
+            [
+              "Nina Patel",
+              "Amara is encouraging, prepared, and makes every session feel easy. I’m speaking more confidently at work already.",
+              "2 weeks ago",
+            ],
+            [
+              "Diego Soto",
+              "A thoughtful teacher and great listener. She gave me specific exercises that made a real difference.",
+              "1 month ago",
+            ],
+          ].map(([name, text, date], i) => (<div className="review" key={name}>
+            <Avatar person={{
+              name,
+              avatar: name
+                .split(" ")
+                .map((x) => x[0])
+                .join(""),
+              color: i ? "amber" : "blue",
+            }} />
+            <div>
               <div>
-                <p>{m.text}</p>
-                <span>{m.time}</span>
+                <strong>{name}</strong>
+                <Stars rating={5} />
               </div>
-            </div>))}
+              <p>{text}</p>
+              <span>{date} · English speaking</span>
+            </div>
+          </div>))}
+        </section>
+      </div>
+      <aside className="profile-side">
+        <div className="side-card">
+          <h3>Looking to learn</h3>
+          <div className="wanted-skill">
+            <span className="skill-symbol small">{"{ }"}</span>
+            <div>
+              <strong>React</strong>
+              <span>Beginner</span>
+            </div>
+          </div>
+          <div className="wanted-skill">
+            <span className="skill-symbol small">♪</span>
+            <div>
+              <strong>Guitar</strong>
+              <span>Beginner</span>
+            </div>
+          </div>
         </div>
-        <form className="composer" onSubmit={send}>
-          <button type="button">
-            <Icon name="plus"/>
-          </button>
-          <input value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Write a message…"/>
-          <button className="send-btn" type="submit" aria-label="Send">
-            <Icon name="send"/>
-          </button>
-        </form>
-      </section>
-      <aside className="chat-details">
-        <Avatar person={people[2]} size="xl"/>
-        <h2>Amara Okafor</h2>
-        <p>London, UK</p>
-        <Stars rating={5} count={34}/>
-        <Button variant="secondary" className="full">
-          View profile
-        </Button>
-        <div className="detail-divider"/>
-        <h3>Your exchange</h3>
-        <div className="exchange-compact">
-          <span>
-            <small>YOU TEACH</small>React basics
-          </span>
-          <Icon name="swap"/>
-          <span>
-            <small>YOU LEARN</small>English speaking
-          </span>
+        <div className="side-card">
+          <h3>Availability</h3>
+          <div className="availability-row">
+            <span>Mon – Thu</span>
+            <strong>6:00 – 9:00 PM</strong>
+          </div>
+          <div className="availability-row">
+            <span>Saturday</span>
+            <strong>10:00 AM – 2:00 PM</strong>
+          </div>
+          <small>Times shown in your timezone</small>
         </div>
-        <div className="detail-divider"/>
-        <h3>Next session</h3>
-        <div className="next-compact">
-          <Icon name="calendar"/>
+        <div className="side-card response-card">
+          <Icon name="clock" />
           <div>
-            <strong>Thursday, March 12</strong>
-            <span>6:00 – 7:00 PM</span>
+            <strong>Usually responds in 2 hours</strong>
+            <span>Last active 12 minutes ago</span>
           </div>
         </div>
       </aside>
-    </main>);
+    </div>
+  </main>);
+}
+function Requests({ showToast }) {
+  const [tab, setTab] = useState("Incoming");
+  const [statuses, setStatuses] = useState({});
+  const requests = tab === "Incoming"
+    ? [
+      {
+        id: 1,
+        person: people[4],
+        offer: "Spanish conversation",
+        want: "React basics",
+        note: "I’m building a tiny recipe app and would love help with components. Happy to practice Spanish with you!",
+        date: "Today",
+      },
+      {
+        id: 2,
+        person: people[5],
+        offer: "Guitar",
+        want: "TypeScript",
+        note: "Your TypeScript experience looks like a great fit. I can teach beginner guitar chords and songs.",
+        date: "Yesterday",
+      },
+    ]
+    : tab === "Sent"
+      ? [
+        {
+          id: 3,
+          person: people[1],
+          offer: "React",
+          want: "English speaking",
+          note: "Would love to pair on a small React project together.",
+          date: "Mar 6",
+        },
+      ]
+      : [];
+  return (<main className="page requests-page">
+    <PageHead eyebrow="Exchange hub" title="Requests">
+      <Button icon="plus">New request</Button>
+    </PageHead>
+    <div className="tabs">
+      {["Incoming", "Sent", "History"].map((t) => (<button className={tab === t ? "active" : ""} onClick={() => setTab(t)} key={t}>
+        {t}
+        {t === "Incoming" && <span>2</span>}
+      </button>))}
+    </div>
+    {requests.length ? (<div className="request-list">
+      {requests.map((r) => (<article className="request-card" key={r.id}>
+        <div className="request-top">
+          <Avatar person={r.person} size="lg" />
+          <div>
+            <h2>{r.person.name}</h2>
+            <p>
+              {r.person.role} · <Stars rating={r.person.rating} />
+            </p>
+            <span>{r.date}</span>
+          </div>
+          <Badge tone={statuses[r.id] === "accepted"
+            ? "green"
+            : statuses[r.id] === "rejected"
+              ? "rose"
+              : "amber"}>
+            {statuses[r.id] ||
+              (tab === "Sent" ? "Pending" : "New request")}
+          </Badge>
+        </div>
+        <div className="request-swap">
+          <div>
+            <small>THEY’LL TEACH</small>
+            <strong>{r.offer}</strong>
+          </div>
+          <span>
+            <Icon name="swap" />
+          </span>
+          <div>
+            <small>THEY WANT TO LEARN</small>
+            <strong>{r.want}</strong>
+          </div>
+        </div>
+        <blockquote>“{r.note}”</blockquote>
+        {tab === "Incoming" && !statuses[r.id] && (<div className="request-actions">
+          <Button variant="secondary" onClick={() => {
+            setStatuses({ ...statuses, [r.id]: "rejected" });
+            showToast("Request declined");
+          }}>
+            Decline
+          </Button>
+          <Button onClick={() => {
+            setStatuses({ ...statuses, [r.id]: "accepted" });
+            showToast(`Exchange with ${r.person.name} accepted`);
+          }} icon="check">
+            Accept exchange
+          </Button>
+        </div>)}
+      </article>))}
+    </div>) : (<div className="empty-state">
+      <div>
+        <Icon name="swap" size={28} />
+      </div>
+      <h2>No {tab.toLowerCase()} requests</h2>
+      <p>
+        {tab === "History"
+          ? "Completed and declined exchanges will appear here."
+          : "You’re all caught up for now."}
+      </p>
+    </div>)}
+  </main>);
+}
+function Messages() {
+  const [active, setActive] = useState(1);
+  const [texts, setTexts] = useState(initialMessages);
+  const [draft, setDraft] = useState("");
+  const send = (e) => {
+    e.preventDefault();
+    if (!draft.trim())
+      return;
+    setTexts([
+      ...texts,
+      { id: Date.now(), mine: true, text: draft, time: "Now" },
+    ]);
+    setDraft("");
+  };
+  return (<main className="messages-page">
+    <div className="conversations">
+      <div className="messages-title">
+        <h1>Messages</h1>
+        <button>
+          <Icon name="plus" />
+        </button>
+      </div>
+      <div className="conversation-search">
+        <Icon name="search" />
+        <input placeholder="Search conversations" />
+      </div>
+      {conversations.map((c) => (<button className={`conversation ${active === c.id ? "active" : ""}`} onClick={() => setActive(c.id)} key={c.id}>
+        <Avatar person={c.person} online={c.id === 1} />
+        <div>
+          <strong>{c.person.name}</strong>
+          <p>{c.preview}</p>
+        </div>
+        <span>
+          {c.time}
+          {c.unread > 0 && <b>{c.unread}</b>}
+        </span>
+      </button>))}
+    </div>
+    <section className="chat">
+      <header>
+        <div className="mini-person">
+          <Avatar person={people[2]} online />
+          <div>
+            <strong>Amara Okafor</strong>
+            <span>
+              Online · English <Icon name="swap" size={12} /> React
+            </span>
+          </div>
+        </div>
+        <div>
+          <button className="icon-btn">
+            <Icon name="video" />
+          </button>
+          <button className="icon-btn">
+            <Icon name="more" />
+          </button>
+        </div>
+      </header>
+      <div className="chat-body">
+        <div className="date-separator">
+          <span>Today</span>
+        </div>
+        {texts.map((m) => (<div className={`message-row ${m.mine ? "mine" : ""}`} key={m.id}>
+          {!m.mine && <Avatar person={people[2]} size="sm" />}
+          <div>
+            <p>{m.text}</p>
+            <span>{m.time}</span>
+          </div>
+        </div>))}
+      </div>
+      <form className="composer" onSubmit={send}>
+        <button type="button">
+          <Icon name="plus" />
+        </button>
+        <input value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Write a message…" />
+        <button className="send-btn" type="submit" aria-label="Send">
+          <Icon name="send" />
+        </button>
+      </form>
+    </section>
+    <aside className="chat-details">
+      <Avatar person={people[2]} size="xl" />
+      <h2>Amara Okafor</h2>
+      <p>London, UK</p>
+      <Stars rating={5} count={34} />
+      <Button variant="secondary" className="full">
+        View profile
+      </Button>
+      <div className="detail-divider" />
+      <h3>Your exchange</h3>
+      <div className="exchange-compact">
+        <span>
+          <small>YOU TEACH</small>React basics
+        </span>
+        <Icon name="swap" />
+        <span>
+          <small>YOU LEARN</small>English speaking
+        </span>
+      </div>
+      <div className="detail-divider" />
+      <h3>Next session</h3>
+      <div className="next-compact">
+        <Icon name="calendar" />
+        <div>
+          <strong>Thursday, March 12</strong>
+          <span>6:00 – 7:00 PM</span>
+        </div>
+      </div>
+    </aside>
+  </main>);
 }
 function Sessions({ showToast }) {
-    const [completed, setCompleted] = useState(false);
-    const [review, setReview] = useState(false);
-    const [rating, setRating] = useState(0);
-    return (<main className="page sessions-page">
-      <PageHead eyebrow="Your learning calendar" title="Sessions">
-        <Button icon="plus">Schedule session</Button>
-      </PageHead>
-      <div className="week-strip">
-        {[
-            ["MON", "9"],
-            ["TUE", "10"],
-            ["WED", "11"],
-            ["THU", "12"],
-            ["FRI", "13"],
-            ["SAT", "14"],
-            ["SUN", "15"],
-        ].map(([day, date], i) => (<button className={i === 1 ? "active" : ""} key={day}>
-            <span>{day}</span>
-            <strong>{date}</strong>
-            {[1, 3, 5].includes(i) && <i />}
+  const [completed, setCompleted] = useState(false);
+  const [review, setReview] = useState(false);
+  const [rating, setRating] = useState(0);
+  return (<main className="page sessions-page">
+    <PageHead eyebrow="Your learning calendar" title="Sessions">
+      <Button icon="plus">Schedule session</Button>
+    </PageHead>
+    <div className="week-strip">
+      {[
+        ["MON", "9"],
+        ["TUE", "10"],
+        ["WED", "11"],
+        ["THU", "12"],
+        ["FRI", "13"],
+        ["SAT", "14"],
+        ["SUN", "15"],
+      ].map(([day, date], i) => (<button className={i === 1 ? "active" : ""} key={day}>
+        <span>{day}</span>
+        <strong>{date}</strong>
+        {[1, 3, 5].includes(i) && <i />}
+      </button>))}
+    </div>
+    <div className="session-layout">
+      <section>
+        <div className="section-title">
+          <h2>Upcoming</h2>
+          <span>3 sessions</span>
+        </div>
+        <article className="session-card featured">
+          <div className="session-time">
+            <strong>5:30</strong>
+            <span>PM</span>
+            <i />
+          </div>
+          <div className="session-info">
+            <Badge tone="green">Tomorrow</Badge>
+            <h2>Figma fundamentals</h2>
+            <p>Exchange with Maya Chen</p>
+            <div className="mini-person">
+              <Avatar person={people[0]} size="sm" />
+              <span>You’re learning Figma · Session 2 of 5</span>
+            </div>
+          </div>
+          <div className="session-buttons">
+            <Button icon="video">Join session</Button>
+            <Button variant="secondary">Reschedule</Button>
+          </div>
+        </article>
+        <article className="session-card">
+          <div className="session-time">
+            <strong>6:00</strong>
+            <span>PM</span>
+          </div>
+          <div className="session-info">
+            <Badge tone="blue">Thursday, Mar 12</Badge>
+            <h2>English conversation practice</h2>
+            <p>Exchange with Amara Okafor</p>
+          </div>
+          <div className="session-buttons">
+            <Button variant="secondary">View details</Button>
+          </div>
+        </article>
+        <div className="section-title past-title">
+          <h2>Past sessions</h2>
+        </div>
+        <article className="session-card muted">
+          <div className="session-time">
+            <strong>7:00</strong>
+            <span>PM</span>
+          </div>
+          <div className="session-info">
+            <Badge>March 5</Badge>
+            <h2>Photography composition</h2>
+            <p>Exchange with Jon Bell</p>
+          </div>
+          <div className="session-buttons">
+            {completed ? (<Badge tone="green">
+              <Icon name="check" size={14} /> Completed
+            </Badge>) : (<Button variant="secondary" onClick={() => {
+              setCompleted(true);
+              setReview(true);
+            }}>
+              Mark completed
+            </Button>)}
+          </div>
+        </article>
+      </section>
+      <aside>
+        <div className="session-summary">
+          <span className="section-eyebrow">March summary</span>
+          <h3>Keep your momentum</h3>
+          <div>
+            <strong>7</strong>
+            <span>
+              Sessions
+              <br />
+              completed
+            </span>
+          </div>
+          <div>
+            <strong>6.5h</strong>
+            <span>
+              Time spent
+              <br />
+              learning
+            </span>
+          </div>
+          <div className="streak">
+            <Icon name="star" />
+            <span>
+              <strong>3 week streak</strong>Longest streak: 6 weeks
+            </span>
+          </div>
+        </div>
+      </aside>
+    </div>
+    {review && (<Modal title="How was your session?" onClose={() => setReview(false)}>
+      <div className="review-modal">
+        <Avatar person={people[3]} size="lg" />
+        <p>
+          Share a review for your photography session with{" "}
+          <strong>Jon Bell</strong>.
+        </p>
+        <div className="rating-pick">
+          {[1, 2, 3, 4, 5].map((n) => (<button className={n <= rating ? "active" : ""} key={n} onClick={() => setRating(n)}>
+            <Icon name="star" size={28} />
           </button>))}
+        </div>
+        <label>
+          What went well?
+          <textarea placeholder="Jon explained composition clearly and gave me practical exercises…" />
+        </label>
+        <Button className="full" disabled={!rating} onClick={() => {
+          setReview(false);
+          showToast("Review submitted — thank you!");
+        }}>
+          Submit review
+        </Button>
       </div>
-      <div className="session-layout">
-        <section>
-          <div className="section-title">
-            <h2>Upcoming</h2>
-            <span>3 sessions</span>
-          </div>
-          <article className="session-card featured">
-            <div className="session-time">
-              <strong>5:30</strong>
-              <span>PM</span>
-              <i />
-            </div>
-            <div className="session-info">
-              <Badge tone="green">Tomorrow</Badge>
-              <h2>Figma fundamentals</h2>
-              <p>Exchange with Maya Chen</p>
-              <div className="mini-person">
-                <Avatar person={people[0]} size="sm"/>
-                <span>You’re learning Figma · Session 2 of 5</span>
-              </div>
-            </div>
-            <div className="session-buttons">
-              <Button icon="video">Join session</Button>
-              <Button variant="secondary">Reschedule</Button>
-            </div>
-          </article>
-          <article className="session-card">
-            <div className="session-time">
-              <strong>6:00</strong>
-              <span>PM</span>
-            </div>
-            <div className="session-info">
-              <Badge tone="blue">Thursday, Mar 12</Badge>
-              <h2>English conversation practice</h2>
-              <p>Exchange with Amara Okafor</p>
-            </div>
-            <div className="session-buttons">
-              <Button variant="secondary">View details</Button>
-            </div>
-          </article>
-          <div className="section-title past-title">
-            <h2>Past sessions</h2>
-          </div>
-          <article className="session-card muted">
-            <div className="session-time">
-              <strong>7:00</strong>
-              <span>PM</span>
-            </div>
-            <div className="session-info">
-              <Badge>March 5</Badge>
-              <h2>Photography composition</h2>
-              <p>Exchange with Jon Bell</p>
-            </div>
-            <div className="session-buttons">
-              {completed ? (<Badge tone="green">
-                  <Icon name="check" size={14}/> Completed
-                </Badge>) : (<Button variant="secondary" onClick={() => {
-                setCompleted(true);
-                setReview(true);
-            }}>
-                  Mark completed
-                </Button>)}
-            </div>
-          </article>
-        </section>
-        <aside>
-          <div className="session-summary">
-            <span className="section-eyebrow">March summary</span>
-            <h3>Keep your momentum</h3>
-            <div>
-              <strong>7</strong>
-              <span>
-                Sessions
-                <br />
-                completed
-              </span>
-            </div>
-            <div>
-              <strong>6.5h</strong>
-              <span>
-                Time spent
-                <br />
-                learning
-              </span>
-            </div>
-            <div className="streak">
-              <Icon name="star"/>
-              <span>
-                <strong>3 week streak</strong>Longest streak: 6 weeks
-              </span>
-            </div>
-          </div>
-        </aside>
-      </div>
-      {review && (<Modal title="How was your session?" onClose={() => setReview(false)}>
-          <div className="review-modal">
-            <Avatar person={people[3]} size="lg"/>
-            <p>
-              Share a review for your photography session with{" "}
-              <strong>Jon Bell</strong>.
-            </p>
-            <div className="rating-pick">
-              {[1, 2, 3, 4, 5].map((n) => (<button className={n <= rating ? "active" : ""} key={n} onClick={() => setRating(n)}>
-                  <Icon name="star" size={28}/>
-                </button>))}
-            </div>
-            <label>
-              What went well?
-              <textarea placeholder="Jon explained composition clearly and gave me practical exercises…"/>
-            </label>
-            <Button className="full" disabled={!rating} onClick={() => {
-                setReview(false);
-                showToast("Review submitted — thank you!");
-            }}>
-              Submit review
-            </Button>
-          </div>
-        </Modal>)}
-    </main>);
+    </Modal>)}
+  </main>);
 }
 function Settings({ showToast }) {
-    const [tab, setTab] = useState("Profile");
-    return (<main className="page settings-page">
-      <PageHead eyebrow="Your account" title="Settings"/>
-      <div className="settings-layout">
-        <nav>
-          {[
-            "Profile",
-            "Skills",
-            "Availability",
-            "Notifications",
-            "Account",
+  const [tab, setTab] = useState("Profile");
+  return (<main className="page settings-page">
+    <PageHead eyebrow="Your account" title="Settings" />
+    <div className="settings-layout">
+      <nav>
+        {[
+          "Profile",
+          "Skills",
+          "Availability",
+          "Notifications",
+          "Account",
         ].map((t) => (<button className={tab === t ? "active" : ""} onClick={() => setTab(t)} key={t}>
-              <Icon name={t === "Profile"
-                ? "user"
-                : t === "Skills"
-                    ? "swap"
-                    : t === "Availability"
-                        ? "calendar"
-                        : t === "Notifications"
-                            ? "bell"
-                            : "settings"}/>
-              {t}
-            </button>))}
-        </nav>
-        <section className="settings-form">
-          <div className="settings-header">
-            <h2>{tab}</h2>
-            <p>
-              {tab === "Profile"
-            ? "Keep your public profile accurate and welcoming."
-            : `Manage your ${tab.toLowerCase()} preferences.`}
-            </p>
+          <Icon name={t === "Profile"
+            ? "user"
+            : t === "Skills"
+              ? "swap"
+              : t === "Availability"
+                ? "calendar"
+                : t === "Notifications"
+                  ? "bell"
+                  : "settings"} />
+          {t}
+        </button>))}
+      </nav>
+      <section className="settings-form">
+        <div className="settings-header">
+          <h2>{tab}</h2>
+          <p>
+            {tab === "Profile"
+              ? "Keep your public profile accurate and welcoming."
+              : `Manage your ${tab.toLowerCase()} preferences.`}
+          </p>
+        </div>
+        {tab === "Profile" ? (<>
+          <div className="photo-setting">
+            <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} size="xl" />
+            <div>
+              <Button variant="secondary">Change photo</Button>
+              <span>JPG or PNG · Max 5 MB</span>
+            </div>
           </div>
-          {tab === "Profile" ? (<>
-              <div className="photo-setting">
-                <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} size="xl"/>
-                <div>
-                  <Button variant="secondary">Change photo</Button>
-                  <span>JPG or PNG · Max 5 MB</span>
-                </div>
-              </div>
-              <div className="field-row">
-                <label>
-                  First name
-                  <input defaultValue="Alex"/>
-                </label>
-                <label>
-                  Last name
-                  <input defaultValue="Morgan"/>
-                </label>
-              </div>
-              <label>
-                Headline
-                <input defaultValue="Frontend developer and curious lifelong learner"/>
-              </label>
-              <label>
-                Bio
-                <textarea defaultValue="I’m a frontend developer who loves helping people build their first React projects. I’m currently working on becoming a more confident English speaker and improving my photography."/>
-              </label>
-              <div className="field-row">
-                <label>
-                  Location
-                  <input defaultValue="Berlin, Germany"/>
-                </label>
-                <label>
-                  Primary language
-                  <select defaultValue="English">
-                    <option>English</option>
-                    <option>German</option>
-                  </select>
-                </label>
-              </div>
-            </>) : tab === "Availability" ? (<>
-              <div className="availability-settings">
-                <h3>Weekly availability</h3>
-                {[
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
+          <div className="field-row">
+            <label>
+              First name
+              <input defaultValue="Alex" />
+            </label>
+            <label>
+              Last name
+              <input defaultValue="Morgan" />
+            </label>
+          </div>
+          <label>
+            Headline
+            <input defaultValue="Frontend developer and curious lifelong learner" />
+          </label>
+          <label>
+            Bio
+            <textarea defaultValue="I’m a frontend developer who loves helping people build their first React projects. I’m currently working on becoming a more confident English speaker and improving my photography." />
+          </label>
+          <div className="field-row">
+            <label>
+              Location
+              <input defaultValue="Berlin, Germany" />
+            </label>
+            <label>
+              Primary language
+              <select defaultValue="English">
+                <option>English</option>
+                <option>German</option>
+              </select>
+            </label>
+          </div>
+        </>) : tab === "Availability" ? (<>
+          <div className="availability-settings">
+            <h3>Weekly availability</h3>
+            {[
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
             ].map((day, i) => (<div className="day-row" key={day}>
-                    <label className="switch">
-                      <input type="checkbox" defaultChecked={i < 4 || i === 5}/>
-                      <i />
-                    </label>
-                    <strong>{day}</strong>
-                    <input type="time" defaultValue={i === 5 ? "10:00" : "18:00"}/>
-                    <span>to</span>
-                    <input type="time" defaultValue={i === 5 ? "14:00" : "21:00"}/>
-                  </div>))}
-              </div>
-            </>) : tab === "Notifications" ? (<div className="notification-settings">
-              {[
-                "New exchange requests",
-                "Request updates",
-                "New messages",
-                "Session reminders",
-                "Weekly match recommendations",
-            ].map((item, i) => (<div key={item}>
-                  <span>
-                    <strong>{item}</strong>
-                    <small>
-                      {i === 3
-                    ? "24 hours and 30 minutes before a session"
-                    : "Receive updates by email and in app"}
-                    </small>
-                  </span>
-                  <label className="switch">
-                    <input type="checkbox" defaultChecked={i !== 4}/>
-                    <i />
-                  </label>
-                </div>))}
-            </div>) : (<div className="empty-settings">
-              <Icon name={tab === "Skills" ? "swap" : "settings"} size={30}/>
-              <h3>{tab} preferences</h3>
-              <p>
-                Your current {tab.toLowerCase()} settings are ready to update.
-              </p>
-              <Button variant="secondary">Manage {tab.toLowerCase()}</Button>
-            </div>)}
-          <div className="settings-actions">
-            <Button onClick={() => showToast("Settings saved successfully")} icon="check">
-              Save changes
-            </Button>
+              <label className="switch">
+                <input type="checkbox" defaultChecked={i < 4 || i === 5} />
+                <i />
+              </label>
+              <strong>{day}</strong>
+              <input type="time" defaultValue={i === 5 ? "10:00" : "18:00"} />
+              <span>to</span>
+              <input type="time" defaultValue={i === 5 ? "14:00" : "21:00"} />
+            </div>))}
           </div>
-        </section>
-      </div>
-    </main>);
+        </>) : tab === "Notifications" ? (<div className="notification-settings">
+          {[
+            "New exchange requests",
+            "Request updates",
+            "New messages",
+            "Session reminders",
+            "Weekly match recommendations",
+          ].map((item, i) => (<div key={item}>
+            <span>
+              <strong>{item}</strong>
+              <small>
+                {i === 3
+                  ? "24 hours and 30 minutes before a session"
+                  : "Receive updates by email and in app"}
+              </small>
+            </span>
+            <label className="switch">
+              <input type="checkbox" defaultChecked={i !== 4} />
+              <i />
+            </label>
+          </div>))}
+        </div>) : (<div className="empty-settings">
+          <Icon name={tab === "Skills" ? "swap" : "settings"} size={30} />
+          <h3>{tab} preferences</h3>
+          <p>
+            Your current {tab.toLowerCase()} settings are ready to update.
+          </p>
+          <Button variant="secondary">Manage {tab.toLowerCase()}</Button>
+        </div>)}
+        <div className="settings-actions">
+          <Button onClick={() => showToast("Settings saved successfully")} icon="check">
+            Save changes
+          </Button>
+        </div>
+      </section>
+    </div>
+  </main>);
 }
 function RequestModal({ onClose, showToast, }) {
-    const submit = (e) => {
-        e.preventDefault();
-        onClose();
-        showToast("Exchange request sent to Amara");
-    };
-    return (<Modal title="Propose a skill exchange" onClose={onClose}>
-      <form className="request-form" onSubmit={submit}>
-        <div className="modal-person">
-          <Avatar person={people[2]}/>
-          <span>
-            You’re proposing an exchange with <strong>Amara Okafor</strong>
-          </span>
-        </div>
-        <div className="field-row">
-          <label>
-            You’ll teach
-            <select>
-              <option>React development</option>
-              <option>TypeScript basics</option>
-            </select>
-          </label>
-          <label>
-            You’d like to learn
-            <select>
-              <option>English speaking</option>
-              <option>Public speaking</option>
-            </select>
-          </label>
-        </div>
+  const submit = (e) => {
+    e.preventDefault();
+    onClose();
+    showToast("Exchange request sent to Amara");
+  };
+  return (<Modal title="Propose a skill exchange" onClose={onClose}>
+    <form className="request-form" onSubmit={submit}>
+      <div className="modal-person">
+        <Avatar person={people[2]} />
+        <span>
+          You’re proposing an exchange with <strong>Amara Okafor</strong>
+        </span>
+      </div>
+      <div className="field-row">
         <label>
-          Message
-          <textarea required defaultValue="Hi Amara! I’d love to help you build your React project in exchange for English conversation practice. Would weekday evenings work for you?"/>
-        </label>
-        <label>
-          Preferred schedule
+          You’ll teach
           <select>
-            <option>Thursday evenings</option>
-            <option>Saturday mornings</option>
-            <option>Flexible</option>
+            <option>React development</option>
+            <option>TypeScript basics</option>
           </select>
         </label>
-        <div className="modal-actions">
-          <Button variant="ghost" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button type="submit" icon="send">
-            Send request
-          </Button>
-        </div>
-      </form>
-    </Modal>);
+        <label>
+          You’d like to learn
+          <select>
+            <option>English speaking</option>
+            <option>Public speaking</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        Message
+        <textarea required defaultValue="Hi Amara! I’d love to help you build your React project in exchange for English conversation practice. Would weekday evenings work for you?" />
+      </label>
+      <label>
+        Preferred schedule
+        <select>
+          <option>Thursday evenings</option>
+          <option>Saturday mornings</option>
+          <option>Flexible</option>
+        </select>
+      </label>
+      <div className="modal-actions">
+        <Button variant="ghost" onClick={onClose}>
+          Cancel
+        </Button>
+        <Button type="submit" icon="send">
+          Send request
+        </Button>
+      </div>
+    </form>
+  </Modal>);
 }
 function SkillSwapApp() {
-    const [page, setPage] = useState("landing");
-    const [notificationOpen, setNotificationOpen] = useState(false);
-    const [requestOpen, setRequestOpen] = useState(false);
-    const [toast, setToast] = useState("");
-    const navigate = (p) => {
-        setPage(p);
-        window.scrollTo(0, 0);
-    };
-    const showToast = (text) => {
-        setToast(text);
-        window.setTimeout(() => setToast(""), 2800);
-    };
-    const login = () => navigate("dashboard");
-    if (page === "landing")
-        return <Landing navigate={navigate}/>;
-    if (page === "login" || page === "signup")
-        return <AuthPage kind={page} navigate={navigate} login={login}/>;
-    const content = {
-        dashboard: <Dashboard navigate={navigate}/>,
-        explore: <Explore navigate={navigate}/>,
-        profile: (<Profile navigate={navigate} openRequest={() => setRequestOpen(true)}/>),
-        requests: <Requests showToast={showToast}/>,
-        messages: <Messages />,
-        sessions: <Sessions showToast={showToast}/>,
-        settings: <Settings showToast={showToast}/>,
-    };
-    return (<AppShell page={page} navigate={navigate} openNotifications={() => setNotificationOpen(!notificationOpen)}>
-      {content[page]}
-      {notificationOpen && (<div className="notification-panel">
-          <div className="panel-head">
-            <h2>Notifications</h2>
-            <button>Mark all as read</button>
-          </div>
-          {notifications.map((n) => (<button className={n.unread ? "unread" : ""} key={n.id}>
-              <span className={`notification-icon ${n.icon}`}>
-                <Icon name={n.icon}/>
-              </span>
-              <span>
-                <strong>{n.title}</strong>
-                <p>{n.body}</p>
-                <small>{n.time} ago</small>
-              </span>
-              {n.unread && <i />}
-            </button>))}
-        </div>)}
-      {requestOpen && (<RequestModal onClose={() => setRequestOpen(false)} showToast={showToast}/>)}
-      {toast && (<div className="toast">
-          <Icon name="check"/>
-          <span>{toast}</span>
-        </div>)}
-    </AppShell>);
+  const [page, setPage] = useState("landing");
+  const [notificationOpen, setNotificationOpen] = useState(false);
+  const [requestOpen, setRequestOpen] = useState(false);
+  const [toast, setToast] = useState("");
+  const navigate = (p) => {
+    setPage(p);
+    window.scrollTo(0, 0);
+  };
+  const showToast = (text) => {
+    setToast(text);
+    window.setTimeout(() => setToast(""), 2800);
+  };
+  const login = () => navigate("dashboard");
+  if (page === "landing")
+    return <Landing navigate={navigate} />;
+  if (page === "login" || page === "signup")
+    return <AuthPage kind={page} navigate={navigate} login={login} />;
+  const content = {
+    dashboard: <Dashboard navigate={navigate} />,
+    explore: <Explore navigate={navigate} />,
+    profile: (<Profile navigate={navigate} openRequest={() => setRequestOpen(true)} />),
+    requests: <Requests showToast={showToast} />,
+    messages: <Messages />,
+    sessions: <Sessions showToast={showToast} />,
+    settings: <Settings showToast={showToast} />,
+  };
+  return (<AppShell page={page} navigate={navigate} openNotifications={() => setNotificationOpen(!notificationOpen)}>
+    {content[page]}
+    {notificationOpen && (<div className="notification-panel">
+      <div className="panel-head">
+        <h2>Notifications</h2>
+        <button>Mark all as read</button>
+      </div>
+      {notifications.map((n) => (<button className={n.unread ? "unread" : ""} key={n.id}>
+        <span className={`notification-icon ${n.icon}`}>
+          <Icon name={n.icon} />
+        </span>
+        <span>
+          <strong>{n.title}</strong>
+          <p>{n.body}</p>
+          <small>{n.time} ago</small>
+        </span>
+        {n.unread && <i />}
+      </button>))}
+    </div>)}
+    {requestOpen && (<RequestModal onClose={() => setRequestOpen(false)} showToast={showToast} />)}
+    {toast && (<div className="toast">
+      <Icon name="check" />
+      <span>{toast}</span>
+    </div>)}
+  </AppShell>);
 }
 
 
