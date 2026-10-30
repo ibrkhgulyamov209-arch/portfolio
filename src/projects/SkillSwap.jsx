@@ -640,7 +640,7 @@ const people = [
   },
   {
     id: 3,
-    name: "Adilova Nazima",
+    name: "Amara Okafor",
     role: "Language coach",
     location: "London, UK",
     avatar: "AO",
