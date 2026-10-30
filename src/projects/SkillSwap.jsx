@@ -1143,7 +1143,7 @@ function Landing({ navigate }) {
     </footer>
   </div>);
 }
-function AuthPage({ kind, navigate, login, }) {
+function AuthPage({ kind, navigate, login, userName, setUserName }) {
   const isSignup = kind === "signup";
   const [step, setStep] = useState(1);
   const [authNotice, setAuthNotice] = useState("");
@@ -1152,7 +1152,7 @@ function AuthPage({ kind, navigate, login, }) {
     if (isSignup && step === 1)
       setStep(2);
     else
-      login();
+      login(userName);
   };
   return (<div className="auth-page">
     <div className="auth-brand">
@@ -1201,7 +1201,7 @@ function AuthPage({ kind, navigate, login, }) {
         {(!isSignup || step === 1) && (<>
           <label>
             Full name{!isSignup && <small> (optional)</small>}
-            <input placeholder={isSignup ? "Alex Morgan" : "Your name"} required={isSignup} />
+            <input placeholder={isSignup ? "Your name" : "Your name"} value={userName} onChange={(e) => setUserName(e.target.value)} required={isSignup} />
           </label>
           <label>
             Email address
@@ -1271,7 +1271,7 @@ function AuthPage({ kind, navigate, login, }) {
     </div>
   </div>);
 }
-function AppShell({ page, navigate, children, openNotifications, }) {
+function AppShell({ page, navigate, children, openNotifications, userName }) {
   const nav = [
     ["dashboard", "home", "Overview"],
     ["explore", "search", "Explore"],
@@ -1304,9 +1304,9 @@ function AppShell({ page, navigate, children, openNotifications, }) {
           Settings
         </button>
         <div className="side-profile">
-          <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
+          <Avatar person={{ name: userName, avatar: userName.slice(0, 2).toUpperCase(), color: "navy" }} />
           <div>
-            <strong>Alex Morgan</strong>
+            <strong>{userName}</strong>
             <span>View profile</span>
           </div>
           <Icon name="more" />
@@ -1344,9 +1344,10 @@ function PageHead({ eyebrow, title, children, }) {
     {children}
   </div>);
 }
-function Dashboard({ navigate }) {
+function Dashboard({ navigate, userName, lang }) {
+  const greeting = lang === "ru" ? `Доброе утро, ${userName}` : lang === "uz" ? `Xayrli tong, ${userName}` : `Good morning, ${userName}`;
   return (<main className="page dashboard">
-    <PageHead eyebrow="Monday, March 9" title="Good morning, Alex">
+    <PageHead eyebrow="Monday, March 9" title={greeting}>
       <Button variant="secondary" onClick={() => navigate("explore")} icon="search">
         Find people
       </Button>
@@ -1380,7 +1381,7 @@ function Dashboard({ navigate }) {
               <span className="swap-mini">
                 <Icon name="swap" size={15} />
               </span>
-              <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
+              <Avatar person={{ name: userName, avatar: userName.slice(0, 2).toUpperCase(), color: "navy" }} />
             </div>
             <div className="exchange-info">
               <strong>
@@ -1401,7 +1402,7 @@ function Dashboard({ navigate }) {
               <span className="swap-mini">
                 <Icon name="swap" size={15} />
               </span>
-              <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} />
+              <Avatar person={{ name: userName, avatar: userName.slice(0, 2).toUpperCase(), color: "navy" }} />
             </div>
             <div className="exchange-info">
               <strong>
@@ -1859,7 +1860,7 @@ function Requests({ showToast }) {
     </div>)}
   </main>);
 }
-function Messages() {
+function Messages({ userName, lang }) {
   const [active, setActive] = useState(1);
   const [texts, setTexts] = useState(messages);
   const [draft, setDraft] = useState("");
@@ -1924,7 +1925,7 @@ function Messages() {
         {texts.map((m) => (<div className={`message-row ${m.mine ? "mine" : ""}`} key={m.id}>
           {!m.mine && <Avatar person={people[2]} size="sm" />}
           <div>
-            <p>{m.text}</p>
+          <p>{m.id === 1 ? (lang === "ru" ? `Привет, ${userName.split(/\s+/)[0]}! Я видел, что ты хочешь улучшить разговорный английский.` : lang === "uz" ? `Salom, ${userName.split(/\s+/)[0]}! Ingliz tilida suhbatlashishni yaxshilamoqchi ekaningizni ko‘rdim.` : `Hey ${userName.split(/\s+/)[0]}! I saw you want to improve your English conversation.`) : m.text}</p>
             <span>{m.time}</span>
           </div>
         </div>))}
@@ -2113,7 +2114,7 @@ function Sessions({ showToast }) {
     </Modal>)}
   </main>);
 }
-function Settings({ showToast }) {
+function Settings({ showToast, userName, setUserName }) {
   const [tab, setTab] = useState("Profile");
   return (<main className="page settings-page">
     <PageHead eyebrow="Your account" title="Settings" />
@@ -2149,7 +2150,7 @@ function Settings({ showToast }) {
         </div>
         {tab === "Profile" ? (<>
           <div className="photo-setting">
-            <Avatar person={{ name: "Alex Morgan", avatar: "AM", color: "navy" }} size="xl" />
+            <Avatar person={{ name: userName, avatar: userName.slice(0, 2).toUpperCase(), color: "navy" }} size="xl" />
             <div>
               <Button variant="secondary">Change photo</Button>
               <span>JPG or PNG · Max 5 MB</span>
@@ -2158,7 +2159,7 @@ function Settings({ showToast }) {
           <div className="field-row">
             <label>
               First name
-              <input defaultValue="Alex" />
+              <input value={userName.split(/\s+/)[0]} onChange={(e) => setUserName([e.target.value, ...userName.split(/\s+/).slice(1)].join(" ").trim())} />
             </label>
             <label>
               Last name
@@ -2397,8 +2398,10 @@ function LocalizedTree({ lang, children }) {
   return <div ref={rootRef} className="skillswap-localized-root">{children}</div>;
 }
 
-function SkillSwapApp() {
+function SkillSwapApp({ lang }) {
   const [page, setPage] = useState("landing");
+  const [userName, setUserName] = useState(() => localStorage.getItem("skillswap-user-name") || "Your name");
+  useEffect(() => { localStorage.setItem("skillswap-user-name", userName); }, [userName]);
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [requestOpen, setRequestOpen] = useState(false);
   const [toast, setToast] = useState("");
@@ -2410,21 +2413,25 @@ function SkillSwapApp() {
     setToast(text);
     window.setTimeout(() => setToast(""), 2800);
   };
-  const login = () => navigate("dashboard");
+  const login = (enteredName) => {
+    const cleanName = enteredName?.trim();
+    if (cleanName) setUserName(cleanName);
+    navigate("dashboard");
+  };
   if (page === "landing")
     return <Landing navigate={navigate} />;
   if (page === "login" || page === "signup")
-    return <AuthPage kind={page} navigate={navigate} login={login} />;
+    return <AuthPage kind={page} navigate={navigate} login={login} userName={userName} setUserName={setUserName} />;
   const content = {
-    dashboard: <Dashboard navigate={navigate} />,
+    dashboard: <Dashboard navigate={navigate} userName={userName} lang={lang} />,
     explore: <Explore navigate={navigate} />,
     profile: (<Profile navigate={navigate} openRequest={() => setRequestOpen(true)} />),
     requests: <Requests showToast={showToast} />,
-    messages: <Messages />,
+    messages: <Messages userName={userName} lang={lang} />,
     sessions: <Sessions showToast={showToast} />,
-    settings: <Settings showToast={showToast} />,
+    settings: <Settings showToast={showToast} userName={userName} setUserName={setUserName} />,
   };
-  return (<AppShell page={page} navigate={navigate} openNotifications={() => setNotificationOpen(!notificationOpen)}>
+  return (<AppShell page={page} navigate={navigate} userName={userName} openNotifications={() => setNotificationOpen(!notificationOpen)}>
     {content[page]}
     {notificationOpen && (<div className="notification-panel">
       <div className="panel-head">
@@ -2457,7 +2464,7 @@ export default function SkillSwap({ lang = "en" }) {
     <div className="skillswap-embed">
       <style>{styles}</style>
       <LocalizedTree lang={lang}>
-        <SkillSwapApp />
+        <SkillSwapApp lang={lang} />
       </LocalizedTree>
     </div>
   );
