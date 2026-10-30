@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 // SkillSwap is packaged as one portable component. Styles and demo data are embedded
 // so it can be imported into an existing React/Vite portfolio without extra files.
